@@ -4,9 +4,12 @@ import ProcessSteps from "@/components/ProcessSteps";
 import Button from "@/components/Button";
 
 export const metadata: Metadata = {
-  title: "Déroulement d'une expertise | Justebati",
+  title: "Déroulement d'une expertise",
   description:
     "Prise de contact, visite, analyses, rapport : le déroulé d'une mission Justebati, étape par étape. Transparent, technique, indépendant. Demandez un devis.",
+  alternates: {
+    canonical: "/comment-ca-se-passe",
+  },
 };
 
 export default function CommentCaSePasse() {

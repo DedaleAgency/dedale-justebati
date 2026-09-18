@@ -3,9 +3,12 @@ import Section from "@/components/Section";
 import Button from "@/components/Button";
 
 export const metadata: Metadata = {
-  title: "Litige artisan | Expert bâtiment Justebati",
+  title: "Litige artisan",
   description:
     "Conflit avec un artisan ou une entreprise ? Constat technique indépendant pour négocier ou constituer un dossier. Aucun travaux à vendre. Devis.",
+  alternates: {
+    canonical: "/litige-artisan",
+  },
 };
 
 export default function LitigeArtisanPage() {

@@ -4,11 +4,16 @@ import ExpertiseCard from "@/components/ExpertiseCard";
 import Button from "@/components/Button";
 
 export const metadata: Metadata = {
-  title: "Expert bâtiment indépendant",
+  title: {
+    absolute: "Justebati — L'œil indépendant sur votre bâti.",
+  },
   description:
     "Justebati : expertise bâtiment pour particuliers. Avant achat, fissures, humidité, malfaçons, sinistres. Indépendant — aucun travaux à vendre. Devis.",
+  alternates: {
+    canonical: "/",
+  },
   openGraph: {
-    title: "Expert bâtiment indépendant | Justebati",
+    title: "Justebati — L'œil indépendant sur votre bâti.",
     description:
       "Expertise bâtiment pour particuliers. Avant achat, fissures, humidité, malfaçons, sinistres. Indépendant — aucun travaux à vendre.",
   },

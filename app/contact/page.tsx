@@ -4,9 +4,12 @@ import ContactForm from "@/components/ContactForm";
 import { siteConfig } from "@/config/site";
 
 export const metadata: Metadata = {
-  title: "Devis expertise bâtiment | Justebati",
+  title: "Devis expertise bâtiment",
   description:
     "Décrivez votre besoin : avant achat, fissures, humidité, malfaçons, sinistre ou litige. Réponse soignée. Expertise indépendante — sans travaux à vendre.",
+  alternates: {
+    canonical: "/contact",
+  },
 };
 
 export default function ContactPage() {

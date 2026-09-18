@@ -3,9 +3,12 @@ import Section from "@/components/Section";
 import Button from "@/components/Button";
 
 export const metadata: Metadata = {
-  title: "Expertise malfaçons & réception | Justebati",
+  title: "Expertise malfaçons & réception",
   description:
     "Malfaçons, non-conformités, assistance à la réception : constat indépendant, réserves exploitables. Rapport technique — sans travaux à vendre. Devis.",
+  alternates: {
+    canonical: "/expertise-malfacons-reception",
+  },
 };
 
 export default function ExpertiseMalfaconsPage() {

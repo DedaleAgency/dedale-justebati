@@ -2,9 +2,12 @@ import { Metadata } from "next";
 import Section from "@/components/Section";
 
 export const metadata: Metadata = {
-  title: "Confidentialité | Justebati",
+  title: "Confidentialité",
   description:
     "Traitement des données personnelles, formulaires et cookies sur justebati.fr — transparence RGPD.",
+  alternates: {
+    canonical: "/politique-de-confidentialite",
+  },
 };
 
 export default function PolitiqueConfidentialitePage() {
