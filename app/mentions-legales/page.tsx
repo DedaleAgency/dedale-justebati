@@ -53,7 +53,7 @@ export default function MentionsLegalesPage() {
             </li>
             <li>Contact : 01 00 00 00 00 — contact@exemple.fr</li>
           </ul>
-          <p className="text-sm italic text-stone">
+          <p className="text-sm italic text-mist">
             (Les mentions d&apos;éditeur ci-dessus sont des placeholders en
             attendant les informations client. Le site reste en mode contrôle.)
           </p>
@@ -71,7 +71,7 @@ export default function MentionsLegalesPage() {
               coordonnées publiées sur le site de l&apos;agence.
             </li>
           </ul>
-          <p className="text-sm italic text-stone">
+          <p className="text-sm italic text-mist">
             (Coordonnées légales complètes de l&apos;hébergeur technique final à
             compléter si une obligation de mention nominative distincte
             s&apos;applique après choix d&apos;infra définitif.)

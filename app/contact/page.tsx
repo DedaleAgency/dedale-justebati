@@ -21,7 +21,7 @@ export default function ContactPage() {
             Demander un devis d&apos;expertise
           </h1>
           <div className="prose-custom mb-12">
-            <p className="text-xl text-stone">
+            <p className="text-xl text-mist">
               Décrivez votre situation. Nous revenons vers vous avec un devis
               d&apos;expertise adapté — sans engagement de travaux. Justebati ne
               vend aucun travaux, ne réalise pas les diagnostics obligatoires
@@ -33,19 +33,19 @@ export default function ContactPage() {
             <h2 className="mb-4 text-2xl font-display">Coordonnées</h2>
             <div className="space-y-2">
               <p className="flex items-center space-x-2">
-                <span className="text-stone">Téléphone :</span>
+                <span className="text-mist">Téléphone :</span>
                 <a
                   href={`tel:${siteConfig.phone}`}
-                  className="font-medium text-copper hover:text-ink"
+                  className="font-medium text-oxide hover:text-ink"
                 >
                   {siteConfig.phoneDisplay}
                 </a>
               </p>
               <p className="flex items-center space-x-2">
-                <span className="text-stone">E-mail :</span>
+                <span className="text-mist">E-mail :</span>
                 <a
                   href={`mailto:${siteConfig.email}`}
-                  className="font-medium text-copper hover:text-ink"
+                  className="font-medium text-oxide hover:text-ink"
                 >
                   {siteConfig.email}
                 </a>
@@ -60,19 +60,19 @@ export default function ContactPage() {
 
           <div className="mt-12 rounded-lg border border-line bg-paper-2 p-8">
             <h2 className="mb-4 text-2xl font-display">Après l&apos;envoi</h2>
-            <p className="leading-relaxed text-stone">
+            <p className="leading-relaxed text-mist">
               Nous étudions votre message et vous recontactons pour préciser le
               devis (périmètre, conditions, délais indicatifs). Pour le déroulé
               type d&apos;une mission :{" "}
-              <a href="/comment-ca-se-passe" className="text-copper underline">
+              <a href="/comment-ca-se-passe" className="text-oxide underline">
                 Comment ça se passe
               </a>
               . Questions générales :{" "}
-              <a href="/faq" className="text-copper underline">
+              <a href="/faq" className="text-oxide underline">
                 FAQ
               </a>
               . Qui intervient :{" "}
-              <a href="/lexpert" className="text-copper underline">
+              <a href="/lexpert" className="text-oxide underline">
                 L&apos;expert
               </a>
               .

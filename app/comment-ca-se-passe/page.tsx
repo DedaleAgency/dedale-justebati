@@ -21,7 +21,7 @@ export default function CommentCaSePasse() {
             Comment se déroule une expertise
           </h1>
           <div className="prose-custom">
-            <p className="text-xl text-stone">
+            <p className="text-xl text-mist">
               Une mission Justebati suit un déroulé simple et transparent. Cinq
               étapes, du premier contact au rapport. Pas de surprise sur le rôle
               de l&apos;expert : constater, analyser, chiffrer, écrire — sans
@@ -31,7 +31,7 @@ export default function CommentCaSePasse() {
         </div>
       </Section>
 
-      <Section background="paper-2">
+      <Section background="sand">
         <div className="mx-auto max-w-5xl">
           <ProcessSteps />
         </div>

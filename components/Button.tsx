@@ -20,8 +20,8 @@ export default function Button({
   const baseStyles =
     "inline-block rounded-lg px-6 py-3 text-sm font-medium transition-colors";
   const variantStyles = {
-    primary: "bg-copper text-paper hover:bg-ink",
-    secondary: "border-2 border-copper text-copper hover:bg-copper hover:text-paper",
+    primary: "bg-oxide text-paper hover:bg-ink",
+    secondary: "border-2 border-oxide text-oxide hover:bg-oxide hover:text-paper",
   };
 
   const combinedClassName = `${baseStyles} ${variantStyles[variant]} ${className}`;

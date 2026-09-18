@@ -20,7 +20,7 @@ export default function ExpertiseFissuresPage() {
             Expertise fissures maison
           </h1>
           <div className="prose-custom">
-            <p className="text-xl text-stone">
+            <p className="text-xl text-mist">
               Une fissure sur un mur, une façade ou un plafond inquiète — à
               juste titre. Toutes ne menacent pas la structure. Certaines
               signalent un mouvement du sol, un défaut constructif ou un
@@ -28,7 +28,7 @@ export default function ExpertiseFissuresPage() {
               indépendant : cause probable, gravité, suivi ou réparation, et
               préconisations claires.
             </p>
-            <p className="text-xl text-stone">
+            <p className="text-xl text-mist">
               Nous ne vendons aucun travaux. Le rapport sert à comprendre et à
               agir — pas à vous vendre un chantier.
             </p>
@@ -108,7 +108,7 @@ export default function ExpertiseFissuresPage() {
         </div>
       </Section>
 
-      <Section background="paper-2">
+      <Section background="sand">
         <div className="mx-auto max-w-3xl text-center">
           <h2 className="mb-6 text-2xl font-display">
             Liens utiles

@@ -1,7 +1,7 @@
 interface SectionProps {
   children: React.ReactNode;
   className?: string;
-  background?: "paper" | "paper-2" | "dark";
+  background?: "paper" | "sand" | "dark";
   id?: string;
 }
 
@@ -13,8 +13,8 @@ export default function Section({
 }: SectionProps) {
   const bgStyles = {
     paper: "bg-paper",
-    "paper-2": "bg-paper-2",
-    dark: "bg-ok-dark text-on-dark",
+    sand: "bg-sand",
+    dark: "bg-night text-on-night",
   };
 
   return (

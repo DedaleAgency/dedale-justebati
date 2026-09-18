@@ -20,14 +20,14 @@ export default function ExpertiseHumiditePage() {
             Expertise humidité maison
           </h1>
           <div className="prose-custom">
-            <p className="text-xl text-stone">
+            <p className="text-xl text-mist">
               Taches, odeurs, moisissures, salpêtre, peinture qui cloque :
               l&apos;humidité a plusieurs causes, et le mauvais traitement coûte
               cher. Justebati identifie l&apos;origine probable du désordre —
               infiltration, condensation, remontées capillaires, défaut
               d&apos;étanchéité — et vous remet un rapport indépendant.
             </p>
-            <p className="text-xl text-stone">
+            <p className="text-xl text-mist">
               Nous ne vendons aucun traitement ni travaux. Notre rôle
               s&apos;arrête à l&apos;expertise et aux préconisations.
             </p>
@@ -112,7 +112,7 @@ export default function ExpertiseHumiditePage() {
         </div>
       </Section>
 
-      <Section background="paper-2">
+      <Section background="sand">
         <div className="mx-auto max-w-3xl text-center">
           <h2 className="mb-6 text-2xl font-display">
             Liens utiles

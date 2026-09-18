@@ -20,7 +20,7 @@ export default function AssistanceExpertiseAssurancePage() {
             Assistance expertise d&apos;assurance et sinistre
           </h1>
           <div className="prose-custom">
-            <p className="text-xl text-stone">
+            <p className="text-xl text-mist">
               Face à un sinistre — dégât des eaux, événement climatique,
               sécheresse et fissures associées — l&apos;assureur mandate souvent
               son propre expert. Vous pouvez, de votre côté, vous faire assister
@@ -105,7 +105,7 @@ export default function AssistanceExpertiseAssurancePage() {
         </div>
       </Section>
 
-      <Section background="paper-2">
+      <Section background="sand">
         <div className="mx-auto max-w-3xl text-center">
           <h2 className="mb-6 text-2xl font-display">
             Liens utiles

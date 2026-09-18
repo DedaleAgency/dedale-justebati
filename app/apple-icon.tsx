@@ -17,25 +17,25 @@ export default function AppleIcon() {
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
-          backgroundColor: "#F4F0E7",
+          backgroundColor: "#F7F3EB",
         }}
       >
         <svg
           width="120"
           height="120"
-          viewBox="0 0 24 24"
+          viewBox="0 0 40 40"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
         >
-          <path
-            d="M4 20V4M4 20H20"
-            stroke="#9C6B3C"
-            strokeWidth="2"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-          />
-          <circle cx="4" cy="4" r="1.5" fill="#9C6B3C" />
-          <circle cx="20" cy="20" r="1.5" fill="#9C6B3C" />
+          <g strokeWidth="1.5" stroke="#A85A3A" fill="none">
+            <path d="M12 8 L12 20" strokeLinecap="square" />
+            <path d="M10 20 L28 20" strokeLinecap="square" />
+            <path d="M28 20 L28 32" strokeLinecap="square" />
+            <path
+              d="M20 8 C20 8, 24 8, 26 12 C28 16, 28 18, 28 20"
+              strokeLinecap="round"
+            />
+          </g>
         </svg>
       </div>
     ),

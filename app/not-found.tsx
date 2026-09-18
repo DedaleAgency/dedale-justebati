@@ -19,7 +19,7 @@ export default function NotFound() {
         <h1 className="mb-6 text-4xl font-display md:text-5xl">
           Page introuvable
         </h1>
-        <p className="mb-8 text-lg text-stone">
+        <p className="mb-8 text-lg text-mist">
           Cette page n&apos;existe pas, ou l&apos;adresse a changé. Reprenez
           depuis l&apos;accueil, parcourez les prestations, ou contactez-nous
           pour un devis.

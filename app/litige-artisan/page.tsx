@@ -20,14 +20,14 @@ export default function LitigeArtisanPage() {
             Litige avec un artisan : expert bâtiment
           </h1>
           <div className="prose-custom">
-            <p className="text-xl text-stone">
+            <p className="text-xl text-mist">
               Désaccord sur la qualité des travaux, travaux inachevés, malfaçons
               contestées : le conflit avec un artisan ou une entreprise se joue
               souvent sur des faits techniques mal établis. Justebati produit un
               constat indépendant — clair, photographié, hiérarchisé — pour
               négocier à l&apos;amiable ou préparer un dossier plus formel.
             </p>
-            <p className="text-xl text-stone">
+            <p className="text-xl text-mist">
               Nous ne vendons aucun travaux. Nous n&apos;avons aucun intérêt à
               « reprendre le chantier ».
             </p>
@@ -107,7 +107,7 @@ export default function LitigeArtisanPage() {
         </div>
       </Section>
 
-      <Section background="paper-2">
+      <Section background="sand">
         <div className="mx-auto max-w-3xl text-center">
           <h2 className="mb-6 text-2xl font-display">
             Liens utiles

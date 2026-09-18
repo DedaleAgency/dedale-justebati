@@ -20,14 +20,14 @@ export default function ExpertiseAvantAchatPage() {
             Expertise avant achat immobilier
           </h1>
           <div className="prose-custom">
-            <p className="text-xl text-stone">
+            <p className="text-xl text-mist">
               Avant de signer, vous avez besoin d&apos;autre chose qu&apos;un
               dossier de diagnostics réglementaires. Justebati réalise un bilan
               technique indépendant du bien : état du bâti, points de
               vigilance, distinction entre défauts cosmétiques et désordres
               graves, et ordre de grandeur des travaux à prévoir.
             </p>
-            <p className="text-xl text-stone">
+            <p className="text-xl text-mist">
               Objectif : décider en connaissance de cause — ou négocier en
               s&apos;appuyant sur des faits.
             </p>
@@ -174,7 +174,7 @@ export default function ExpertiseAvantAchatPage() {
         </div>
       </Section>
 
-      <Section background="paper-2">
+      <Section background="sand">
         <div className="mx-auto max-w-3xl text-center">
           <h2 className="mb-6 text-2xl font-display">
             Liens utiles

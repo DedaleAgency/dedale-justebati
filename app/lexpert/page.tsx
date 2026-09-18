@@ -20,7 +20,7 @@ export default function ExpertPage() {
             L&apos;expert Justebati
           </h1>
           <div className="prose-custom">
-            <p className="text-xl text-stone">
+            <p className="text-xl text-mist">
               Justebati, c&apos;est une démarche : regarder le bâti avec
               rigueur, formuler des constats utilisables, et rester indépendant
               de tout chantier. L&apos;expert intervient pour les particuliers —
