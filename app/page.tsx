@@ -84,17 +84,17 @@ export default function HomePage() {
           className="object-cover"
           sizes="100vw"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-night/60 via-night/50 to-night/70" />
+        <div className="absolute inset-0 bg-gradient-to-b from-night/70 via-night/60 to-night/80" />
         <div className="relative flex h-full items-center">
           <div className="container-custom">
-            <div className="mx-auto max-w-4xl">
-              <h1 className="mb-6 text-4xl font-display leading-tight text-on-night md:text-5xl lg:text-6xl">
+            <div className="max-w-4xl">
+              <h1 className="mb-8 text-[2.5rem] font-display leading-[1.15] text-on-night md:text-6xl lg:text-7xl">
                 Expertise bâtiment indépendante — sans travaux à vendre
               </h1>
-              <p className="mb-8 text-xl text-on-night/90">
+              <p className="mb-6 text-2xl font-display text-on-night/95 md:text-3xl">
                 L&apos;œil indépendant sur votre bâti.
               </p>
-              <p className="mb-8 text-lg leading-relaxed text-on-night/80">
+              <p className="mb-10 max-w-2xl text-lg leading-relaxed text-on-night/85">
                 Justebati est un cabinet d&apos;expertise bâtiment pour
                 particuliers. Nous inspectons votre bien, identifions les
                 désordres et vous remettons un rapport clair — avec photos et
@@ -113,11 +113,17 @@ export default function HomePage() {
 
       {/* Introduction */}
       <Section>
-        <div className="mx-auto max-w-3xl">
-          <h2 className="mb-6 text-3xl font-display text-center md:text-4xl">
+        <div className="mx-auto max-w-4xl">
+          <div className="mb-8 flex items-center gap-4">
+            <span className="font-mono text-sm uppercase tracking-wider text-mist">
+              Notre mission
+            </span>
+            <div className="h-px flex-1 bg-line" />
+          </div>
+          <h2 className="mb-12 text-4xl font-display md:text-5xl">
             Ce que Justebati fait pour vous
           </h2>
-          <div className="prose-custom">
+          <div className="prose-custom space-y-6 text-lg">
             <p>
               Sur site, l&apos;expert observe la structure, l&apos;enveloppe,
               les points sensibles (fissures, humidité, toiture, malfaçons). Il
@@ -136,10 +142,16 @@ export default function HomePage() {
 
       {/* Expertises */}
       <Section background="sand" id="prestations">
-        <h2 className="mb-12 text-center text-3xl font-display md:text-4xl">
+        <div className="mb-4 flex items-center gap-4">
+          <span className="font-mono text-sm uppercase tracking-wider text-mist">
+            Prestations
+          </span>
+          <div className="h-px flex-1 bg-line" />
+        </div>
+        <h2 className="mb-16 text-4xl font-display md:text-5xl lg:text-6xl">
           Six missions, une même exigence
         </h2>
-        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
           {expertises.map((expertise) => (
             <ExpertiseCard key={expertise.href} {...expertise} />
           ))}
@@ -164,35 +176,73 @@ export default function HomePage() {
 
       {/* Comment ça se passe */}
       <Section background="sand">
-        <div className="mx-auto max-w-3xl text-center">
-          <h2 className="mb-6 text-3xl font-display md:text-4xl">
+        <div className="mx-auto max-w-4xl">
+          <div className="mb-8 flex items-center gap-4">
+            <span className="font-mono text-sm uppercase tracking-wider text-mist">
+              Déroulement
+            </span>
+            <div className="h-px flex-1 bg-line" />
+          </div>
+          <h2 className="mb-12 text-4xl font-display md:text-5xl">
             Comment ça se passe — en bref
           </h2>
-          <ol className="mb-8 space-y-3 text-left">
-            <li className="flex items-start">
-              <span className="mr-3 font-mono text-oxide">01.</span>
-              <span>Vous décrivez votre besoin (appel ou formulaire).</span>
+          <ol className="mb-10 space-y-6">
+            <li className="flex items-start gap-6 border-l-2 border-oxide pl-6">
+              <span className="font-mono text-sm font-medium text-oxide">
+                01
+              </span>
+              <div>
+                <h3 className="mb-1 text-lg font-display">Contact</h3>
+                <p className="text-mist">
+                  Vous décrivez votre besoin (appel ou formulaire).
+                </p>
+              </div>
             </li>
-            <li className="flex items-start">
-              <span className="mr-3 font-mono text-oxide">02.</span>
-              <span>Visite sur site et relevés.</span>
+            <li className="flex items-start gap-6 border-l-2 border-oxide pl-6">
+              <span className="font-mono text-sm font-medium text-oxide">
+                02
+              </span>
+              <div>
+                <h3 className="mb-1 text-lg font-display">Visite</h3>
+                <p className="text-mist">Visite sur site et relevés.</p>
+              </div>
             </li>
-            <li className="flex items-start">
-              <span className="mr-3 font-mono text-oxide">03.</span>
-              <span>Analyse des désordres et de leur gravité.</span>
+            <li className="flex items-start gap-6 border-l-2 border-oxide pl-6">
+              <span className="font-mono text-sm font-medium text-oxide">
+                03
+              </span>
+              <div>
+                <h3 className="mb-1 text-lg font-display">Analyse</h3>
+                <p className="text-mist">
+                  Analyse des désordres et de leur gravité.
+                </p>
+              </div>
             </li>
-            <li className="flex items-start">
-              <span className="mr-3 font-mono text-oxide">04.</span>
-              <span>Chiffrage des travaux à prévoir.</span>
+            <li className="flex items-start gap-6 border-l-2 border-oxide pl-6">
+              <span className="font-mono text-sm font-medium text-oxide">
+                04
+              </span>
+              <div>
+                <h3 className="mb-1 text-lg font-display">Chiffrage</h3>
+                <p className="text-mist">Chiffrage des travaux à prévoir.</p>
+              </div>
             </li>
-            <li className="flex items-start">
-              <span className="mr-3 font-mono text-oxide">05.</span>
-              <span>Remise du rapport écrit illustré.</span>
+            <li className="flex items-start gap-6 border-l-2 border-oxide pl-6">
+              <span className="font-mono text-sm font-medium text-oxide">
+                05
+              </span>
+              <div>
+                <h3 className="mb-1 text-lg font-display">Rapport</h3>
+                <p className="text-mist">Remise du rapport écrit illustré.</p>
+              </div>
             </li>
           </ol>
           <p className="text-mist">
             Le détail étape par étape est sur{" "}
-            <a href="/comment-ca-se-passe" className="text-oxide underline">
+            <a
+              href="/comment-ca-se-passe"
+              className="font-medium text-oxide underline decoration-2 underline-offset-4 transition-colors hover:text-ink"
+            >
               Comment se déroule une expertise
             </a>
             .
@@ -202,40 +252,44 @@ export default function HomePage() {
 
       {/* Pour qui */}
       <Section>
-        <div className="mx-auto max-w-3xl">
-          <h2 className="mb-6 text-center text-3xl font-display md:text-4xl">
-            Pour qui ?
-          </h2>
-          <ul className="space-y-3">
-            <li className="flex items-start">
-              <span className="mr-3 text-oxide">•</span>
-              <span>
+        <div className="mx-auto max-w-4xl">
+          <div className="mb-8 flex items-center gap-4">
+            <span className="font-mono text-sm uppercase tracking-wider text-mist">
+              Public
+            </span>
+            <div className="h-px flex-1 bg-line" />
+          </div>
+          <h2 className="mb-12 text-4xl font-display md:text-5xl">Pour qui ?</h2>
+          <ul className="space-y-5">
+            <li className="flex items-start gap-4">
+              <span className="mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-oxide" />
+              <span className="text-lg">
                 Acquéreurs qui veulent un regard technique avant d&apos;acheter
               </span>
             </li>
-            <li className="flex items-start">
-              <span className="mr-3 text-oxide">•</span>
-              <span>
+            <li className="flex items-start gap-4">
+              <span className="mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-oxide" />
+              <span className="text-lg">
                 Propriétaires confrontés à un désordre (fissures, humidité,
                 toiture, structure)
               </span>
             </li>
-            <li className="flex items-start">
-              <span className="mr-3 text-oxide">•</span>
-              <span>
+            <li className="flex items-start gap-4">
+              <span className="mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-oxide" />
+              <span className="text-lg">
                 Maîtres d&apos;ouvrage en réception ou face à des malfaçons
               </span>
             </li>
-            <li className="flex items-start">
-              <span className="mr-3 text-oxide">•</span>
-              <span>
+            <li className="flex items-start gap-4">
+              <span className="mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-oxide" />
+              <span className="text-lg">
                 Assurés en sinistre (dont sécheresse) qui veulent un appui
                 technique indépendant
               </span>
             </li>
-            <li className="flex items-start">
-              <span className="mr-3 text-oxide">•</span>
-              <span>
+            <li className="flex items-start gap-4">
+              <span className="mt-1.5 h-1.5 w-1.5 flex-shrink-0 rounded-full bg-oxide" />
+              <span className="text-lg">
                 Particuliers en litige avec un artisan ou une entreprise
               </span>
             </li>
@@ -245,28 +299,38 @@ export default function HomePage() {
 
       {/* Ce que Justebati ne fait pas */}
       <Section background="sand">
-        <div className="mx-auto max-w-3xl">
-          <h2 className="mb-6 text-center text-3xl font-display md:text-4xl">
+        <div className="mx-auto max-w-4xl">
+          <div className="mb-8 flex items-center gap-4">
+            <span className="font-mono text-sm uppercase tracking-wider text-mist">
+              Hors périmètre
+            </span>
+            <div className="h-px flex-1 bg-line" />
+          </div>
+          <h2 className="mb-12 text-4xl font-display md:text-5xl">
             Ce que Justebati ne fait pas
           </h2>
-          <ul className="space-y-3">
-            <li className="flex items-start">
-              <span className="mr-3 text-mist">×</span>
-              <span>Estimation de la valeur marchande d&apos;un bien</span>
+          <ul className="mb-10 space-y-5">
+            <li className="flex items-start gap-4">
+              <span className="mt-1 text-2xl text-mist">×</span>
+              <span className="text-lg">
+                Estimation de la valeur marchande d&apos;un bien
+              </span>
             </li>
-            <li className="flex items-start">
-              <span className="mr-3 text-mist">×</span>
-              <span>
+            <li className="flex items-start gap-4">
+              <span className="mt-1 text-2xl text-mist">×</span>
+              <span className="text-lg">
                 Diagnostics réglementaires obligatoires (DPE, amiante, plomb,
                 termites, etc.)
               </span>
             </li>
-            <li className="flex items-start">
-              <span className="mr-3 text-mist">×</span>
-              <span>Travaux, rénovation, vente de traitements</span>
+            <li className="flex items-start gap-4">
+              <span className="mt-1 text-2xl text-mist">×</span>
+              <span className="text-lg">
+                Travaux, rénovation, vente de traitements
+              </span>
             </li>
           </ul>
-          <p className="mt-6 text-center text-mist">
+          <p className="text-lg text-mist">
             Besoin d&apos;un diagnostiqueur ou d&apos;un agent immobilier ? Ce
             n&apos;est pas notre rôle. Besoin d&apos;un œil technique
             indépendant sur le bâti ? C&apos;est le nôtre.
@@ -275,16 +339,16 @@ export default function HomePage() {
       </Section>
 
       {/* CTA Final */}
-      <Section>
-        <div className="mx-auto max-w-2xl text-center">
-          <h2 className="mb-6 text-3xl font-display md:text-4xl">
+      <Section background="dark">
+        <div className="mx-auto max-w-3xl text-center">
+          <h2 className="mb-8 text-4xl font-display md:text-5xl lg:text-6xl">
             Parlons de votre projet
           </h2>
-          <p className="mb-8 text-lg text-mist">
+          <p className="mb-12 text-xl leading-relaxed text-on-night/80">
             Décrivez votre besoin, nous revenons vers vous avec un devis clair —
             sans engagement de chantier.
           </p>
-          <div className="flex flex-col items-center justify-center space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0">
+          <div className="flex flex-col items-center justify-center space-y-4 sm:flex-row sm:space-x-6 sm:space-y-0">
             <Button href="/contact">Demander un devis</Button>
             <Button href="tel:0100000000" variant="secondary">
               Appeler 01 00 00 00 00

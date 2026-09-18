@@ -5,23 +5,23 @@ import Logo from "./Logo";
 export default function Footer() {
   return (
     <footer className="border-t border-line bg-night text-on-night">
-      <div className="container-custom section-spacing">
-        <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-4">
+      <div className="container-custom py-20 md:py-28">
+        <div className="mb-16 grid gap-12 md:grid-cols-12">
           {/* Marque */}
-          <div className="lg:col-span-2">
-            <Logo className="mb-4 h-8 w-auto text-on-dark" mono />
-            <p className="mb-4 text-sm text-mist">
+          <div className="md:col-span-5">
+            <Logo className="mb-6 h-8 w-auto text-on-night" mono />
+            <p className="mb-4 font-display text-lg text-on-night/90">
               {siteConfig.baseline}
             </p>
-            <p className="text-sm text-mist">
+            <p className="text-sm leading-relaxed text-mist">
               Cabinet d&apos;expertise bâtiment indépendant. Aucun travaux à
               vendre.
             </p>
           </div>
 
           {/* Navigation */}
-          <div>
-            <h3 className="mb-4 text-sm font-mono font-medium uppercase tracking-wider">
+          <div className="md:col-span-3">
+            <h3 className="mb-6 text-xs font-mono font-medium uppercase tracking-widest text-on-night/60">
               Navigation
             </h3>
             <ul className="space-y-2 text-sm">
@@ -69,8 +69,8 @@ export default function Footer() {
           </div>
 
           {/* Prestations */}
-          <div>
-            <h3 className="mb-4 text-sm font-mono font-medium uppercase tracking-wider">
+          <div className="md:col-span-4">
+            <h3 className="mb-6 text-xs font-mono font-medium uppercase tracking-widest text-on-night/60">
               Expertises
             </h3>
             <ul className="space-y-2 text-sm">
@@ -127,8 +127,8 @@ export default function Footer() {
         </div>
 
         {/* Bas de footer */}
-        <div className="mt-12 border-t border-mist/20 pt-8">
-          <div className="flex flex-col items-center justify-between space-y-4 text-sm text-mist md:flex-row md:space-y-0">
+        <div className="border-t border-mist/20 pt-8">
+          <div className="flex flex-col items-center justify-between space-y-4 text-xs text-mist md:flex-row md:space-y-0">
             <div className="flex flex-col items-center space-y-2 md:flex-row md:space-x-6 md:space-y-0">
               <p>
                 &copy; {new Date().getFullYear()} {siteConfig.name}

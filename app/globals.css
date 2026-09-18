@@ -18,6 +18,12 @@
   h5,
   h6 {
     @apply font-display;
+    letter-spacing: -0.02em;
+  }
+  
+  body {
+    font-size: 1.0625rem;
+    line-height: 1.6;
   }
 
   @media (prefers-reduced-motion: reduce) {
@@ -35,11 +41,11 @@
 
 @layer utilities {
   .section-spacing {
-    @apply py-16 md:py-24;
+    @apply py-20 md:py-32;
   }
 
   .container-custom {
-    @apply mx-auto max-w-7xl px-6 lg:px-8;
+    @apply mx-auto max-w-6xl px-6 lg:px-8;
   }
 
   .prose-custom {
