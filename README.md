@@ -134,24 +134,34 @@ url: "https://justebati.fr",
 
 ## Design
 
+### Direction artistique v2
+
+Design éditorial premium (principes Awwwards / MERSI) + qualité craft Dédale.  
+Sensation : rapport d'architecte + magazine matériel. Calme, précis, cher — sans bling.
+
 ### Palette de couleurs
 
-Le site utilise une palette "quiet technical" définie dans `tailwind.config.ts` :
+Palette "paper chaud + encre profonde + accent oxyde" définie dans `tailwind.config.ts` :
 
-- **ink** `#1A1814` — Texte principal, logo
-- **paper** `#F4F0E7` — Fond page
-- **paper-2** `#E8E2D6` — Bandes / cards
-- **stone** `#8A8478` — Texte secondaire
-- **copper** `#9C6B3C` — Accent CTA, focus
-- **line** `#D4CEC2` — Bordures
-- **ok-dark** `#0F0E0C` — Fond sombre (footer, hero)
-- **on-dark** `#F4F0E7` — Texte sur sombre
+- **ink** `#12100E` — Texte principal
+- **paper** `#F7F3EB` — Fond page
+- **sand** `#E6DFD2` — Bandes alternées
+- **oxide** `#A85A3A` — Accent CTA, focus
+- **mist** `#6F6A63` — Texte secondaire
+- **line** `#D9D2C5` — Filets
+- **night** `#0C0B0A` — Footer / inversé
+- **on-night** `#F7F3EB` — Texte sur night
 
-### Typographies
+### Typographies (Google Fonts)
 
-- **Display (Fraunces)** — Titres, logo
-- **UI (DM Sans)** — Corps, navigation
-- **Mono (IBM Plex Mono)** — Labels étapes, meta
+- **Display (Newsreader)** — Titres, hero, citations — caractère éditorial
+- **UI (Outfit)** — Navigation, corps, interface — moderne et lisible
+- **Mono (JetBrains Mono)** — Labels étapes, meta — chiffres techniques
+
+### Images
+
+Photos matière cohérentes (Unsplash) : façade pierre, fissures, toiture, détails chantier.  
+Voir crédits complets dans **`VISUELS.md`**.
 
 ### Motion
 
@@ -259,5 +269,5 @@ Réalisation : Dédale Agency
 ---
 
 **Contact technique :** Dédale Agency  
-**Version :** 1.0.0  
+**Version :** 2.0.0 (refonte visuelle complète)  
 **Dernière mise à jour :** 18 septembre 2026
