@@ -3,9 +3,12 @@ import Section from "@/components/Section";
 import Button from "@/components/Button";
 
 export const metadata: Metadata = {
-  title: "Expertise humidité maison | Justebati",
+  title: "Expertise humidité maison",
   description:
     "Humidité, moisissures, infiltrations : identification de la cause par un expert indépendant. Pas de vente de traitement. Rapport clair. Demandez un devis.",
+  alternates: {
+    canonical: "/expertise-humidite",
+  },
 };
 
 export default function ExpertiseHumiditePage() {

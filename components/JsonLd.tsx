@@ -9,7 +9,7 @@ export default function JsonLd() {
     url: siteConfig.url,
     telephone: siteConfig.phoneDisplay,
     email: siteConfig.email,
-    logo: `${siteConfig.url}/logo.png`,
+    logo: `${siteConfig.url}/logo.svg`,
   };
 
   return (

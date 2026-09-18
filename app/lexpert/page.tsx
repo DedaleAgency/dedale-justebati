@@ -3,9 +3,12 @@ import Section from "@/components/Section";
 import Button from "@/components/Button";
 
 export const metadata: Metadata = {
-  title: "L'expert bâtiment | Justebati",
+  title: "L'expert bâtiment",
   description:
     "Parcours, indépendance et méthode de l'expert Justebati. Une expertise au service des particuliers — sans aucun travaux à vendre. Contactez-nous.",
+  alternates: {
+    canonical: "/lexpert",
+  },
 };
 
 export default function ExpertPage() {

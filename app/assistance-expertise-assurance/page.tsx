@@ -3,9 +3,12 @@ import Section from "@/components/Section";
 import Button from "@/components/Button";
 
 export const metadata: Metadata = {
-  title: "Expertise sinistre & sécheresse | Justebati",
+  title: "Expertise sinistre & sécheresse",
   description:
     "Sinistre, sécheresse, refus d'indemnisation : assistance technique indépendante face à l'assureur. Rapport clair pour défendre votre dossier. Devis.",
+  alternates: {
+    canonical: "/assistance-expertise-assurance",
+  },
 };
 
 export default function AssistanceExpertiseAssurancePage() {

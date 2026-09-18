@@ -4,9 +4,12 @@ import FaqAccordion from "@/components/FaqAccordion";
 import Button from "@/components/Button";
 
 export const metadata: Metadata = {
-  title: "FAQ expertise bâtiment | Justebati",
+  title: "FAQ expertise bâtiment",
   description:
     "Indépendance, tarifs, délais, différence avec un diagnostiqueur, sinistres : réponses claires aux questions sur l'expertise Justebati. Contact & devis.",
+  alternates: {
+    canonical: "/faq",
+  },
 };
 
 const faqItems = [

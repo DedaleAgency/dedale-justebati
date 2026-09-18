@@ -3,9 +3,12 @@ import Section from "@/components/Section";
 import Button from "@/components/Button";
 
 export const metadata: Metadata = {
-  title: "Expertise fissures maison | Justebati",
+  title: "Expertise fissures maison",
   description:
     "Fissures sur murs ou façade ? Cause, gravité et préconisations par un expert indépendant. Rapport exploitable — aucun travaux vendus. Demandez un devis.",
+  alternates: {
+    canonical: "/expertise-fissures",
+  },
 };
 
 export default function ExpertiseFissuresPage() {

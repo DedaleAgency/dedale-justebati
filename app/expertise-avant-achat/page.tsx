@@ -3,9 +3,12 @@ import Section from "@/components/Section";
 import Button from "@/components/Button";
 
 export const metadata: Metadata = {
-  title: "Expertise avant achat | Expert bâtiment Justebati",
+  title: "Expertise avant achat",
   description:
     "Sécurisez votre achat : bilan technique indépendant avant compromis. Fissures, humidité, structure. Rapport clair — sans travaux à vendre. Devis.",
+  alternates: {
+    canonical: "/expertise-avant-achat",
+  },
 };
 
 export default function ExpertiseAvantAchatPage() {

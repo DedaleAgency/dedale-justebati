@@ -3,7 +3,7 @@ import Section from "@/components/Section";
 import Button from "@/components/Button";
 
 export const metadata: Metadata = {
-  title: "Page introuvable | Justebati",
+  title: "Page introuvable",
   description:
     "La page demandée n'existe pas ou a été déplacée. Retrouvez l'accueil, les prestations ou le contact Justebati.",
   robots: {
