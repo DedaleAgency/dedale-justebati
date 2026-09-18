@@ -34,7 +34,7 @@ export default function Header() {
           {/* Desktop Navigation */}
           <div className="hidden items-center space-x-8 md:flex">
             <div className="group relative">
-              <button className="text-sm font-medium text-ink transition-colors hover:text-copper">
+              <button className="text-sm font-medium text-ink transition-colors hover:text-oxide">
                 Expertises
               </button>
               <div className="absolute left-0 top-full hidden pt-2 group-hover:block">
@@ -43,7 +43,7 @@ export default function Header() {
                     <Link
                       key={item.href}
                       href={item.href}
-                      className="block rounded px-4 py-2 text-sm text-ink transition-colors hover:bg-paper-2 hover:text-copper"
+                      className="block rounded px-4 py-2 text-sm text-ink transition-colors hover:bg-sand hover:text-oxide"
                     >
                       {item.name}
                     </Link>
@@ -53,31 +53,31 @@ export default function Header() {
             </div>
             <Link
               href="/lexpert"
-              className="text-sm font-medium text-ink transition-colors hover:text-copper"
+              className="text-sm font-medium text-ink transition-colors hover:text-oxide"
             >
               L&apos;expert
             </Link>
             <Link
               href="/comment-ca-se-passe"
-              className="text-sm font-medium text-ink transition-colors hover:text-copper"
+              className="text-sm font-medium text-ink transition-colors hover:text-oxide"
             >
               Comment ça se passe
             </Link>
             <Link
               href="/faq"
-              className="text-sm font-medium text-ink transition-colors hover:text-copper"
+              className="text-sm font-medium text-ink transition-colors hover:text-oxide"
             >
               FAQ
             </Link>
             <a
               href={`tel:${siteConfig.phone}`}
-              className="text-sm font-medium text-copper transition-colors hover:text-ink"
+              className="text-sm font-medium text-oxide transition-colors hover:text-ink"
             >
               {siteConfig.phoneDisplay}
             </a>
             <Link
               href="/contact"
-              className="rounded-lg bg-copper px-6 py-2.5 text-sm font-medium text-paper transition-colors hover:bg-ink"
+              className="rounded-lg bg-oxide px-6 py-2.5 text-sm font-medium text-paper transition-colors hover:bg-ink"
             >
               Devis
             </Link>
@@ -106,7 +106,7 @@ export default function Header() {
           <div className="border-t border-line py-4 md:hidden">
             <div className="space-y-4">
               <div>
-                <div className="mb-2 text-xs font-mono font-medium uppercase tracking-wider text-stone">
+                <div className="mb-2 text-xs font-mono font-medium uppercase tracking-wider text-mist">
                   Expertises
                 </div>
                 {expertises.map((item) => (
@@ -114,7 +114,7 @@ export default function Header() {
                     key={item.href}
                     href={item.href}
                     onClick={() => setIsMenuOpen(false)}
-                    className="block py-2 text-sm text-ink transition-colors hover:text-copper"
+                    className="block py-2 text-sm text-ink transition-colors hover:text-oxide"
                   >
                     {item.name}
                   </Link>
@@ -123,28 +123,28 @@ export default function Header() {
               <Link
                 href="/lexpert"
                 onClick={() => setIsMenuOpen(false)}
-                className="block py-2 text-sm text-ink transition-colors hover:text-copper"
+                className="block py-2 text-sm text-ink transition-colors hover:text-oxide"
               >
                 L&apos;expert
               </Link>
               <Link
                 href="/comment-ca-se-passe"
                 onClick={() => setIsMenuOpen(false)}
-                className="block py-2 text-sm text-ink transition-colors hover:text-copper"
+                className="block py-2 text-sm text-ink transition-colors hover:text-oxide"
               >
                 Comment ça se passe
               </Link>
               <Link
                 href="/faq"
                 onClick={() => setIsMenuOpen(false)}
-                className="block py-2 text-sm text-ink transition-colors hover:text-copper"
+                className="block py-2 text-sm text-ink transition-colors hover:text-oxide"
               >
                 FAQ
               </Link>
               <Link
                 href="/contact"
                 onClick={() => setIsMenuOpen(false)}
-                className="mt-4 block rounded-lg bg-copper px-6 py-2.5 text-center text-sm font-medium text-paper"
+                className="mt-4 block rounded-lg bg-oxide px-6 py-2.5 text-center text-sm font-medium text-paper"
               >
                 Demander un devis
               </Link>

@@ -57,7 +57,7 @@ export default function ProcessSteps() {
             } items-start md:items-center`}
           >
             {/* Step number badge */}
-            <div className="mb-4 flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full border-2 border-copper bg-paper font-mono text-sm font-medium text-copper md:absolute md:left-1/2 md:mb-0 md:-translate-x-1/2">
+            <div className="mb-4 flex h-12 w-12 flex-shrink-0 items-center justify-center rounded-full border-2 border-oxide bg-paper font-mono text-sm font-medium text-oxide md:absolute md:left-1/2 md:mb-0 md:-translate-x-1/2">
               {step.number}
             </div>
 
@@ -70,7 +70,7 @@ export default function ProcessSteps() {
               <h3 className="mb-2 text-xl font-display text-ink">
                 {step.title}
               </h3>
-              <p className="leading-relaxed text-stone">{step.description}</p>
+              <p className="leading-relaxed text-mist">{step.description}</p>
             </div>
           </motion.div>
         ))}

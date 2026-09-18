@@ -22,7 +22,7 @@ export default function StickyMobileCta() {
   return (
     <a
       href={`tel:${siteConfig.phone}`}
-      className={`fixed bottom-6 left-1/2 z-50 flex -translate-x-1/2 items-center space-x-2 rounded-full bg-copper px-6 py-4 text-sm font-medium text-paper shadow-lg transition-all duration-300 hover:bg-ink md:hidden ${
+      className={`fixed bottom-6 left-1/2 z-50 flex -translate-x-1/2 items-center space-x-2 rounded-full bg-oxide px-6 py-4 text-sm font-medium text-paper shadow-lg transition-all duration-300 hover:bg-ink md:hidden ${
         isVisible ? "translate-y-0 opacity-100" : "translate-y-16 opacity-0"
       }`}
       aria-label={`Appeler ${siteConfig.name}`}

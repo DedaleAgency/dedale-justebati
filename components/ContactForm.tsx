@@ -38,11 +38,11 @@ export default function ContactForm() {
 
   if (isSuccess) {
     return (
-      <div className="rounded-lg border-2 border-copper bg-paper-2 p-8 text-center">
+      <div className="rounded-lg border-2 border-oxide bg-paper-2 p-8 text-center">
         <h3 className="mb-2 text-2xl font-display text-ink">
           Demande bien reçue
         </h3>
-        <p className="mb-6 text-stone">
+        <p className="mb-6 text-mist">
           Merci. Nous revenons vers vous rapidement pour votre devis
           d&apos;expertise. En cas d&apos;urgence, appelez le 01 00 00 00 00.
         </p>
@@ -68,7 +68,7 @@ export default function ContactForm() {
             id="prenom"
             name="prenom"
             required
-            className="w-full rounded-lg border border-line bg-paper px-4 py-3 text-ink transition-colors focus:border-copper focus:outline-none"
+            className="w-full rounded-lg border border-line bg-paper px-4 py-3 text-ink transition-colors focus:border-oxide focus:outline-none"
           />
         </div>
         <div>
@@ -83,7 +83,7 @@ export default function ContactForm() {
             id="nom"
             name="nom"
             required
-            className="w-full rounded-lg border border-line bg-paper px-4 py-3 text-ink transition-colors focus:border-copper focus:outline-none"
+            className="w-full rounded-lg border border-line bg-paper px-4 py-3 text-ink transition-colors focus:border-oxide focus:outline-none"
           />
         </div>
       </div>
@@ -103,7 +103,7 @@ export default function ContactForm() {
             placeholder="06 00 00 00 00"
             required
             pattern="[0-9\s]+"
-            className="w-full rounded-lg border border-line bg-paper px-4 py-3 text-ink transition-colors focus:border-copper focus:outline-none"
+            className="w-full rounded-lg border border-line bg-paper px-4 py-3 text-ink transition-colors focus:border-oxide focus:outline-none"
           />
         </div>
         <div>
@@ -120,7 +120,7 @@ export default function ContactForm() {
             placeholder="00000"
             required
             pattern="[0-9]{5}"
-            className="w-full rounded-lg border border-line bg-paper px-4 py-3 text-ink transition-colors focus:border-copper focus:outline-none"
+            className="w-full rounded-lg border border-line bg-paper px-4 py-3 text-ink transition-colors focus:border-oxide focus:outline-none"
           />
         </div>
       </div>
@@ -137,7 +137,7 @@ export default function ContactForm() {
             id="typeBien"
             name="typeBien"
             required
-            className="w-full rounded-lg border border-line bg-paper px-4 py-3 text-ink transition-colors focus:border-copper focus:outline-none"
+            className="w-full rounded-lg border border-line bg-paper px-4 py-3 text-ink transition-colors focus:border-oxide focus:outline-none"
           >
             <option value="">Sélectionnez...</option>
             <option value="maison">Maison</option>
@@ -156,7 +156,7 @@ export default function ContactForm() {
             id="typeMission"
             name="typeMission"
             required
-            className="w-full rounded-lg border border-line bg-paper px-4 py-3 text-ink transition-colors focus:border-copper focus:outline-none"
+            className="w-full rounded-lg border border-line bg-paper px-4 py-3 text-ink transition-colors focus:border-oxide focus:outline-none"
           >
             <option value="">Sélectionnez...</option>
             <option value="avant-achat">Expertise avant achat</option>
@@ -182,22 +182,22 @@ export default function ContactForm() {
           rows={6}
           required
           placeholder="Ex. fissures apparues après l'été, visite avant compromis prévue le..."
-          className="w-full rounded-lg border border-line bg-paper px-4 py-3 text-ink transition-colors focus:border-copper focus:outline-none"
+          className="w-full rounded-lg border border-line bg-paper px-4 py-3 text-ink transition-colors focus:border-oxide focus:outline-none"
         />
       </div>
 
       {error && (
-        <div className="rounded-lg border border-copper bg-copper/10 p-4 text-sm text-ink">
+        <div className="rounded-lg border border-oxide bg-oxide/10 p-4 text-sm text-ink">
           {error}
         </div>
       )}
 
-      <div className="text-sm text-stone">
+      <div className="text-sm text-mist">
         En envoyant ce formulaire, vous acceptez que Justebati traite vos
         données pour répondre à votre demande. Voir la{" "}
         <a
           href="/politique-de-confidentialite"
-          className="text-copper underline"
+          className="text-oxide underline"
         >
           politique de confidentialité
         </a>

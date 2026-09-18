@@ -77,10 +77,10 @@ export default function FaqPage() {
           <h1 className="mb-6 text-4xl font-display md:text-5xl">
             Questions fréquentes
           </h1>
-          <p className="mb-12 text-lg text-stone">
+          <p className="mb-12 text-lg text-mist">
             Réponses courtes sur l&apos;indépendance, le périmètre, le déroulé
             et les situations typiques. Pour un cas précis :{" "}
-            <a href="/contact" className="text-copper underline">
+            <a href="/contact" className="text-oxide underline">
               demandez un devis
             </a>{" "}
             ou appelez le 01 00 00 00 00.
@@ -97,7 +97,7 @@ export default function FaqPage() {
         </div>
       </Section>
 
-      <Section background="paper-2">
+      <Section background="sand">
         <div className="mx-auto max-w-3xl text-center">
           <h2 className="mb-6 text-2xl font-display">
             Liens utiles

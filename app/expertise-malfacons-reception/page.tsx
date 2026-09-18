@@ -20,14 +20,14 @@ export default function ExpertiseMalfaconsPage() {
             Expertise malfaçons et réception de travaux
           </h1>
           <div className="prose-custom">
-            <p className="text-xl text-stone">
+            <p className="text-xl text-mist">
               Travaux mal exécutés, non-conformités, réception qui approche :
               Justebati établit un constat technique indépendant.
               L&apos;objectif est de documenter les désordres, de formuler des
               réserves exploitables et de vous donner un appui clair — pour
               négocier, faire reprendre, ou constituer un dossier.
             </p>
-            <p className="text-xl text-stone">
+            <p className="text-xl text-mist">
               Nous ne vendons aucun travaux. Nous ne sommes pas
               l&apos;entreprise qui a réalisé le chantier.
             </p>
@@ -110,7 +110,7 @@ export default function ExpertiseMalfaconsPage() {
         </div>
       </Section>
 
-      <Section background="paper-2">
+      <Section background="sand">
         <div className="mx-auto max-w-3xl text-center">
           <h2 className="mb-6 text-2xl font-display">
             Liens utiles

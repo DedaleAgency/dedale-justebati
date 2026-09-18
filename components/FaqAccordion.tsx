@@ -20,7 +20,7 @@ export default function FaqAccordion({ items }: FaqAccordionProps) {
       {items.map((item, index) => (
         <div
           key={index}
-          className="rounded-lg border border-line bg-paper transition-colors hover:border-copper"
+          className="rounded-lg border border-line bg-paper transition-colors hover:border-oxide"
         >
           <button
             onClick={() => setOpenIndex(openIndex === index ? null : index)}
@@ -31,7 +31,7 @@ export default function FaqAccordion({ items }: FaqAccordionProps) {
               {item.question}
             </span>
             <svg
-              className={`h-5 w-5 flex-shrink-0 text-copper transition-transform ${
+              className={`h-5 w-5 flex-shrink-0 text-oxide transition-transform ${
                 openIndex === index ? "rotate-180" : ""
               }`}
               fill="none"
@@ -56,7 +56,7 @@ export default function FaqAccordion({ items }: FaqAccordionProps) {
                 className="overflow-hidden"
               >
                 <div className="border-t border-line p-6 pt-4">
-                  <p className="leading-relaxed text-stone">{item.answer}</p>
+                  <p className="leading-relaxed text-mist">{item.answer}</p>
                 </div>
               </motion.div>
             )}

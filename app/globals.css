@@ -76,7 +76,7 @@
   }
 
   .prose-custom a {
-    @apply text-copper underline decoration-1 underline-offset-2 transition-colors hover:text-ink;
+    @apply text-oxide underline decoration-1 underline-offset-2 transition-colors hover:text-ink;
   }
 
   .prose-custom strong {
