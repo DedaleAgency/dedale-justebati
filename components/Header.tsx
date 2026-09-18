@@ -24,21 +24,21 @@ export default function Header() {
   ];
 
   return (
-    <header className="sticky top-0 z-50 border-b border-line bg-paper/95 backdrop-blur-sm">
+    <header className="sticky top-0 z-50 border-b border-line/50 bg-paper/80 backdrop-blur-md">
       <nav className="container-custom">
-        <div className="flex h-20 items-center justify-between">
+        <div className="flex h-24 items-center justify-between">
           <Link href="/" className="flex items-center space-x-2">
             <Logo className="h-8 w-auto" />
           </Link>
 
           {/* Desktop Navigation */}
-          <div className="hidden items-center space-x-8 md:flex">
+          <div className="hidden items-center space-x-10 md:flex">
             <div className="group relative">
               <button className="text-sm font-medium text-ink transition-colors hover:text-oxide">
                 Expertises
               </button>
-              <div className="absolute left-0 top-full hidden pt-2 group-hover:block">
-                <div className="w-64 rounded-lg border border-line bg-paper p-2 shadow-lg">
+              <div className="absolute left-0 top-full hidden pt-3 group-hover:block">
+                <div className="w-72 border border-line/30 bg-paper/95 p-3 shadow-[0_8px_32px_rgba(0,0,0,0.08)] backdrop-blur-sm">
                   {expertises.map((item) => (
                     <Link
                       key={item.href}
