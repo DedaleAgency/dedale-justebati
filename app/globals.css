@@ -1,0 +1,85 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-paper text-ink antialiased;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-display;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+
+    * {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+}
+
+@layer utilities {
+  .section-spacing {
+    @apply py-16 md:py-24;
+  }
+
+  .container-custom {
+    @apply mx-auto max-w-7xl px-6 lg:px-8;
+  }
+
+  .prose-custom {
+    @apply leading-relaxed text-ink;
+  }
+
+  .prose-custom h2 {
+    @apply mb-4 mt-8 text-3xl font-display lg:text-4xl;
+  }
+
+  .prose-custom h3 {
+    @apply mb-3 mt-6 text-2xl font-display lg:text-3xl;
+  }
+
+  .prose-custom h4 {
+    @apply mb-2 mt-4 text-xl font-display lg:text-2xl;
+  }
+
+  .prose-custom p {
+    @apply mb-4;
+  }
+
+  .prose-custom ul,
+  .prose-custom ol {
+    @apply mb-4 ml-6 space-y-2;
+  }
+
+  .prose-custom ul {
+    @apply list-disc;
+  }
+
+  .prose-custom ol {
+    @apply list-decimal;
+  }
+
+  .prose-custom a {
+    @apply text-copper underline decoration-1 underline-offset-2 transition-colors hover:text-ink;
+  }
+
+  .prose-custom strong {
+    @apply font-semibold text-ink;
+  }
+}
