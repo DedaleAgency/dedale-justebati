@@ -1,6 +1,6 @@
 import { Metadata } from "next";
-import Section from "@/components/Section";
-import Button from "@/components/Button";
+import Image from "next/image";
+import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "Expertise malfaçons & réception",
@@ -14,120 +14,93 @@ export const metadata: Metadata = {
 export default function ExpertiseMalfaconsPage() {
   return (
     <>
-      <Section>
-        <div className="mx-auto max-w-4xl">
-          <h1 className="mb-6 text-4xl font-display md:text-5xl">
+      <section className="section-light section-spacing">
+        <div className="container-custom">
+          <div className="mb-12">
+            <div className="relative aspect-[21/9] w-full overflow-hidden">
+              <Image
+                src="/images/peinture-01.jpg"
+                alt="Détail de peinture et finitions - expertise malfaçons"
+                fill
+                className="object-cover"
+                priority
+              />
+            </div>
+          </div>
+          <div className="mx-auto max-w-3xl">
+            <div className="mb-6 text-[11px] font-semibold uppercase tracking-[0.14em] text-copper">
+              Expertise bâtiment
+            </div>
+          <h1 className="mb-6 font-serif text-[clamp(1.875rem,3.2vw,2.375rem)] leading-[1.15] tracking-[-0.01em] text-navy">
             Expertise malfaçons et réception de travaux
           </h1>
-          <div className="prose-custom">
-            <p className="text-xl text-stone">
-              Travaux mal exécutés, non-conformités, réception qui approche :
-              Justebati établit un constat technique indépendant.
-              L&apos;objectif est de documenter les désordres, de formuler des
-              réserves exploitables et de vous donner un appui clair — pour
-              négocier, faire reprendre, ou constituer un dossier.
-            </p>
-            <p className="text-xl text-stone">
-              Nous ne vendons aucun travaux. Nous ne sommes pas
-              l&apos;entreprise qui a réalisé le chantier.
-            </p>
+          <p className="mb-8 text-[17px] leading-[1.65] text-navy-muted">
+            Travaux mal exécutés, non-conformités, réception à préparer ou à sécuriser : Justebati dresse un constat technique indépendant. Le rapport documente les désordres et formule des réserves exploitables.
+          </p>
+          <p className="mb-8 text-base leading-[1.65] text-navy-muted">
+            Nous ne vendons aucun travaux. Notre mission s'arrête au constat et au conseil.
+          </p>
 
-            <h2>Assistance à la réception</h2>
-            <p>
-              La réception est un moment décisif : c&apos;est souvent à cette
-              étape que les réserves doivent être consignées. Une présence ou un
-              passage d&apos;expert peut aider à :
-            </p>
-            <ul>
-              <li>
-                Repérer les non-conformités visibles et les désordres apparents
-              </li>
-              <li>
-                Formuler des réserves précises, localisées et photographiées
-              </li>
-              <li>
-                Distinguer le détail cosmétique du défaut à faire reprendre
-              </li>
-              <li>
-                Préparer la suite (levée de réserves, échanges avec
-                l&apos;entreprise)
-              </li>
-            </ul>
-            <p>
-              Selon le cadre du chantier (construction neuve, rénovation,
-              extension), les enjeux juridiques et contractuels varient.
-              Justebati apporte le regard technique ; votre conseil (avocat,
-              notaire, association de consommateurs) reste compétent sur le
-              droit.
-            </p>
-
-            <h2>Malfaçons après travaux</h2>
-            <p>
-              Si les travaux sont déjà livrés et que des désordres apparaissent
-              — fissures, étanchéité, finitions, structure apparente —
-              l&apos;expertise formalise le constat. Le rapport peut servir de
-              base à une discussion amiable ou, le cas échéant, à un dossier
-              plus formel. Voir aussi{" "}
-              <a href="/litige-artisan">litige avec un artisan</a>.
-            </p>
-
-            <h2>CCMI, VEFA et cadres contractuels</h2>
-            <p>
-              Dans certains projets (notamment construction de maison
-              individuelle ou acquisition en VEFA), la réception et les
-              garanties légales suivent des règles spécifiques. Justebati
-              n&apos;invente pas de procédure à votre place : nous documentons
-              l&apos;état technique du bien et des ouvrages observés, pour que
-              vous puissiez agir dans le cadre qui est le vôtre.
-            </p>
-
-            <h2>Ce que contient le rapport</h2>
-            <ul>
-              <li>
-                Inventaire des désordres et non-conformités constatés
-              </li>
-              <li>Photos localisées</li>
-              <li>Commentaires de gravité et d&apos;urgence</li>
-              <li>
-                Préconisations de reprise ou d&apos;investigations
-              </li>
-              <li>Chiffrage des travaux à prévoir, le cas échéant</li>
-            </ul>
-            <p>
-              Justebati ne réalise pas les diagnostics obligatoires (DPE,
-              amiante…) ni d&apos;estimation immobilière.
-            </p>
-          </div>
-
-          <div className="mt-12 flex flex-col items-start space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0">
-            <Button href="/contact">
-              Demander un devis malfaçons / réception
-            </Button>
-            <Button href="/litige-artisan" variant="secondary">
-              Litige avec un artisan
-            </Button>
-          </div>
-        </div>
-      </Section>
-
-      <Section background="paper-2">
-        <div className="mx-auto max-w-3xl text-center">
-          <h2 className="mb-6 text-2xl font-display">
-            Liens utiles
+          <h2 className="mb-4 mt-8 font-serif text-[clamp(1.625rem,2.5vw,2rem)] leading-[1.2] text-navy">
+            Malfaçons
           </h2>
-          <div className="flex flex-wrap justify-center gap-4">
-            <Button href="/comment-ca-se-passe" variant="secondary">
-              Comment ça se passe
-            </Button>
-            <Button href="/expertise-fissures" variant="secondary">
-              Expertise fissures
-            </Button>
-            <Button href="/faq" variant="secondary">
-              FAQ
-            </Button>
+          <p className="mb-4 text-base leading-[1.65] text-navy-muted">
+            L'expertise peut porter sur :
+          </p>
+          <ul className="mb-4 ml-6 space-y-2 text-base leading-[1.65] text-navy-muted">
+            <li className="list-disc">Défauts d'exécution visibles</li>
+            <li className="list-disc">Non-conformités aux règles de l'art ou aux documents contractuels</li>
+            <li className="list-disc">Désordres sur ouvrages neufs ou rénovés</li>
+            <li className="list-disc">Points à formuler en réserves avant ou après réception</li>
+          </ul>
+          <p className="mb-6 text-base leading-[1.65] text-navy-muted">
+            Le rapport décrit les faits, les photographie et indique les suites techniques recommandées. Il peut servir de base à une discussion amiable ou à un dossier plus formel.
+          </p>
+
+          <h2 className="mb-4 mt-8 font-serif text-[clamp(1.625rem,2.5vw,2rem)] leading-[1.2] text-navy">
+            Assistance à la réception
+          </h2>
+          <p className="mb-4 text-base leading-[1.65] text-navy-muted">
+            La réception est un moment décisif : elle déclenche les garanties et fige une partie des recours. Une assistance indépendante permet de relever les réserves avant de lever les clés ou de signer sans réserve.
+          </p>
+          <p className="mb-6 text-base leading-[1.65] text-navy-muted">
+            Selon le contexte (maison neuve, rénovation, extension), le périmètre de visite est défini à l'avance.
+          </p>
+
+          <h2 className="mb-4 mt-8 font-serif text-[clamp(1.625rem,2.5vw,2rem)] leading-[1.2] text-navy">
+            Lien avec un litige artisan
+          </h2>
+          <p className="mb-6 text-base leading-[1.65] text-navy-muted">
+            Si le désaccord avec l'entreprise s'installe, le constat technique nourrit la négociation ou le dossier. Voir aussi la page litige artisan.
+          </p>
+
+          <h2 className="mb-4 mt-8 font-serif text-[clamp(1.625rem,2.5vw,2rem)] leading-[1.2] text-navy">
+            Ce que Justebati ne fait pas
+          </h2>
+          <ul className="mb-6 ml-6 space-y-2 text-base leading-[1.65] text-navy-muted">
+            <li className="list-disc">Reprise des travaux ou vente d'interventions</li>
+            <li className="list-disc">Diagnostics réglementaires obligatoires</li>
+            <li className="list-disc">Estimation immobilière</li>
+            <li className="list-disc">Conseil juridique (rôle de l'avocat ou du conseil du client)</li>
+          </ul>
+
+          <div className="mt-12 flex flex-col gap-4 sm:flex-row">
+            <Link
+              href="/contact"
+              className="inline-flex items-center justify-center rounded-sm bg-copper px-[22px] py-3 text-[13px] font-semibold text-white transition-colors duration-base hover:bg-copper-hover"
+            >
+              Demander un devis
+            </Link>
+            <Link
+              href="/litige-artisan"
+              className="inline-flex items-center justify-center rounded-sm border border-border-on-paper px-[22px] py-3 text-[13px] font-semibold text-navy transition-colors duration-base hover:bg-navy/[0.03]"
+            >
+              Litige avec un artisan
+            </Link>
+          </div>
           </div>
         </div>
-      </Section>
+      </section>
     </>
   );
 }

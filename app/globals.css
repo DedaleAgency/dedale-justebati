@@ -8,7 +8,7 @@
   }
 
   body {
-    @apply bg-paper text-ink antialiased;
+    @apply bg-navy text-paper font-sans antialiased;
   }
 
   h1,
@@ -17,7 +17,7 @@
   h4,
   h5,
   h6 {
-    @apply font-display;
+    @apply font-serif;
   }
 
   @media (prefers-reduced-motion: reduce) {
@@ -39,23 +39,23 @@
   }
 
   .container-custom {
-    @apply mx-auto max-w-7xl px-6 lg:px-8;
+    @apply mx-auto w-full max-w-[1140px] px-[18px] sm:px-10;
   }
 
   .prose-custom {
-    @apply leading-relaxed text-ink;
+    @apply text-base leading-[1.65] text-paper;
   }
 
   .prose-custom h2 {
-    @apply mb-4 mt-8 text-3xl font-display lg:text-4xl;
+    @apply mb-4 mt-8 font-serif text-[clamp(1.625rem,2.5vw,2rem)] leading-[1.2];
   }
 
   .prose-custom h3 {
-    @apply mb-3 mt-6 text-2xl font-display lg:text-3xl;
+    @apply mb-3 mt-6 font-serif text-[1.375rem] leading-[1.25];
   }
 
   .prose-custom h4 {
-    @apply mb-2 mt-4 text-xl font-display lg:text-2xl;
+    @apply mb-2 mt-4 font-serif text-xl leading-[1.3];
   }
 
   .prose-custom p {
@@ -76,10 +76,35 @@
   }
 
   .prose-custom a {
-    @apply text-copper underline decoration-1 underline-offset-2 transition-colors hover:text-ink;
+    @apply text-copper-light underline decoration-1 underline-offset-2 transition-colors duration-base hover:text-copper;
   }
 
   .prose-custom strong {
-    @apply font-semibold text-ink;
+    @apply font-semibold text-paper;
+  }
+
+  .section-light {
+    @apply bg-paper text-navy;
+  }
+
+  .section-light h1,
+  .section-light h2,
+  .section-light h3,
+  .section-light h4,
+  .section-light h5,
+  .section-light h6 {
+    @apply text-navy;
+  }
+
+  .section-light .prose-custom {
+    @apply text-navy-muted;
+  }
+
+  .section-light .prose-custom strong {
+    @apply text-navy;
+  }
+
+  .section-light .prose-custom a {
+    @apply text-copper-hover hover:text-copper;
   }
 }

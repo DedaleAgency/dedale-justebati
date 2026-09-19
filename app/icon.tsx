@@ -17,26 +17,19 @@ export default function Icon() {
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
-          backgroundColor: "#F4F0E7",
+          backgroundColor: "#0B1623",
         }}
       >
-        <svg
-          width="24"
-          height="24"
-          viewBox="0 0 24 24"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
+        <div
+          style={{
+            fontSize: "20px",
+            fontWeight: "400",
+            color: "#B87333",
+            fontFamily: "serif",
+          }}
         >
-          <path
-            d="M4 20V4M4 20H20"
-            stroke="#9C6B3C"
-            strokeWidth="2"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-          />
-          <circle cx="4" cy="4" r="1.5" fill="#9C6B3C" />
-          <circle cx="20" cy="20" r="1.5" fill="#9C6B3C" />
-        </svg>
+          J
+        </div>
       </div>
     ),
     {

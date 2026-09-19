@@ -20,7 +20,7 @@ export default async function OGImage() {
           flexDirection: "column",
           alignItems: "center",
           justifyContent: "center",
-          backgroundColor: "#F4F0E7",
+          backgroundColor: "#0B1623",
           padding: "80px",
         }}
       >
@@ -33,30 +33,13 @@ export default async function OGImage() {
             textAlign: "center",
           }}
         >
-          <svg
-            width="100"
-            height="100"
-            viewBox="0 0 40 40"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-            style={{ marginBottom: "40px" }}
-          >
-            <path
-              d="M8 32V8M8 32H32"
-              stroke="#9C6B3C"
-              strokeWidth="3"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            />
-            <circle cx="8" cy="8" r="2" fill="#9C6B3C" />
-            <circle cx="32" cy="32" r="2" fill="#9C6B3C" />
-          </svg>
           <div
             style={{
               fontSize: "80px",
-              fontWeight: "bold",
-              color: "#1A1814",
-              marginBottom: "20px",
+              fontWeight: "400",
+              color: "#EDE9E1",
+              marginBottom: "30px",
+              fontFamily: "serif",
             }}
           >
             {siteConfig.name}
@@ -64,7 +47,7 @@ export default async function OGImage() {
           <div
             style={{
               fontSize: "36px",
-              color: "#8A8478",
+              color: "rgba(237, 233, 225, 0.65)",
               maxWidth: "900px",
             }}
           >
