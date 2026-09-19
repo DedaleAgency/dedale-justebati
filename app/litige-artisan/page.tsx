@@ -1,4 +1,5 @@
 import { Metadata } from "next";
+import Image from "next/image";
 import Link from "next/link";
 
 export const metadata: Metadata = {
@@ -12,12 +13,24 @@ export const metadata: Metadata = {
 
 export default function LitigeArtisanPage() {
   return (
-    <section className="section-light section-spacing">
-      <div className="container-custom">
-        <div className="mx-auto max-w-3xl">
-          <div className="mb-6 text-[11px] font-semibold uppercase tracking-[0.14em] text-copper">
-            Expertise bâtiment
+    <>
+      <section className="section-light section-spacing">
+        <div className="container-custom">
+          <div className="mb-12">
+            <div className="relative aspect-[21/9] w-full overflow-hidden">
+              <Image
+                src="/images/mur-01.jpg"
+                alt="Détail de mur et maçonnerie - litige artisan"
+                fill
+                className="object-cover"
+                priority
+              />
+            </div>
           </div>
+          <div className="mx-auto max-w-3xl">
+            <div className="mb-6 text-[11px] font-semibold uppercase tracking-[0.14em] text-copper">
+              Expertise bâtiment
+            </div>
           <h1 className="mb-6 font-serif text-[clamp(1.875rem,3.2vw,2.375rem)] leading-[1.15] tracking-[-0.01em] text-navy">
             Litige avec un artisan : expert bâtiment
           </h1>
@@ -82,8 +95,9 @@ export default function LitigeArtisanPage() {
               Expertise malfaçons
             </Link>
           </div>
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </>
   );
 }

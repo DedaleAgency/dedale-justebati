@@ -109,8 +109,38 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Six missions — Liste éditoriale */}
+      {/* Cabinet — Editorial + Image */}
       <section className="section-light section-spacing">
+        <div className="container-custom">
+          <div className="grid gap-12 md:grid-cols-2 md:items-center">
+            <div>
+              <div className="mb-4 text-[11px] font-semibold uppercase tracking-[0.14em] text-copper">
+                Cabinet
+              </div>
+              <h2 className="mb-6 font-serif text-[clamp(1.625rem,2.5vw,2rem)] leading-[1.2] text-navy">
+                Expertise technique du bâti pour particuliers
+              </h2>
+              <p className="mb-4 text-[17px] leading-[1.65] text-navy">
+                Structure, enveloppe, fissures, humidité, toiture, malfaçons : nous distinguons le cosmétique du grave et chiffrons les travaux à prévoir.
+              </p>
+              <p className="text-sm text-navy-muted">
+                Hors périmètre : DPE et diagnostics réglementaires, estimation immobilière, travaux.
+              </p>
+            </div>
+            <div className="relative aspect-[4/3] overflow-hidden">
+              <Image
+                src="/images/fissure-02.jpg"
+                alt="Détail fissure et ferraillage"
+                fill
+                className="object-cover"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Six missions — Liste éditoriale */}
+      <section className="section-light section-spacing" style={{ paddingTop: 0 }}>
         <div className="container-custom">
           <div className="mb-12 text-center">
             <h2 className="mb-4 font-serif text-[clamp(1.625rem,2.5vw,2rem)] leading-[1.2]">

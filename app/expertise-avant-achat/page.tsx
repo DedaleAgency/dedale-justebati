@@ -17,6 +17,17 @@ export default function ExpertiseAvantAchatPage() {
     <>
       <section className="section-light section-spacing">
         <div className="container-custom">
+          <div className="mb-12">
+            <div className="relative aspect-[21/9] w-full overflow-hidden">
+              <Image
+                src="/images/facade-beton.jpg"
+                alt="Détail de façade béton - expertise avant achat"
+                fill
+                className="object-cover"
+                priority
+              />
+            </div>
+          </div>
           <div className="mx-auto max-w-3xl">
             <div className="mb-6 text-[11px] font-semibold uppercase tracking-[0.14em] text-copper">
               Expertise bâtiment
