@@ -1,11 +1,14 @@
 import { Metadata } from "next";
-import Section from "@/components/Section";
-import Button from "@/components/Button";
+import PageLayout from "@/components/PageLayout";
+import PageHero from "@/components/PageHero";
+import { Button } from "@/components/ui/button";
+import Link from "next/link";
+import Cartouche from "@/components/Cartouche";
 
 export const metadata: Metadata = {
   title: "Expertise humidité maison",
   description:
-    "Humidité, moisissures, infiltrations : identification de la cause par un expert indépendant. Pas de vente de traitement. Rapport clair. Demandez un devis.",
+    "Moisissures, infiltrations, remontées capillaires ? Expertise humidité maison indépendante. On cherche la cause, pas un traitement à vendre. Devis.",
   alternates: {
     canonical: "/expertise-humidite",
   },
@@ -14,122 +17,126 @@ export const metadata: Metadata = {
 export default function ExpertiseHumiditePage() {
   return (
     <>
-      <Section>
-        <div className="mx-auto max-w-4xl">
-          <h1 className="mb-6 text-4xl font-display md:text-5xl">
-            Expertise humidité maison
-          </h1>
-          <div className="prose-custom">
-            <p className="text-xl text-stone">
-              Taches, odeurs, moisissures, salpêtre, peinture qui cloque :
-              l&apos;humidité a plusieurs causes, et le mauvais traitement coûte
-              cher. Justebati identifie l&apos;origine probable du désordre —
-              infiltration, condensation, remontées capillaires, défaut
-              d&apos;étanchéité — et vous remet un rapport indépendant.
-            </p>
-            <p className="text-xl text-stone">
-              Nous ne vendons aucun traitement ni travaux. Notre rôle
-              s&apos;arrête à l&apos;expertise et aux préconisations.
-            </p>
-
-            <h2>Causes fréquentes (repères)</h2>
-            <p>
-              Sans se substituer à la visite, les situations rencontrées
-              incluent souvent :
-            </p>
-            <ul>
-              <li>
-                <strong>Infiltrations</strong> : toiture, noues, façades,
-                menuiseries, réseaux
-              </li>
-              <li>
-                <strong>Condensation</strong> : ventilation insuffisante, ponts
-                thermiques, usages
-              </li>
-              <li>
-                <strong>Remontées capillaires</strong> : absence ou défaillance
-                de rupture de capillarité, niveaux bas
-              </li>
-              <li>
-                <strong>Défauts d&apos;étanchéité</strong> : terrasses, salles
-                d&apos;eau, joints
-              </li>
-            </ul>
-            <p>
-              Chaque cause appelle une réponse différente. Traiter les symptômes
-              sans la cause ne règle rien durablement — d&apos;où
-              l&apos;intérêt d&apos;un constat neutre avant d&apos;engager des
-              travaux.
-            </p>
-
-            <h2>Ce que l&apos;expert fait sur site</h2>
-            <ul>
-              <li>
-                Relevés visuels et photographiques des zones touchées
-              </li>
-              <li>
-                Lecture du contexte constructif (âge, matériaux, transformations)
-              </li>
-              <li>Recherche d&apos;indices de provenance de l&apos;eau</li>
-              <li>
-                Distinction entre désordre localisé et problème plus large
-              </li>
-              <li>
-                Préconisations d&apos;investigations complémentaires si
-                nécessaire
-              </li>
-              <li>Chiffrage des travaux à prévoir, selon les constats</li>
-            </ul>
-            <p>
-              Justebati ne réalise pas les diagnostics obligatoires (DPE,
-              amiante…) ni d&apos;estimation immobilière.
-            </p>
-
-            <h2>Rapport exploitable</h2>
-            <p>
-              Vous repartez avec un document écrit : constats, hypothèses de
-              cause, niveau d&apos;urgence, pistes de remédiation et ordre de
-              grandeur financier. De quoi dialoguer avec un artisan, un bureau
-              d&apos;études ou votre assureur — sans pression commerciale de
-              notre part.
-            </p>
-
-            <h2>Humidité et projet d&apos;achat</h2>
-            <p>
-              Une trace d&apos;humidité au moment de la visite d&apos;un bien à
-              acquérir mérite un regard technique avant engagement. Voir aussi
-              l&apos;
-              <a href="/expertise-avant-achat">expertise avant achat</a>.
-            </p>
-          </div>
-
-          <div className="mt-12 flex flex-col items-start space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0">
-            <Button href="/contact">Demander un devis humidité</Button>
-            <Button href="/comment-ca-se-passe" variant="secondary">
-              Voir comment se déroule une mission
-            </Button>
-          </div>
+      <PageLayout>
+        <PageHero
+          imageSrc="https://images.unsplash.com/photo-1604709177225-055f99402ea3?q=80&w=2070&auto=format&fit=crop"
+          imageAlt="Mur humide avec traces de moisissure et d'infiltration"
+        />
+        <Cartouche
+          fields={[
+            { label: "Doc.", value: "JB-M03" },
+            { label: "Mission", value: "Humidité" },
+            { label: "Statut", value: "Indépendant" },
+            { label: "Travaux", value: "Aucun" },
+          ]}
+        />
+        <div className="mb-4 mt-6 font-mono text-[11px] uppercase tracking-[0.07em] text-oxide">
+          Diagnostic humidité
         </div>
-      </Section>
+        <h1 className="mb-6 font-display text-[clamp(2rem,3.5vw,3rem)] font-medium leading-[1.12] tracking-[-0.02em]">
+          Expertise humidité maison
+        </h1>
+        <div className="prose max-w-none">
+          <p className="lead">
+            Moisissures, taches, odeurs, salpêtre : l&apos;humidité dans un bâtiment peut avoir
+            plusieurs causes. Justebati inspecte votre bien, identifie l&apos;origine du désordre
+            et vous remet un diagnostic clair. Nous ne vendons aucun traitement.
+          </p>
 
-      <Section background="paper-2">
+          <h2>Pourquoi faire expertiser l&apos;humidité</h2>
+          <p>
+            Un excès d&apos;humidité peut dégrader le bâti, affecter la santé des occupants et
+            entraîner des coûts de traitement élevés. Avant d&apos;entreprendre des travaux, il
+            faut comprendre la cause : infiltration, condensation, remontée capillaire,
+            défaut d&apos;étanchéité, fuite cachée. Justebati ne vend pas de solution « clé en
+            main » : nous apportons le diagnostic technique indépendant.
+          </p>
+
+          <h2>Les types d&apos;humidité les plus courants</h2>
+          <ul>
+            <li>
+              <strong>Infiltration</strong> : eau qui pénètre par la toiture, les façades, les
+              menuiseries ou les fondations
+            </li>
+            <li>
+              <strong>Condensation</strong> : vapeur d&apos;eau qui se condense sur les parois
+              froides (ventilation insuffisante, pont thermique)
+            </li>
+            <li>
+              <strong>Remontée capillaire</strong> : eau du sol qui remonte dans les murs par
+              capillarité (absence ou défaillance de barrière étanche)
+            </li>
+            <li>
+              <strong>Fuite</strong> : canalisation, chasse d&apos;eau, évacuation défectueuse
+            </li>
+          </ul>
+          <p>
+            L&apos;expert observe les traces, mesure si nécessaire l&apos;humidité des matériaux,
+            étudie la configuration du bien et formule une hypothèse de cause.
+          </p>
+
+          <h2>Ce que l&apos;expert regarde</h2>
+          <ul>
+            <li>Localisation et étendue des traces d&apos;humidité</li>
+            <li>Type de désordre : moisissures, salpêtre, cloques, décollement</li>
+            <li>Configuration du bâti : ventilation, isolation, exposition</li>
+            <li>
+              Points sensibles : caves, murs enterrés, combles, pièces humides (salle de bain,
+              cuisine)
+            </li>
+            <li>Indices de défaut d&apos;étanchéité ou de fuite</li>
+          </ul>
+
+          <h2>Le rapport d&apos;expertise</h2>
+          <p>
+            Vous recevez un document écrit et illustré qui décrit les désordres constatés, expose
+            la ou les causes probables, et recommande une solution : ventilation, réparation
+            d&apos;étanchéité, traitement de remontée, réfection de revêtement. Le chiffrage des
+            travaux est donné à titre indicatif — Justebati ne les réalise pas.
+          </p>
+
+          <h2>Justebati vs entreprise de traitement</h2>
+          <p>
+            Beaucoup d&apos;entreprises qui diagnostiquent l&apos;humidité vendent également le
+            traitement. Justebati n&apos;en vend aucun : notre rémunération, c&apos;est la mission
+            d&apos;expertise. Le rapport reste neutre et vous pouvez le partager avec
+            l&apos;artisan de votre choix.
+          </p>
+
+          <h2>Pour qui ?</h2>
+          <p>
+            Propriétaires ou locataires confrontés à des problèmes d&apos;humidité (moisissures,
+            taches, odeurs), en phase de diagnostic ou en litige, qui veulent un avis technique
+            neutre avant d&apos;engager des travaux.
+          </p>
+        </div>
+
+        <div className="mt-12 flex flex-col gap-4 sm:flex-row">
+          <Button asChild className="bg-ink text-paper hover:bg-oxide">
+            <Link href="/contact">Demander une expertise humidité</Link>
+          </Button>
+          <Button asChild variant="outline">
+            <Link href="/comment-ca-se-passe">Comment ça se passe</Link>
+          </Button>
+        </div>
+      </PageLayout>
+
+      <div className="border-b border-ink bg-sand px-6 py-16 lg:px-12">
         <div className="mx-auto max-w-3xl text-center">
-          <h2 className="mb-6 text-2xl font-display">
-            Liens utiles
-          </h2>
+          <h2 className="mb-6 font-display text-[1.5rem] font-medium">Liens utiles</h2>
           <div className="flex flex-wrap justify-center gap-4">
-            <Button href="/expertise-avant-achat" variant="secondary">
-              Expertise avant achat
+            <Button asChild variant="secondary">
+              <Link href="/expertise-fissures">Expertise fissures</Link>
             </Button>
-            <Button href="/expertise-fissures" variant="secondary">
-              Expertise fissures
+            <Button asChild variant="secondary">
+              <Link href="/expertise-avant-achat">Expertise avant achat</Link>
             </Button>
-            <Button href="/faq" variant="secondary">
-              FAQ
+            <Button asChild variant="secondary">
+              <Link href="/faq">FAQ</Link>
             </Button>
           </div>
         </div>
-      </Section>
+      </div>
     </>
   );
 }

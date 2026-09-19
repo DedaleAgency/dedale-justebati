@@ -1,7 +1,9 @@
-"use client";
-
-import { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
 
 interface FaqItem {
   question: string;
@@ -13,56 +15,18 @@ interface FaqAccordionProps {
 }
 
 export default function FaqAccordion({ items }: FaqAccordionProps) {
-  const [openIndex, setOpenIndex] = useState<number | null>(null);
-
   return (
-    <div className="space-y-4">
+    <Accordion className="w-full">
       {items.map((item, index) => (
-        <div
-          key={index}
-          className="rounded-lg border border-line bg-paper transition-colors hover:border-copper"
-        >
-          <button
-            onClick={() => setOpenIndex(openIndex === index ? null : index)}
-            className="flex w-full items-start justify-between p-6 text-left"
-            aria-expanded={openIndex === index}
-          >
-            <span className="pr-8 font-display text-lg text-ink">
-              {item.question}
-            </span>
-            <svg
-              className={`h-5 w-5 flex-shrink-0 text-copper transition-transform ${
-                openIndex === index ? "rotate-180" : ""
-              }`}
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M19 9l-7 7-7-7"
-              />
-            </svg>
-          </button>
-          <AnimatePresence>
-            {openIndex === index && (
-              <motion.div
-                initial={{ height: 0, opacity: 0 }}
-                animate={{ height: "auto", opacity: 1 }}
-                exit={{ height: 0, opacity: 0 }}
-                transition={{ duration: 0.3 }}
-                className="overflow-hidden"
-              >
-                <div className="border-t border-line p-6 pt-4">
-                  <p className="leading-relaxed text-stone">{item.answer}</p>
-                </div>
-              </motion.div>
-            )}
-          </AnimatePresence>
-        </div>
+        <AccordionItem key={`item-${index}`} value={`item-${index}`} className="border-b border-line">
+          <AccordionTrigger className="py-5 text-left font-sans text-[15px] font-semibold hover:text-oxide">
+            {item.question}
+          </AccordionTrigger>
+          <AccordionContent className="pb-5 pt-2 text-[15px] leading-relaxed text-mist">
+            {item.answer}
+          </AccordionContent>
+        </AccordionItem>
       ))}
-    </div>
+    </Accordion>
   );
 }

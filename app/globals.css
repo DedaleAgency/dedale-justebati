@@ -1,3 +1,6 @@
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+@import "./prose.css";
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -5,10 +8,13 @@
 @layer base {
   html {
     scroll-behavior: smooth;
+    overflow-x: hidden;
   }
 
   body {
-    @apply bg-paper text-ink antialiased;
+    @apply antialiased bg-paper text-ink font-sans;
+    overflow-x: hidden;
+    max-width: 100vw;
   }
 
   h1,
@@ -31,55 +37,46 @@
       transition-duration: 0.01ms !important;
     }
   }
-}
+  
+  :root {
+    
+    --ink: 30 12% 9%;
+    --paper: 40 33% 93%;
+    --sand: 36 24% 86%;
+    --oxide: 14 37% 40%;
+    --mist: 30 6% 40%;
+    --line: 36 20% 78%;
+    --night: 30 12% 5%;
+    --on-night: 40 33% 93%;
 
-@layer utilities {
-  .section-spacing {
-    @apply py-16 md:py-24;
+    --background: 40 33% 93%;
+    --foreground: 30 12% 9%;
+    --card: 40 33% 93%;
+    --card-foreground: 30 12% 9%;
+    --popover: 40 33% 93%;
+    --popover-foreground: 30 12% 9%;
+    --primary: 30 12% 9%;
+    --primary-foreground: 40 33% 93%;
+    --secondary: 36 24% 86%;
+    --secondary-foreground: 30 12% 9%;
+    --muted: 36 24% 86%;
+    --muted-foreground: 30 6% 40%;
+    --accent: 14 37% 40%;
+    --accent-foreground: 40 33% 93%;
+    --destructive: 14 37% 40%;
+    --destructive-foreground: 40 33% 93%;
+    --border: 36 20% 78%;
+    --input: 36 20% 78%;
+    --ring: 14 37% 40%;
+    --chart-1: 14 37% 40%;
+    --chart-2: 30 6% 40%;
+    --chart-3: 36 24% 86%;
+    --chart-4: 36 20% 78%;
+    --chart-5: 30 12% 9%;
+    --radius: 0px;
   }
 
-  .container-custom {
-    @apply mx-auto max-w-7xl px-6 lg:px-8;
-  }
-
-  .prose-custom {
-    @apply leading-relaxed text-ink;
-  }
-
-  .prose-custom h2 {
-    @apply mb-4 mt-8 text-3xl font-display lg:text-4xl;
-  }
-
-  .prose-custom h3 {
-    @apply mb-3 mt-6 text-2xl font-display lg:text-3xl;
-  }
-
-  .prose-custom h4 {
-    @apply mb-2 mt-4 text-xl font-display lg:text-2xl;
-  }
-
-  .prose-custom p {
-    @apply mb-4;
-  }
-
-  .prose-custom ul,
-  .prose-custom ol {
-    @apply mb-4 ml-6 space-y-2;
-  }
-
-  .prose-custom ul {
-    @apply list-disc;
-  }
-
-  .prose-custom ol {
-    @apply list-decimal;
-  }
-
-  .prose-custom a {
-    @apply text-copper underline decoration-1 underline-offset-2 transition-colors hover:text-ink;
-  }
-
-  .prose-custom strong {
-    @apply font-semibold text-ink;
+  * {
+    @apply border-border;
   }
 }

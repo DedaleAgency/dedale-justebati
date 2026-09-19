@@ -1,0 +1,64 @@
+.prose {
+  @apply text-ink leading-relaxed;
+}
+
+.prose p {
+  @apply mb-4;
+}
+
+.prose h2 {
+  @apply mb-4 mt-8 font-display text-[clamp(1.5rem,2.2vw,2rem)] font-medium leading-tight tracking-[-0.015em];
+}
+
+.prose h3 {
+  @apply mb-3 mt-6 font-display text-[clamp(1.2rem,1.8vw,1.5rem)] font-medium leading-tight tracking-[-0.01em];
+}
+
+.prose h4 {
+  @apply mb-2 mt-4 font-sans text-[1.1rem] font-semibold leading-tight tracking-tight;
+}
+
+.prose ul,
+.prose ol {
+  @apply mb-4 ml-6 space-y-2;
+}
+
+.prose ul {
+  @apply list-disc;
+}
+
+.prose ol {
+  @apply list-decimal;
+}
+
+.prose li {
+  @apply text-[15px] leading-relaxed;
+}
+
+.prose a {
+  @apply text-oxide underline decoration-1 underline-offset-2 transition-colors hover:text-ink;
+}
+
+.prose strong {
+  @apply font-semibold text-ink;
+}
+
+.prose table {
+  @apply mb-6 w-full border-collapse;
+}
+
+.prose th {
+  @apply border border-line bg-sand p-3 text-left font-semibold;
+}
+
+.prose td {
+  @apply border border-line p-3;
+}
+
+.prose tr:nth-child(even) {
+  @apply bg-sand/30;
+}
+
+.prose .lead {
+  @apply text-[17px] font-medium leading-relaxed text-mist lg:text-[18px];
+}

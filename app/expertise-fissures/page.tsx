@@ -1,11 +1,14 @@
 import { Metadata } from "next";
-import Section from "@/components/Section";
-import Button from "@/components/Button";
+import PageLayout from "@/components/PageLayout";
+import PageHero from "@/components/PageHero";
+import { Button } from "@/components/ui/button";
+import Link from "next/link";
+import Cartouche from "@/components/Cartouche";
 
 export const metadata: Metadata = {
   title: "Expertise fissures maison",
   description:
-    "Fissures sur murs ou façade ? Cause, gravité et préconisations par un expert indépendant. Rapport exploitable — aucun travaux vendus. Demandez un devis.",
+    "Fissure sur votre bien : cause, gravité, évolution ? Expertise indépendante fissures maison et appartement. Rapport clair — aucun travaux à vendre.",
   alternates: {
     canonical: "/expertise-fissures",
   },
@@ -14,118 +17,116 @@ export const metadata: Metadata = {
 export default function ExpertiseFissuresPage() {
   return (
     <>
-      <Section>
-        <div className="mx-auto max-w-4xl">
-          <h1 className="mb-6 text-4xl font-display md:text-5xl">
-            Expertise fissures maison
-          </h1>
-          <div className="prose-custom">
-            <p className="text-xl text-stone">
-              Une fissure sur un mur, une façade ou un plafond inquiète — à
-              juste titre. Toutes ne menacent pas la structure. Certaines
-              signalent un mouvement du sol, un défaut constructif ou un
-              sinistre (dont sécheresse). Justebati établit un constat technique
-              indépendant : cause probable, gravité, suivi ou réparation, et
-              préconisations claires.
-            </p>
-            <p className="text-xl text-stone">
-              Nous ne vendons aucun travaux. Le rapport sert à comprendre et à
-              agir — pas à vous vendre un chantier.
-            </p>
-
-            <h2>Cosmétique ou structurel ?</h2>
-            <p>L&apos;expertise distingue notamment :</p>
-            <ul>
-              <li>
-                <strong>Fissures de surface</strong> : enduit, peinture, retrait
-                de matériaux — souvent sans enjeu structurel immédiat
-              </li>
-              <li>
-                <strong>Fissures traversantes ou évolutives</strong> : indices
-                de mouvement, tassement, poussée, ou désordre plus profond
-              </li>
-              <li>
-                <strong>Fissures en lien avec le sol</strong> : argiles,
-                sécheresse, drainage — à croiser avec le contexte du site
-              </li>
-            </ul>
-            <p>
-              L&apos;ouverture, l&apos;orientation, la localisation (angles,
-              ouvertures, joints) et l&apos;historique du bien guident
-              l&apos;analyse. L&apos;objectif : hiérarchiser le risque, pas
-              dramatiser ni minimiser.
-            </p>
-
-            <h2>Ce que contient le rapport</h2>
-            <ul>
-              <li>Description et cartographie des désordres observés</li>
-              <li>Hypothèses de cause documentées par les constats</li>
-              <li>Appréciation de la gravité et des urgences</li>
-              <li>
-                Préconisations (surveillance, investigations complémentaires,
-                principes de réparation)
-              </li>
-              <li>Chiffrage des travaux à prévoir, le cas échéant</li>
-              <li>Illustrations photographiques</li>
-            </ul>
-            <p>
-              Justebati ne réalise pas les diagnostics obligatoires (DPE,
-              amiante…) ni d&apos;estimation immobilière.
-            </p>
-
-            <h2>Lien avec la sécheresse et l&apos;assurance</h2>
-            <p>
-              Certaines fissures s&apos;inscrivent dans un contexte de
-              retrait-gonflement des argiles ou de sinistre déclaré. Dans ce
-              cas, un constat technique indépendant peut appuyer votre dialogue
-              avec l&apos;assureur. Justebati propose une{" "}
-              <a href="/assistance-expertise-assurance">
-                assistance expertise d&apos;assurance et sinistre
-              </a>{" "}
-              — sans promettre d&apos;indemnisation ni de résultat chiffré face
-              à la compagnie.
-            </p>
-
-            <h2>Quand faire appel ?</h2>
-            <ul>
-              <li>Fissures apparues ou qui s&apos;élargissent</li>
-              <li>Désordres après travaux, extension ou sinistre</li>
-              <li>
-                Achat d&apos;un bien présentant des fissures visibles
-              </li>
-              <li>
-                Demande d&apos;avis avant de lancer une réparation
-              </li>
-            </ul>
-          </div>
-
-          <div className="mt-12 flex flex-col items-start space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0">
-            <Button href="/contact">Demander un devis fissures</Button>
-            <Button href="/assistance-expertise-assurance" variant="secondary">
-              Assistance sinistre / sécheresse
-            </Button>
-          </div>
+      <PageLayout>
+        <PageHero
+          imageSrc="https://images.unsplash.com/photo-1621905252507-b35492cc74b4?q=80&w=2069&auto=format&fit=crop"
+          imageAlt="Fissure sur mur en béton, détail de pathologie"
+        />
+        <Cartouche
+          fields={[
+            { label: "Doc.", value: "JB-M02" },
+            { label: "Mission", value: "Fissures" },
+            { label: "Statut", value: "Indépendant" },
+            { label: "Travaux", value: "Aucun" },
+          ]}
+        />
+        <div className="mb-4 mt-6 font-mono text-[11px] uppercase tracking-[0.07em] text-oxide">
+          Diagnostic fissures
         </div>
-      </Section>
+        <h1 className="mb-6 font-display text-[clamp(2rem,3.5vw,3rem)] font-medium leading-[1.12] tracking-[-0.02em]">
+          Expertise fissures maison
+        </h1>
+        <div className="prose max-w-none">
+          <p className="lead">
+            Une fissure peut être cosmétique ou révéler un désordre structurel. L&apos;expert
+            Justebati inspecte le bien, identifie la cause probable, évalue la gravité et propose
+            un suivi ou une réparation adaptée. Sans vendre de travaux.
+          </p>
 
-      <Section background="paper-2">
+          <h2>Quand faire appel à un expert fissures</h2>
+          <p>
+            Vous venez de constater une fissure sur votre bien (mur, façade, plafond, dalle). Vous
+            vous demandez si elle évolue, si elle nécessite des travaux, si elle peut affecter la
+            solidité ou la valeur du bâti. Justebati ne réalise pas les travaux : nous apportons le
+            regard technique neutre pour comprendre et décider.
+          </p>
+
+          <h2>Ce que l&apos;expert analyse</h2>
+          <ul>
+            <li>Localisation et orientation de la fissure</li>
+            <li>Ouverture, profondeur, tracé</li>
+            <li>Indices d&apos;évolution (jauges, photos anciennes si disponibles)</li>
+            <li>
+              Contexte : nature du sol, fondations, sinistres antérieurs, travaux récents, climat
+            </li>
+            <li>Présence de désordres associés (humidité, déformation, épaufrures)</li>
+          </ul>
+
+          <h2>Les causes les plus fréquentes</h2>
+          <p>
+            Les fissures peuvent avoir plusieurs origines : retrait/gonflement d&apos;argile
+            (sécheresse), tassement différentiel, défaut de fondation, poussée latérale, infiltration
+            répétée, malfaçon de construction, ou simple retrait thermique. L&apos;expert croise les
+            indices pour établir une hypothèse de cause.
+          </p>
+
+          <h2>Le rapport d&apos;expertise</h2>
+          <p>
+            Vous recevez un document écrit et illustré qui décrit les fissures constatées,
+            hiérarchise leur gravité, expose la ou les causes probables, et recommande une conduite
+            : surveillance simple, réparation cosmétique, ou intervention structurelle. Le chiffrage
+            des travaux est donné à titre indicatif — Justebati ne les réalise pas.
+          </p>
+
+          <h2>Fissure structurelle ou cosmétique ?</h2>
+          <p>
+            Une fissure fine et stable, sans ouverture évolutive, peut être cosmétique. Une fissure
+            traversante, en escalier, ou accompagnée de déformation nécessite une attention
+            particulière. L&apos;expert vous aide à faire la distinction.
+          </p>
+
+          <h2>Cas particulier : sécheresse et catastrophe naturelle</h2>
+          <p>
+            Si vous suspectez un sinistre sécheresse (reconnaissance cat-nat), l&apos;expertise
+            Justebati peut servir de base à votre déclaration auprès de l&apos;assureur. Nous ne
+            remplaçons pas l&apos;expert d&apos;assurance, mais nous documentons les désordres de
+            manière indépendante.
+          </p>
+
+          <h2>Pour qui ?</h2>
+          <p>
+            Propriétaires confrontés à des fissures sur maison ou appartement, en phase
+            d&apos;observation ou en litige, qui veulent un avis technique neutre avant
+            d&apos;engager des travaux ou de constituer un dossier.
+          </p>
+        </div>
+
+        <div className="mt-12 flex flex-col gap-4 sm:flex-row">
+          <Button asChild className="bg-ink text-paper hover:bg-oxide">
+            <Link href="/contact">Demander une expertise fissures</Link>
+          </Button>
+          <Button asChild variant="outline">
+            <Link href="/comment-ca-se-passe">Comment ça se passe</Link>
+          </Button>
+        </div>
+      </PageLayout>
+
+      <div className="border-b border-ink bg-sand px-6 py-16 lg:px-12">
         <div className="mx-auto max-w-3xl text-center">
-          <h2 className="mb-6 text-2xl font-display">
-            Liens utiles
-          </h2>
+          <h2 className="mb-6 font-display text-[1.5rem] font-medium">Liens utiles</h2>
           <div className="flex flex-wrap justify-center gap-4">
-            <Button href="/expertise-avant-achat" variant="secondary">
-              Expertise avant achat
+            <Button asChild variant="secondary">
+              <Link href="/expertise-avant-achat">Expertise avant achat</Link>
             </Button>
-            <Button href="/comment-ca-se-passe" variant="secondary">
-              Comment ça se passe
+            <Button asChild variant="secondary">
+              <Link href="/expertise-humidite">Expertise humidité</Link>
             </Button>
-            <Button href="/faq" variant="secondary">
-              FAQ
+            <Button asChild variant="secondary">
+              <Link href="/assistance-expertise-assurance">Assistance assurance</Link>
             </Button>
           </div>
         </div>
-      </Section>
+      </div>
     </>
   );
 }

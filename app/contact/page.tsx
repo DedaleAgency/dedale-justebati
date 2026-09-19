@@ -1,12 +1,12 @@
 import { Metadata } from "next";
-import Section from "@/components/Section";
+import PageLayout from "@/components/PageLayout";
 import ContactForm from "@/components/ContactForm";
-import { siteConfig } from "@/config/site";
+import Cartouche from "@/components/Cartouche";
 
 export const metadata: Metadata = {
-  title: "Devis expertise bâtiment",
+  title: "Contact & devis expertise bâtiment",
   description:
-    "Décrivez votre besoin : avant achat, fissures, humidité, malfaçons, sinistre ou litige. Réponse soignée. Expertise indépendante — sans travaux à vendre.",
+    "Demandez un devis d'expertise bâtiment. Formulaire ou téléphone : 01 00 00 00 00. Réponse rapide. Justebati — expert indépendant, aucun travaux à vendre.",
   alternates: {
     canonical: "/contact",
   },
@@ -14,72 +14,72 @@ export const metadata: Metadata = {
 
 export default function ContactPage() {
   return (
-    <>
-      <Section>
-        <div className="mx-auto max-w-4xl">
-          <h1 className="mb-6 text-4xl font-display md:text-5xl">
-            Demander un devis d&apos;expertise
-          </h1>
-          <div className="prose-custom mb-12">
-            <p className="text-xl text-stone">
-              Décrivez votre situation. Nous revenons vers vous avec un devis
-              d&apos;expertise adapté — sans engagement de travaux. Justebati ne
-              vend aucun travaux, ne réalise pas les diagnostics obligatoires
-              (DPE, amiante…) ni d&apos;estimation immobilière.
-            </p>
-          </div>
+    <PageLayout maxWidth="narrow">
+      <Cartouche
+        fields={[
+          { label: "Doc.", value: "JB-CNT" },
+          { label: "Objet", value: "Contact" },
+          { label: "Téléphone", value: "01 00 00 00 00" },
+          { label: "Email", value: "contact@exemple.fr" },
+        ]}
+      />
+      <div className="mb-4 mt-6 font-mono text-[11px] uppercase tracking-[0.07em] text-oxide">
+        Demander un devis
+      </div>
+      <h1 className="mb-6 font-display text-[clamp(2rem,3.5vw,3rem)] font-medium leading-[1.12] tracking-[-0.02em]">
+        Contact & devis
+      </h1>
+      <div className="prose max-w-none">
+        <p className="lead">
+          Décrivez votre situation dans le formulaire ci-dessous ou appelez directement le 01 00 00
+          00 00. Nous vous revenons avec un devis clair — sans engagement de chantier.
+        </p>
+      </div>
 
-          <div className="mb-12 rounded-lg border border-line bg-paper-2 p-8">
-            <h2 className="mb-4 text-2xl font-display">Coordonnées</h2>
-            <div className="space-y-2">
-              <p className="flex items-center space-x-2">
-                <span className="text-stone">Téléphone :</span>
-                <a
-                  href={`tel:${siteConfig.phone}`}
-                  className="font-medium text-copper hover:text-ink"
-                >
-                  {siteConfig.phoneDisplay}
-                </a>
-              </p>
-              <p className="flex items-center space-x-2">
-                <span className="text-stone">E-mail :</span>
-                <a
-                  href={`mailto:${siteConfig.email}`}
-                  className="font-medium text-copper hover:text-ink"
-                >
-                  {siteConfig.email}
-                </a>
-              </p>
-            </div>
-          </div>
-
+      <div className="my-12 space-y-6">
+        <div className="grid gap-6 border-b border-line pb-6 sm:grid-cols-2">
           <div>
-            <h2 className="mb-6 text-2xl font-display">Formulaire de devis</h2>
-            <ContactForm />
+            <div className="mb-2 font-mono text-[11px] uppercase tracking-[0.07em] text-oxide">
+              Téléphone
+            </div>
+            <a
+              href="tel:0100000000"
+              className="text-[17px] font-medium text-ink hover:text-oxide"
+            >
+              01 00 00 00 00
+            </a>
           </div>
-
-          <div className="mt-12 rounded-lg border border-line bg-paper-2 p-8">
-            <h2 className="mb-4 text-2xl font-display">Après l&apos;envoi</h2>
-            <p className="leading-relaxed text-stone">
-              Nous étudions votre message et vous recontactons pour préciser le
-              devis (périmètre, conditions, délais indicatifs). Pour le déroulé
-              type d&apos;une mission :{" "}
-              <a href="/comment-ca-se-passe" className="text-copper underline">
-                Comment ça se passe
-              </a>
-              . Questions générales :{" "}
-              <a href="/faq" className="text-copper underline">
-                FAQ
-              </a>
-              . Qui intervient :{" "}
-              <a href="/lexpert" className="text-copper underline">
-                L&apos;expert
-              </a>
-              .
-            </p>
+          <div>
+            <div className="mb-2 font-mono text-[11px] uppercase tracking-[0.07em] text-oxide">
+              Email
+            </div>
+            <a
+              href="mailto:contact@exemple.fr"
+              className="text-[17px] font-medium text-ink hover:text-oxide"
+            >
+              contact@exemple.fr
+            </a>
           </div>
         </div>
-      </Section>
-    </>
+
+        <div>
+          <h2 className="mb-6 font-display text-[1.5rem] font-medium">Formulaire de contact</h2>
+          <ContactForm />
+        </div>
+      </div>
+
+      <div className="prose max-w-none">
+        <h3>Ce que nous avons besoin de savoir</h3>
+        <ul>
+          <li>Type de bien (maison, appartement)</li>
+          <li>Localisation approximative (code postal)</li>
+          <li>Nature du besoin (achat, fissures, humidité, litige, sinistre…)</li>
+          <li>Contexte rapide (quand, où, quoi)</li>
+        </ul>
+        <p>
+          Justebati ne vend aucun travaux. Le devis concerne uniquement la mission d&apos;expertise.
+        </p>
+      </div>
+    </PageLayout>
   );
 }
