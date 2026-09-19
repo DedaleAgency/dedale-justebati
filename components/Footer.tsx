@@ -8,7 +8,7 @@ export default function Footer() {
           <div>
             <div className="mb-3 font-display text-[22px] font-bold">JusteBati</div>
             <p className="max-w-[36ch] text-[13px] leading-relaxed text-on-night/55">
-              Cabinet d'expertise bâtiment indépendant pour particuliers. Aucun travaux à vendre.
+              Cabinet d&apos;expertise bâtiment indépendant pour particuliers. Aucun travaux à vendre.
             </p>
           </div>
 

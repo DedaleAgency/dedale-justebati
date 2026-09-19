@@ -87,7 +87,7 @@ export default function HomePage() {
             Expertise bâtiment indépendante — sans travaux à vendre
           </h1>
           <p className="mb-7 max-w-[38ch] text-[15px] leading-relaxed text-mist">
-            L'œil indépendant sur votre bâti. Justebati inspecte votre bien, identifie les
+            L&apos;œil indépendant sur votre bâti. Justebati inspecte votre bien, identifie les
             désordres et vous remet un rapport clair — avec photos et préconisations. Nous ne
             vendons aucun travaux.
           </p>
@@ -116,11 +116,11 @@ export default function HomePage() {
         </div>
         <div className="mt-6 space-y-4 text-mist lg:mt-0">
           <p>
-            Vous achetez, vous constatez une fissure, vous doutez d'une humidité, vous êtes en
-            litige ou face à un sinistre : vous avez besoin d'un regard technique neutre.
+            Vous achetez, vous constatez une fissure, vous doutez d&apos;une humidité, vous êtes en
+            litige ou face à un sinistre : vous avez besoin d&apos;un regard technique neutre.
           </p>
           <p>
-            Sur site, l'expert observe la structure, l'enveloppe, les points sensibles (fissures,
+            Sur site, l&apos;expert observe la structure, l&apos;enveloppe, les points sensibles (fissures,
             humidité, toiture, malfaçons). Il distingue le cosmétique du grave. Il chiffre les
             travaux à prévoir. Il formalise le tout dans un rapport écrit exploitable — pour
             décider, négocier ou constituer un dossier.
@@ -157,12 +157,12 @@ export default function HomePage() {
             Conclusion · rapport
           </div>
           <h2 className="mb-[18px] max-w-[18ch] font-display text-[clamp(1.6rem,2.5vw,2.3rem)] font-medium leading-[1.2] tracking-[-0.015em]">
-            Pourquoi l'indépendance change tout
+            Pourquoi l&apos;indépendance change tout
           </h2>
           <p className="max-w-[46ch] text-mist">
-            Beaucoup d'intervenants du bâtiment ont un intérêt à vous vendre des travaux. Justebati
-            n'en a aucun : nous ne réalisons pas les chantiers que nous préconisons. Notre
-            rémunération, c'est la mission d'expertise. Votre rapport reste neutre, lisible et
+            Beaucoup d&apos;intervenants du bâtiment ont un intérêt à vous vendre des travaux. Justebati
+            n&apos;en a aucun : nous ne réalisons pas les chantiers que nous préconisons. Notre
+            rémunération, c&apos;est la mission d&apos;expertise. Votre rapport reste neutre, lisible et
             utilisable.
           </p>
         </div>
@@ -206,13 +206,13 @@ export default function HomePage() {
             Pour qui ?
           </div>
           <h2 className="mb-5 font-display text-[clamp(1.4rem,2.2vw,1.9rem)] font-medium leading-[1.2] tracking-[-0.015em]">
-            Ceux qui ont besoin d'un œil technique neutre
+            Ceux qui ont besoin d&apos;un œil technique neutre
           </h2>
           <ul className="space-y-0">
             {[
-              "Acquéreurs avant d'acheter",
+              "Acquéreurs avant d&apos;acheter",
               "Propriétaires face à un désordre",
-              "Maîtres d'ouvrage en réception",
+              "Maîtres d&apos;ouvrage en réception",
               "Assurés en sinistre (dont sécheresse)",
               "Particuliers en litige avec un artisan",
             ].map((item, i) => (
@@ -247,8 +247,8 @@ export default function HomePage() {
             ))}
           </ul>
           <p className="mt-5 text-[14px] text-on-night/55">
-            Besoin d'un diagnostiqueur ou d'un agent immobilier ? Ce n'est pas notre rôle. Besoin
-            d'un œil technique indépendant sur le bâti ? C'est le nôtre.
+            Besoin d&apos;un diagnostiqueur ou d&apos;un agent immobilier ? Ce n&apos;est pas notre rôle. Besoin
+            d&apos;un œil technique indépendant sur le bâti ? C&apos;est le nôtre.
           </p>
         </article>
       </section>
