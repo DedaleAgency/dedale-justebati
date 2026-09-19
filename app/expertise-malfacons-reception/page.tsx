@@ -1,5 +1,6 @@
 import { Metadata } from "next";
 import PageLayout from "@/components/PageLayout";
+import PageHero from "@/components/PageHero";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import Cartouche from "@/components/Cartouche";
@@ -17,6 +18,10 @@ export default function ExpertiseMalfaconsReceptionPage() {
   return (
     <>
       <PageLayout>
+        <PageHero
+          imageSrc="https://images.unsplash.com/photo-1503387762-592deb58ef4e?q=80&w=2070&auto=format&fit=crop"
+          imageAlt="Détails de finitions sur mur et joints"
+        />
         <Cartouche
           fields={[
             { label: "Doc.", value: "JB-M04" },

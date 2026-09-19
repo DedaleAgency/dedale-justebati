@@ -1,5 +1,6 @@
 import { Metadata } from "next";
 import PageLayout from "@/components/PageLayout";
+import PageHero from "@/components/PageHero";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import Cartouche from "@/components/Cartouche";
@@ -17,6 +18,10 @@ export default function ExpertiseAvantAchatPage() {
   return (
     <>
       <PageLayout>
+        <PageHero
+          imageSrc="https://images.unsplash.com/photo-1560518883-ce09059eeffa?q=80&w=2073&auto=format&fit=crop"
+          imageAlt="Façade de maison individuelle vue de la rue"
+        />
         <Cartouche
           fields={[
             { label: "Doc.", value: "JB-M01" },

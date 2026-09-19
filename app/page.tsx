@@ -3,7 +3,10 @@ import { Button } from "@/components/ui/button";
 import Cartouche from "@/components/Cartouche";
 import MissionRow from "@/components/MissionRow";
 import FriseEtapes from "@/components/FriseEtapes";
+import SeqPhoto from "@/components/SeqPhoto";
+import CoteAnnotation from "@/components/CoteAnnotation";
 import Link from "next/link";
+import Image from "next/image";
 
 export const metadata: Metadata = {
   title: {
@@ -65,7 +68,24 @@ export default function HomePage() {
     <>
       <section className="grid border-b border-ink lg:grid-cols-[7fr_5fr] lg:min-h-[88vh]">
         <div className="relative min-h-[42vh] overflow-hidden bg-night lg:min-h-[88vh]">
-          <div className="h-full w-full bg-gradient-to-br from-mist/20 to-night" />
+          <Image
+            src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=2070&auto=format&fit=crop"
+            alt="Mur en béton avec détail de joint architectural"
+            fill
+            className="object-cover"
+            style={{ filter: "saturate(0.5) contrast(1.08)" }}
+            priority
+          />
+          <CoteAnnotation
+            number="01"
+            label="Joint pierre"
+            position={{ left: "12%", top: "38%" }}
+          />
+          <CoteAnnotation
+            number="02"
+            label="Point sensible"
+            position={{ left: "52%", top: "58%" }}
+          />
           <div className="absolute bottom-4 left-4 border-l-2 border-oxide bg-night/45 px-[10px] py-[6px] font-mono text-[10px] uppercase tracking-[0.08em] text-on-night">
             Photo · façade · lumière rasante
           </div>
@@ -199,6 +219,13 @@ export default function HomePage() {
         </div>
         <FriseEtapes />
       </section>
+
+      <SeqPhoto
+        wideImage="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?q=80&w=2070&auto=format&fit=crop"
+        wideAlt="Volume bâti, vue d'ensemble de la façade"
+        detailImage="https://images.unsplash.com/photo-1565008576549-57569a49371d?q=80&w=2074&auto=format&fit=crop"
+        detailAlt="Fissure fine sur enduit, vue rapprochée"
+      />
 
       <section className="grid border-b border-ink lg:grid-cols-2">
         <article className="border-b border-line bg-paper px-6 py-14 lg:border-b-0 lg:border-r lg:px-12 lg:py-16">

@@ -1,13 +1,14 @@
 import { Metadata } from "next";
 import PageLayout from "@/components/PageLayout";
+import PageHero from "@/components/PageHero";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import Cartouche from "@/components/Cartouche";
 
 export const metadata: Metadata = {
-  title: "Expertise humidité",
+  title: "Expertise humidité maison",
   description:
-    "Moisissures, infiltrations, remontées capillaires ? Expertise humidité indépendante. On cherche la cause, pas un traitement à vendre. Devis.",
+    "Moisissures, infiltrations, remontées capillaires ? Expertise humidité maison indépendante. On cherche la cause, pas un traitement à vendre. Devis.",
   alternates: {
     canonical: "/expertise-humidite",
   },
@@ -17,6 +18,10 @@ export default function ExpertiseHumiditePage() {
   return (
     <>
       <PageLayout>
+        <PageHero
+          imageSrc="https://images.unsplash.com/photo-1604709177225-055f99402ea3?q=80&w=2070&auto=format&fit=crop"
+          imageAlt="Mur humide avec traces de moisissure et d'infiltration"
+        />
         <Cartouche
           fields={[
             { label: "Doc.", value: "JB-M03" },
@@ -29,7 +34,7 @@ export default function ExpertiseHumiditePage() {
           Diagnostic humidité
         </div>
         <h1 className="mb-6 font-display text-[clamp(2rem,3.5vw,3rem)] font-medium leading-[1.12] tracking-[-0.02em]">
-          Expertise humidité
+          Expertise humidité maison
         </h1>
         <div className="prose max-w-none">
           <p className="lead">

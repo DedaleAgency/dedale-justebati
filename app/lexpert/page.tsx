@@ -1,5 +1,6 @@
 import { Metadata } from "next";
 import PageLayout from "@/components/PageLayout";
+import PageHero from "@/components/PageHero";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import Cartouche from "@/components/Cartouche";
@@ -17,6 +18,10 @@ export default function ExpertPage() {
   return (
     <>
       <PageLayout>
+        <PageHero
+          imageSrc="https://images.unsplash.com/photo-1589939705384-5185137a7f0f?q=80&w=2070&auto=format&fit=crop"
+          imageAlt="Vue intérieure d'une pièce avec fenêtre et lumière naturelle"
+        />
         <Cartouche
           fields={[
             { label: "Doc.", value: "JB-EX" },

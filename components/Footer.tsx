@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Logo from "@/components/Logo";
 
 export default function Footer() {
   return (
@@ -6,7 +7,9 @@ export default function Footer() {
       <div className="mx-auto px-6 py-12 lg:px-12 lg:py-16">
         <div className="grid gap-10 border-b border-[#2A2824] pb-9 lg:grid-cols-[2fr_1fr_1fr] lg:gap-12">
           <div>
-            <div className="mb-3 font-display text-[22px] font-bold">JusteBati</div>
+            <div className="mb-3">
+              <Logo className="h-[26px] w-auto text-on-night" />
+            </div>
             <p className="max-w-[36ch] text-[13px] leading-relaxed text-on-night/55">
               Cabinet d&apos;expertise bâtiment indépendant pour particuliers. Aucun travaux à vendre.
             </p>
@@ -21,7 +24,9 @@ export default function Footer() {
                 { href: "/expertise-avant-achat", label: "Avant achat" },
                 { href: "/expertise-fissures", label: "Fissures" },
                 { href: "/expertise-humidite", label: "Humidité" },
-                { href: "/contact", label: "Contact" },
+                { href: "/expertise-malfacons-reception", label: "Malfaçons" },
+                { href: "/assistance-expertise-assurance", label: "Assurance" },
+                { href: "/litige-artisan", label: "Litige" },
               ].map((link) => (
                 <li key={link.href}>
                   <Link
@@ -44,7 +49,9 @@ export default function Footer() {
                 { href: "/lexpert", label: "L'expert" },
                 { href: "/comment-ca-se-passe", label: "Méthode" },
                 { href: "/faq", label: "FAQ" },
+                { href: "/contact", label: "Contact" },
                 { href: "/mentions-legales", label: "Mentions légales" },
+                { href: "/politique-de-confidentialite", label: "Confidentialité" },
               ].map((link) => (
                 <li key={link.href}>
                   <Link

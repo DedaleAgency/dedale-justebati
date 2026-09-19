@@ -1,11 +1,12 @@
 import { Metadata } from "next";
 import PageLayout from "@/components/PageLayout";
+import PageHero from "@/components/PageHero";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import Cartouche from "@/components/Cartouche";
 
 export const metadata: Metadata = {
-  title: "Expertise fissures",
+  title: "Expertise fissures maison",
   description:
     "Fissure sur votre bien : cause, gravité, évolution ? Expertise indépendante fissures maison et appartement. Rapport clair — aucun travaux à vendre.",
   alternates: {
@@ -17,6 +18,10 @@ export default function ExpertiseFissuresPage() {
   return (
     <>
       <PageLayout>
+        <PageHero
+          imageSrc="https://images.unsplash.com/photo-1621905252507-b35492cc74b4?q=80&w=2069&auto=format&fit=crop"
+          imageAlt="Fissure sur mur en béton, détail de pathologie"
+        />
         <Cartouche
           fields={[
             { label: "Doc.", value: "JB-M02" },
@@ -29,7 +34,7 @@ export default function ExpertiseFissuresPage() {
           Diagnostic fissures
         </div>
         <h1 className="mb-6 font-display text-[clamp(2rem,3.5vw,3rem)] font-medium leading-[1.12] tracking-[-0.02em]">
-          Expertise fissures
+          Expertise fissures maison
         </h1>
         <div className="prose max-w-none">
           <p className="lead">
