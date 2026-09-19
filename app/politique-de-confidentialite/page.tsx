@@ -1,8 +1,8 @@
 import { Metadata } from "next";
-import Section from "@/components/Section";
+import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Confidentialité",
+  title: "Confidentialité | Justebati",
   description:
     "Traitement des données personnelles, formulaires et cookies sur justebati.fr — transparence RGPD.",
   alternates: {
@@ -10,174 +10,119 @@ export const metadata: Metadata = {
   },
 };
 
-export default function PolitiqueConfidentialitePage() {
+export default function ConfidentialitePage() {
   return (
-    <Section>
-      <div className="mx-auto max-w-4xl">
-        <h1 className="mb-6 text-4xl font-display md:text-5xl">
-          Politique de confidentialité
-        </h1>
-        <div className="prose-custom">
-          <p>
-            La présente politique décrit la manière dont les données personnelles
-            sont traitées sur le site <strong>justebati.fr</strong>, édité par
-            Justebati (coordonnées éditeur : voir{" "}
-            <a href="/mentions-legales">mentions légales</a>).
-          </p>
-          <p>
-            Justebati s&apos;engage à traiter vos données de façon loyale,
-            limitée au nécessaire, et conforme au Règlement général sur la
-            protection des données (RGPD) et à la loi Informatique et Libertés.
+    <section className="section-light section-spacing">
+      <div className="container-custom">
+        <div className="mx-auto max-w-3xl">
+          <h1 className="mb-6 font-serif text-[clamp(1.875rem,3.2vw,2.375rem)] leading-[1.15] tracking-[-0.01em] text-navy">
+            Politique de confidentialité
+          </h1>
+          <p className="mb-8 text-base leading-[1.65] text-navy-muted">
+            La présente politique décrit le traitement des données personnelles collectées via le site justebati.fr, notamment via le formulaire de contact et les éventuels cookies.
           </p>
 
-          <h2>Responsable du traitement</h2>
-          <p>Le responsable du traitement est l&apos;éditeur du site Justebati :</p>
-          <ul>
-            <li>
-              Identité : <em>[raison sociale / nom — à fournir]</em>
-            </li>
-            <li>
-              Adresse : <em>[à fournir]</em>
-            </li>
-            <li>Contact : contact@exemple.fr — 01 00 00 00 00</li>
+          <h2 className="mb-4 mt-8 font-serif text-[clamp(1.625rem,2.5vw,2rem)] leading-[1.2] text-navy">
+            Responsable de traitement
+          </h2>
+          <div className="mb-6 space-y-1 text-base text-navy-muted">
+            <p><strong>Éditeur / responsable :</strong> [À compléter — raison sociale client]</p>
+            <p><strong>Contact :</strong> contact@exemple.fr — 01 00 00 00 00</p>
+            <p><strong>Adresse :</strong> [À compléter]</p>
+          </div>
+
+          <h2 className="mb-4 mt-8 font-serif text-[clamp(1.625rem,2.5vw,2rem)] leading-[1.2] text-navy">
+            Données collectées
+          </h2>
+          <p className="mb-4 text-base text-navy-muted">
+            Via le formulaire de devis / contact, peuvent être collectés :
+          </p>
+          <ul className="mb-6 ml-6 space-y-2 text-base text-navy-muted">
+            <li className="list-disc">Identité : prénom, nom</li>
+            <li className="list-disc">Coordonnées : téléphone, éventuellement e-mail si fourni</li>
+            <li className="list-disc">Contexte : code postal, type de bien, type de mission, description libre</li>
           </ul>
-
-          <h2>Données collectées</h2>
-
-          <h3>Formulaire de contact / devis</h3>
-          <p>
-            Lorsque vous utilisez le formulaire, nous collectons notamment :
-            prénom, nom, téléphone, code postal, type de bien, type de mission,
-            description libre. Ces données sont nécessaires pour répondre à votre
-            demande de devis ou de contact.
+          <p className="mb-6 text-base text-navy-muted">
+            Aucune donnée sensible n'est demandée par le formulaire standard.
           </p>
 
-          <h3>Données de navigation</h3>
-          <p>
-            Des données techniques peuvent être collectées automatiquement
-            (adresse IP, type de navigateur, pages consultées, horodatage), via
-            journaux serveur ou outils de mesure d&apos;audience le cas échéant.
-          </p>
-
-          <h2>Finalités</h2>
-          <ul>
-            <li>Traiter et répondre à vos demandes de devis ou de contact</li>
-            <li>
-              Assurer le suivi de la relation commerciale liée à une mission
-              d&apos;expertise
-            </li>
-            <li>
-              Améliorer le site et mesurer l&apos;audience (si outils activés)
-            </li>
-            <li>Respecter les obligations légales applicables</li>
+          <h2 className="mb-4 mt-8 font-serif text-[clamp(1.625rem,2.5vw,2rem)] leading-[1.2] text-navy">
+            Finalités
+          </h2>
+          <ul className="mb-4 ml-6 space-y-2 text-base text-navy-muted">
+            <li className="list-disc">Répondre aux demandes de devis et de contact</li>
+            <li className="list-disc">Organiser les missions d'expertise</li>
+            <li className="list-disc">Assurer le suivi commercial et administratif des dossiers</li>
+            <li className="list-disc">Respecter les obligations légales applicables</li>
           </ul>
+          <p className="mb-6 text-base text-navy-muted">
+            Base légale principale : exécution de mesures précontractuelles / contrat, et intérêt légitime de répondre aux sollicitations.
+          </p>
 
-          <h2>Base légale</h2>
-          <ul>
-            <li>
-              Exécution de mesures précontractuelles à votre demande (devis,
-              prise de contact)
-            </li>
-            <li>
-              Intérêt légal à assurer la sécurité et le bon fonctionnement du
-              site
-            </li>
-            <li>
-              Consentement, le cas échéant, pour certains cookies non essentiels
-            </li>
-            <li>Obligation légale lorsque applicable</li>
+          <h2 className="mb-4 mt-8 font-serif text-[clamp(1.625rem,2.5vw,2rem)] leading-[1.2] text-navy">
+            Destinataires
+          </h2>
+          <p className="mb-4 text-base text-navy-muted">
+            Les données sont traitées par Justebati (éditeur). Elles peuvent être accessibles aux prestataires techniques strictement nécessaires (hébergement, envoi d'e-mails transactionnels), dans le cadre de leurs missions.
+          </p>
+          <p className="mb-6 text-base text-navy-muted">
+            Elles ne sont pas vendues. Justebati ne vend par ailleurs aucun travaux.
+          </p>
+
+          <h2 className="mb-4 mt-8 font-serif text-[clamp(1.625rem,2.5vw,2rem)] leading-[1.2] text-navy">
+            Durée de conservation
+          </h2>
+          <p className="mb-4 text-base text-navy-muted">
+            Les durées exactes seront fixées selon la politique interne du client. En principe :
+          </p>
+          <ul className="mb-6 ml-6 space-y-2 text-base text-navy-muted">
+            <li className="list-disc">Demandes sans suite : conservation limitée au temps nécessaire au traitement de la demande</li>
+            <li className="list-disc">Dossiers de mission : conservation pour la durée de la relation et les obligations légales / responsabilité professionnelle</li>
           </ul>
-
-          <h2>Destinataires</h2>
-          <p>
-            Les données sont destinées à Justebati. Elles peuvent être transmises
-            à des prestataires techniques (hébergement, envoi d&apos;e-mails,
-            maintenance) strictement pour les besoins du service, dans le cadre
-            d&apos;accords appropriés.
-          </p>
-          <p>Justebati ne vend pas vos données personnelles.</p>
-
-          <h2>Durée de conservation</h2>
-          <ul>
-            <li>
-              Demandes de devis / contact sans suite : durée limitée nécessaire
-              au suivi, puis archivage ou suppression selon la politique interne
-            </li>
-            <li>
-              Clients / missions : conservation pour la durée de la relation et
-              des obligations légales (comptables, contentieuses) applicables
-            </li>
-            <li>
-              Journaux techniques : durée courte, liée à la sécurité et au
-              diagnostic
-            </li>
-          </ul>
-          <p>
-            Les durées exactes seront précisées dès validation client / process
-            interne.
+          <p className="mb-6 text-base text-navy-muted">
+            Précisions à compléter dès validation client.
           </p>
 
-          <h2>Cookies</h2>
-          <p>Le site peut utiliser :</p>
-          <ul>
-            <li>
-              <strong>Cookies essentiels</strong> : fonctionnement technique
-              (session, sécurité, préférences de consentement)
-            </li>
-            <li>
-              <strong>Cookies de mesure d&apos;audience</strong> : uniquement
-              s&apos;ils sont mis en place, et selon le régime de consentement
-              applicable
-            </li>
-          </ul>
-          <p>
-            Vous pouvez configurer votre navigateur pour refuser certains
-            cookies. Un bandeau de consentement sera affiché si des cookies non
-            essentiels sont déployés.
+          <h2 className="mb-4 mt-8 font-serif text-[clamp(1.625rem,2.5vw,2rem)] leading-[1.2] text-navy">
+            Cookies et mesure d'audience
+          </h2>
+          <p className="mb-6 text-base text-navy-muted">
+            Le détail des cookies et outils d'analytics réellement déployés sera mis à jour à la mise en production. Tant que non déployés, aucun bandeau cookies non nécessaire n'est requis au-delà du strict technique.
           </p>
 
-          <h2>Vos droits</h2>
-          <p>
-            Conformément au RGPD, vous disposez d&apos;un droit d&apos;accès, de
-            rectification, d&apos;effacement, de limitation, d&apos;opposition,
-            et de portabilité le cas échéant. Vous pouvez également définir des
-            directives relatives au sort de vos données après décès.
+          <h2 className="mb-4 mt-8 font-serif text-[clamp(1.625rem,2.5vw,2rem)] leading-[1.2] text-navy">
+            Vos droits
+          </h2>
+          <p className="mb-4 text-base text-navy-muted">
+            Conformément au RGPD, vous disposez d'un droit d'accès, de rectification, d'effacement, de limitation, d'opposition et de portabilité le cas échéant. Vous pouvez introduire une réclamation auprès de la CNIL.
           </p>
-          <p>
-            Pour exercer vos droits : contact@exemple.fr ou 01 00 00 00 00.
-            Joignez un élément permettant de justifier votre identité si
-            nécessaire.
-          </p>
-          <p>
-            Vous pouvez introduire une réclamation auprès de la CNIL
-            (www.cnil.fr).
+          <p className="mb-6 text-base text-navy-muted">
+            Pour exercer vos droits : contact@exemple.fr — 01 00 00 00 00.
           </p>
 
-          <h2>Sécurité</h2>
-          <p>
-            Des mesures techniques et organisationnelles raisonnables sont mises
-            en œuvre pour protéger les données contre l&apos;accès non autorisé,
-            la perte ou l&apos;altération. Aucun système n&apos;est infaillible ;
-            en cas d&apos;incident notable, les procédures légales de
-            notification seront suivies le cas échéant.
+          <h2 className="mb-4 mt-8 font-serif text-[clamp(1.625rem,2.5vw,2rem)] leading-[1.2] text-navy">
+            Mise à jour
+          </h2>
+          <p className="mb-6 text-base text-navy-muted">
+            Cette politique pourra être mise à jour. La version publiée sur justebati.fr prévaut.
           </p>
 
-          <h2>Modifications</h2>
-          <p>
-            Cette politique peut être mise à jour. La version en ligne fait foi.
-            Date de dernière mise à jour indicative : 18 septembre 2026.
-          </p>
-
-          <h2>Contact</h2>
-          <p>
-            Questions relatives à la confidentialité : contact@exemple.fr —
-            01 00 00 00 00.
-          </p>
-          <p>
-            Voir aussi les <a href="/mentions-legales">mentions légales</a>.
-          </p>
+          <div className="mt-12 flex flex-col gap-4 sm:flex-row">
+            <Link
+              href="/mentions-legales"
+              className="text-copper-hover underline underline-offset-2 hover:text-copper"
+            >
+              Mentions légales →
+            </Link>
+            <Link
+              href="/contact"
+              className="text-copper-hover underline underline-offset-2 hover:text-copper"
+            >
+              Contact →
+            </Link>
+          </div>
         </div>
       </div>
-    </Section>
+    </section>
   );
 }

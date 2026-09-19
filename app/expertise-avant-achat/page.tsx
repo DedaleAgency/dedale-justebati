@@ -1,9 +1,10 @@
 import { Metadata } from "next";
-import Section from "@/components/Section";
+import Image from "next/image";
+import Link from "next/link";
 import Button from "@/components/Button";
 
 export const metadata: Metadata = {
-  title: "Expertise avant achat",
+  title: "Expertise avant achat | Expert bâtiment Justebati",
   description:
     "Sécurisez votre achat : bilan technique indépendant avant compromis. Fissures, humidité, structure. Rapport clair — sans travaux à vendre. Devis.",
   alternates: {
@@ -14,184 +15,86 @@ export const metadata: Metadata = {
 export default function ExpertiseAvantAchatPage() {
   return (
     <>
-      <Section>
-        <div className="mx-auto max-w-4xl">
-          <h1 className="mb-6 text-4xl font-display md:text-5xl">
-            Expertise avant achat immobilier
-          </h1>
-          <div className="prose-custom">
-            <p className="text-xl text-stone">
-              Avant de signer, vous avez besoin d&apos;autre chose qu&apos;un
-              dossier de diagnostics réglementaires. Justebati réalise un bilan
-              technique indépendant du bien : état du bâti, points de
-              vigilance, distinction entre défauts cosmétiques et désordres
-              graves, et ordre de grandeur des travaux à prévoir.
-            </p>
-            <p className="text-xl text-stone">
-              Objectif : décider en connaissance de cause — ou négocier en
-              s&apos;appuyant sur des faits.
-            </p>
-
-            <h2>Pourquoi sécuriser avant le compromis</h2>
-            <p>
-              Un bien peut paraître sain et cacher des désordres coûteux :
-              fissures évolutives, humidité structurelle, toiture fatiguée,
-              malfaçons anciennes. Les diagnostics obligatoires (DPE, amiante,
-              etc.) ne remplacent pas une expertise pathologique du bâti.
-              Justebati ne réalise pas ces diagnostics ni d&apos;estimation
-              immobilière : notre mission, c&apos;est le regard technique
-              indépendant.
-            </p>
-            <p>
-              Intervenir avant le compromis — ou avant la fin du délai de
-              rétractation, selon votre calendrier — permet d&apos;éviter une
-              mauvaise surprise après signature.
-            </p>
-
-            <h2>Ce que l&apos;expert regarde</h2>
-            <p>
-              Selon le type de bien et votre brief, la visite porte notamment
-              sur :
-            </p>
-            <ul>
-              <li>
-                Structure et stabilité apparente (murs, planchers, ouvertures)
-              </li>
-              <li>
-                Fissures : localisation, ouverture, indices d&apos;évolution
-              </li>
-              <li>
-                Humidité : traces, odeurs, points d&apos;infiltration, risques
-                de capillarité
-              </li>
-              <li>
-                Enveloppe : toiture, façades, menuiseries, étanchéité visible
-              </li>
-              <li>
-                Points de désordre récurrents (combles, caves, pièces humides)
-              </li>
-              <li>
-                Indices de malfaçons ou de travaux récents à questionner
-              </li>
-            </ul>
-            <p>
-              L&apos;expert ne se substitue pas à un diagnostiqueur
-              réglementaire. Il complète le dossier avec une lecture
-              constructive et pathologique.
-            </p>
-
-            <h2>Le livrable : un rapport clair</h2>
-            <p>
-              À l&apos;issue de la mission, vous recevez un rapport écrit
-              illustré de photos. Il synthétise les constats, hiérarchise les
-              urgences et propose un chiffrage des travaux à prévoir. Vous
-              pouvez le partager avec votre notaire, votre banque ou votre
-              conseil — sans ambiguïté sur la nature de la mission.
-            </p>
-            <p>
-              Justebati ne vend aucun travaux. Le chiffrage sert à anticiper,
-              pas à vous orienter vers un chantier « maison ».
-            </p>
-
-            <h2>Expertise Justebati vs diagnostiqueur</h2>
-            <div className="overflow-x-auto">
-              <table className="w-full border-collapse border border-line">
-                <thead>
-                  <tr className="bg-paper-2">
-                    <th className="border border-line p-3 text-left"></th>
-                    <th className="border border-line p-3 text-left">
-                      Diagnostiqueur
-                    </th>
-                    <th className="border border-line p-3 text-left">
-                      Justebati
-                    </th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td className="border border-line p-3 font-medium">
-                      Cadre
-                    </td>
-                    <td className="border border-line p-3">
-                      Diagnostics obligatoires à la vente
-                    </td>
-                    <td className="border border-line p-3">
-                      Expertise technique volontaire
-                    </td>
-                  </tr>
-                  <tr className="bg-paper-2">
-                    <td className="border border-line p-3 font-medium">
-                      Objet
-                    </td>
-                    <td className="border border-line p-3">
-                      Conformité réglementaire (DPE, amiante…)
-                    </td>
-                    <td className="border border-line p-3">
-                      Pathologie du bâti, désordres, travaux à prévoir
-                    </td>
-                  </tr>
-                  <tr>
-                    <td className="border border-line p-3 font-medium">
-                      Indépendance travaux
-                    </td>
-                    <td className="border border-line p-3">
-                      Variable selon les structures
-                    </td>
-                    <td className="border border-line p-3">
-                      Aucun travaux vendus
-                    </td>
-                  </tr>
-                  <tr className="bg-paper-2">
-                    <td className="border border-line p-3 font-medium">
-                      Livrable type
-                    </td>
-                    <td className="border border-line p-3">
-                      Diagnostics réglementaires
-                    </td>
-                    <td className="border border-line p-3">
-                      Rapport d&apos;expertise + photos + chiffrage
-                    </td>
-                  </tr>
-                </tbody>
-              </table>
+      <section className="section-light section-spacing">
+        <div className="container-custom">
+          <div className="mx-auto max-w-3xl">
+            <div className="mb-6 text-[11px] font-semibold uppercase tracking-[0.14em] text-copper">
+              Expertise bâtiment
             </div>
-            <p>Les deux approches peuvent coexister. Elles ne se remplacent pas.</p>
-
-            <h2>Pour qui ?</h2>
-            <p>
-              Acquéreurs de maison ou d&apos;appartement, en projet
-              d&apos;achat ou en phase de négociation, qui veulent un avis
-              technique neutre avant de s&apos;engager.
+            <h1 className="mb-6 font-serif text-[clamp(1.875rem,3.2vw,2.375rem)] leading-[1.15] tracking-[-0.01em] text-navy">
+              Expertise avant achat immobilier
+            </h1>
+            <p className="mb-8 text-[17px] leading-[1.65] text-navy-muted">
+              Avant de signer le compromis, un bilan technique indépendant permet de connaître l'état réel du bien : structure, enveloppe, humidité, toiture, points de vigilance visibles.
             </p>
-          </div>
+            <p className="mb-8 text-base leading-[1.65] text-navy-muted">
+              Justebati réalise cette inspection sur site et remet un rapport écrit avec photos et estimation des travaux à prévoir. Nous ne vendons aucun travaux.
+            </p>
 
-          <div className="mt-12 flex flex-col items-start space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0">
-            <Button href="/contact">Demander un devis avant achat</Button>
-            <Button href="/comment-ca-se-passe" variant="secondary">
-              Voir le déroulement d&apos;une mission
-            </Button>
+            <h2 className="mb-4 mt-8 font-serif text-[clamp(1.625rem,2.5vw,2rem)] leading-[1.2] text-navy">
+              Ce que couvre le bilan
+            </h2>
+            <p className="mb-4 text-base leading-[1.65] text-navy-muted">
+              Selon le bien et l'accès, l'expertise peut porter sur :
+            </p>
+            <ul className="mb-4 ml-6 space-y-2 text-base leading-[1.65] text-navy-muted">
+              <li className="list-disc">Fissures et signes de mouvement</li>
+              <li className="list-disc">Humidité, infiltrations, moisissures</li>
+              <li className="list-disc">Toiture, charpente, couverture (parties visibles)</li>
+              <li className="list-disc">Structure et éléments porteurs accessibles</li>
+              <li className="list-disc">Malfaçons ou défauts d'exécution apparents</li>
+              <li className="list-disc">Points à surveiller ou à faire vérifier par un spécialiste</li>
+            </ul>
+            <p className="mb-6 text-base leading-[1.65] text-navy-muted">
+              Le périmètre exact est confirmé avant la mission.
+            </p>
+
+            <h2 className="mb-4 mt-8 font-serif text-[clamp(1.625rem,2.5vw,2rem)] leading-[1.2] text-navy">
+              Différence avec un diagnostiqueur
+            </h2>
+            <p className="mb-4 text-base leading-[1.65] text-navy-muted">
+              Les diagnostics obligatoires (DPE, amiante, plomb, etc.) répondent à une obligation légale de vente. L'expertise avant achat répond à une question différente : l'état pathologique du bâti, la gravité des désordres, le coût prévisible des remises en état.
+            </p>
+            <p className="mb-6 text-base leading-[1.65] text-navy-muted">
+              Justebati ne réalise pas les diagnostics réglementaires. Les deux démarches sont complémentaires, pas interchangeables.
+            </p>
+
+            <h2 className="mb-4 mt-8 font-serif text-[clamp(1.625rem,2.5vw,2rem)] leading-[1.2] text-navy">
+              Livrable
+            </h2>
+            <p className="mb-4 text-base leading-[1.65] text-navy-muted">
+              Un rapport clair, daté, illustré de photos. Il distingue les observations, les hypothèses techniques et les préconisations. Un chiffrage des travaux à prévoir accompagne le diagnostic lorsque les éléments le permettent.
+            </p>
+            <p className="mb-6 text-base leading-[1.65] text-navy-muted">
+              Ce rapport vous aide à décider, à négocier, ou à demander des informations complémentaires au vendeur. Il ne constitue pas une estimation immobilière.
+            </p>
+
+            <h2 className="mb-4 mt-8 font-serif text-[clamp(1.625rem,2.5vw,2rem)] leading-[1.2] text-navy">
+              Ce que Justebati ne fait pas
+            </h2>
+            <ul className="mb-6 ml-6 space-y-2 text-base leading-[1.65] text-navy-muted">
+              <li className="list-disc">Vente de travaux</li>
+              <li className="list-disc">Diagnostics obligatoires (DPE, amiante…)</li>
+              <li className="list-disc">Estimation de valeur du bien</li>
+            </ul>
+
+            <div className="mt-12 flex flex-col gap-4 sm:flex-row">
+              <Link
+                href="/contact"
+                className="inline-flex items-center justify-center rounded-sm bg-copper px-[22px] py-3 text-[13px] font-semibold text-white transition-colors duration-base hover:bg-copper-hover"
+              >
+                Demander un devis
+              </Link>
+              <Link
+                href="/comment-ca-se-passe"
+                className="inline-flex items-center justify-center rounded-sm border border-border-on-paper px-[22px] py-3 text-[13px] font-semibold text-navy transition-colors duration-base hover:bg-navy/[0.03]"
+              >
+                Voir le déroulement
+              </Link>
+            </div>
           </div>
         </div>
-      </Section>
-
-      <Section background="paper-2">
-        <div className="mx-auto max-w-3xl text-center">
-          <h2 className="mb-6 text-2xl font-display">
-            Liens utiles
-          </h2>
-          <div className="flex flex-wrap justify-center gap-4">
-            <Button href="/expertise-fissures" variant="secondary">
-              Expertise fissures
-            </Button>
-            <Button href="/expertise-humidite" variant="secondary">
-              Expertise humidité
-            </Button>
-            <Button href="/faq" variant="secondary">
-              FAQ
-            </Button>
-          </div>
-        </div>
-      </Section>
+      </section>
     </>
   );
 }
