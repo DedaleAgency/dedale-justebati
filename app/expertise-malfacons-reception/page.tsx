@@ -1,133 +1,120 @@
 import { Metadata } from "next";
-import Section from "@/components/Section";
-import Button from "@/components/Button";
+import PageLayout from "@/components/PageLayout";
+import { Button } from "@/components/ui/button";
+import Link from "next/link";
+import Cartouche from "@/components/Cartouche";
 
 export const metadata: Metadata = {
-  title: "Expertise malfaçons & réception",
+  title: "Expertise malfaçons et réception de travaux",
   description:
-    "Malfaçons, non-conformités, assistance à la réception : constat indépendant, réserves exploitables. Rapport technique — sans travaux à vendre. Devis.",
+    "Assistance à la réception, constat malfaçons, réserves : expertise indépendante pour défendre vos intérêts. Aucun travaux à vendre. Devis.",
   alternates: {
     canonical: "/expertise-malfacons-reception",
   },
 };
 
-export default function ExpertiseMalfaconsPage() {
+export default function ExpertiseMalfaconsReceptionPage() {
   return (
     <>
-      <Section>
-        <div className="mx-auto max-w-4xl">
-          <h1 className="mb-6 text-4xl font-display md:text-5xl">
-            Expertise malfaçons et réception de travaux
-          </h1>
-          <div className="prose-custom">
-            <p className="text-xl text-stone">
-              Travaux mal exécutés, non-conformités, réception qui approche :
-              Justebati établit un constat technique indépendant.
-              L&apos;objectif est de documenter les désordres, de formuler des
-              réserves exploitables et de vous donner un appui clair — pour
-              négocier, faire reprendre, ou constituer un dossier.
-            </p>
-            <p className="text-xl text-stone">
-              Nous ne vendons aucun travaux. Nous ne sommes pas
-              l&apos;entreprise qui a réalisé le chantier.
-            </p>
-
-            <h2>Assistance à la réception</h2>
-            <p>
-              La réception est un moment décisif : c&apos;est souvent à cette
-              étape que les réserves doivent être consignées. Une présence ou un
-              passage d&apos;expert peut aider à :
-            </p>
-            <ul>
-              <li>
-                Repérer les non-conformités visibles et les désordres apparents
-              </li>
-              <li>
-                Formuler des réserves précises, localisées et photographiées
-              </li>
-              <li>
-                Distinguer le détail cosmétique du défaut à faire reprendre
-              </li>
-              <li>
-                Préparer la suite (levée de réserves, échanges avec
-                l&apos;entreprise)
-              </li>
-            </ul>
-            <p>
-              Selon le cadre du chantier (construction neuve, rénovation,
-              extension), les enjeux juridiques et contractuels varient.
-              Justebati apporte le regard technique ; votre conseil (avocat,
-              notaire, association de consommateurs) reste compétent sur le
-              droit.
-            </p>
-
-            <h2>Malfaçons après travaux</h2>
-            <p>
-              Si les travaux sont déjà livrés et que des désordres apparaissent
-              — fissures, étanchéité, finitions, structure apparente —
-              l&apos;expertise formalise le constat. Le rapport peut servir de
-              base à une discussion amiable ou, le cas échéant, à un dossier
-              plus formel. Voir aussi{" "}
-              <a href="/litige-artisan">litige avec un artisan</a>.
-            </p>
-
-            <h2>CCMI, VEFA et cadres contractuels</h2>
-            <p>
-              Dans certains projets (notamment construction de maison
-              individuelle ou acquisition en VEFA), la réception et les
-              garanties légales suivent des règles spécifiques. Justebati
-              n&apos;invente pas de procédure à votre place : nous documentons
-              l&apos;état technique du bien et des ouvrages observés, pour que
-              vous puissiez agir dans le cadre qui est le vôtre.
-            </p>
-
-            <h2>Ce que contient le rapport</h2>
-            <ul>
-              <li>
-                Inventaire des désordres et non-conformités constatés
-              </li>
-              <li>Photos localisées</li>
-              <li>Commentaires de gravité et d&apos;urgence</li>
-              <li>
-                Préconisations de reprise ou d&apos;investigations
-              </li>
-              <li>Chiffrage des travaux à prévoir, le cas échéant</li>
-            </ul>
-            <p>
-              Justebati ne réalise pas les diagnostics obligatoires (DPE,
-              amiante…) ni d&apos;estimation immobilière.
-            </p>
-          </div>
-
-          <div className="mt-12 flex flex-col items-start space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0">
-            <Button href="/contact">
-              Demander un devis malfaçons / réception
-            </Button>
-            <Button href="/litige-artisan" variant="secondary">
-              Litige avec un artisan
-            </Button>
-          </div>
+      <PageLayout>
+        <Cartouche
+          fields={[
+            { label: "Doc.", value: "JB-M04" },
+            { label: "Mission", value: "Malfaçons" },
+            { label: "Statut", value: "Indépendant" },
+            { label: "Travaux", value: "Aucun" },
+          ]}
+        />
+        <div className="mb-4 mt-6 font-mono text-[11px] uppercase tracking-[0.07em] text-oxide">
+          Réception & conformité
         </div>
-      </Section>
+        <h1 className="mb-6 font-display text-[clamp(2rem,3.5vw,3rem)] font-medium leading-[1.12] tracking-[-0.02em]">
+          Expertise malfaçons et réception de travaux
+        </h1>
+        <div className="prose max-w-none">
+          <p className="lead">
+            À la réception d&apos;un chantier ou face à des malfaçons, vous avez besoin d&apos;un
+            œil technique neutre. Justebati établit un constat indépendant des désordres,
+            non-conformités et réserves. Sans lien avec l&apos;entreprise.
+          </p>
 
-      <Section background="paper-2">
+          <h2>Assistance à la réception</h2>
+          <p>
+            La réception de travaux est un moment clé : vous constatez la conformité au devis, la
+            finition, les éventuels désordres apparents. Passé ce délai, certaines réclamations
+            deviennent plus complexes. Justebati peut vous accompagner pour établir un procès-verbal
+            de réserves étayé et photographié.
+          </p>
+
+          <h2>Constat malfaçons après réception</h2>
+          <p>
+            Vous avez réceptionné un chantier et découvrez ensuite des malfaçons : défaut
+            d&apos;étanchéité, fissures post-travaux, non-respect du DTU, finitions bâclées.
+            L&apos;expert Justebati documente les désordres, qualifie leur nature (apparent,
+            vice caché, non-conformité) et vous aide à constituer un dossier solide pour négocier ou
+            engager une action.
+          </p>
+
+          <h2>Ce que l&apos;expert inspecte</h2>
+          <ul>
+            <li>Conformité apparente au devis et aux règles de l&apos;art</li>
+            <li>Finitions : enduits, peintures, joints, menuiseries</li>
+            <li>Étanchéité : toiture, terrasse, menuiseries, salles d&apos;eau</li>
+            <li>
+              Désordres structurels ou fonctionnels : fissures, déformations, infiltrations
+            </li>
+            <li>Points de non-conformité technique (DTU, normes)</li>
+          </ul>
+
+          <h2>Le rapport d&apos;expertise</h2>
+          <p>
+            Vous recevez un document écrit et illustré qui décrit les désordres constatés, qualifie
+            leur gravité (apparent, vice caché, non-conformité), et propose des préconisations de
+            remise en conformité. Le chiffrage des travaux correctifs est donné à titre indicatif —
+            Justebati ne les réalise pas.
+          </p>
+
+          <h2>Justebati ne remplace pas un avocat ou un expert judiciaire</h2>
+          <p>
+            Notre mission est technique : nous documentons les désordres de manière indépendante.
+            Si un litige aboutit devant le tribunal, un expert judiciaire sera désigné. Le rapport
+            Justebati peut servir de base à votre dossier, mais ne s&apos;y substitue pas.
+          </p>
+
+          <h2>Pour qui ?</h2>
+          <p>
+            Maîtres d&apos;ouvrage en phase de réception, propriétaires confrontés à des malfaçons
+            après travaux, ou particuliers en litige avec une entreprise qui veulent un constat
+            technique neutre.
+          </p>
+        </div>
+
+        <div className="mt-12 flex flex-col gap-4 sm:flex-row">
+          <Button asChild className="bg-ink text-paper hover:bg-oxide">
+            <Link href="/contact">Demander un constat malfaçons</Link>
+          </Button>
+          <Button asChild variant="outline">
+            <Link href="/comment-ca-se-passe">Comment ça se passe</Link>
+          </Button>
+        </div>
+      </PageLayout>
+
+      <div className="border-b border-ink bg-sand px-6 py-16 lg:px-12">
         <div className="mx-auto max-w-3xl text-center">
-          <h2 className="mb-6 text-2xl font-display">
-            Liens utiles
-          </h2>
+          <h2 className="mb-6 font-display text-[1.5rem] font-medium">Liens utiles</h2>
           <div className="flex flex-wrap justify-center gap-4">
-            <Button href="/comment-ca-se-passe" variant="secondary">
-              Comment ça se passe
+            <Button asChild variant="secondary">
+              <Link href="/litige-artisan">Litige avec un artisan</Link>
             </Button>
-            <Button href="/expertise-fissures" variant="secondary">
-              Expertise fissures
+            <Button asChild variant="secondary">
+              <Link href="/expertise-avant-achat">Expertise avant achat</Link>
             </Button>
-            <Button href="/faq" variant="secondary">
-              FAQ
+            <Button asChild variant="secondary">
+              <Link href="/faq">FAQ</Link>
             </Button>
           </div>
         </div>
-      </Section>
+      </div>
     </>
   );
 }

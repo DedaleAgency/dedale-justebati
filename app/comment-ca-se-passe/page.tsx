@@ -1,7 +1,9 @@
 import { Metadata } from "next";
-import Section from "@/components/Section";
-import ProcessSteps from "@/components/ProcessSteps";
-import Button from "@/components/Button";
+import PageLayout from "@/components/PageLayout";
+import { Button } from "@/components/ui/button";
+import Link from "next/link";
+import Cartouche from "@/components/Cartouche";
+import FriseEtapes from "@/components/FriseEtapes";
 
 export const metadata: Metadata = {
   title: "Déroulement d'une expertise",
@@ -15,117 +17,115 @@ export const metadata: Metadata = {
 export default function CommentCaSePasse() {
   return (
     <>
-      <Section>
-        <div className="mx-auto max-w-4xl">
-          <h1 className="mb-6 text-4xl font-display md:text-5xl">
-            Comment se déroule une expertise
-          </h1>
-          <div className="prose-custom">
-            <p className="text-xl text-stone">
-              Une mission Justebati suit un déroulé simple et transparent. Cinq
-              étapes, du premier contact au rapport. Pas de surprise sur le rôle
-              de l&apos;expert : constater, analyser, chiffrer, écrire — sans
-              vendre de travaux.
-            </p>
-          </div>
+      <PageLayout>
+        <Cartouche
+          fields={[
+            { label: "Doc.", value: "JB-MET" },
+            { label: "Objet", value: "Méthode" },
+            { label: "Process", value: "5 étapes" },
+            { label: "Travaux", value: "Aucun" },
+          ]}
+        />
+        <div className="mb-4 mt-6 font-mono text-[11px] uppercase tracking-[0.07em] text-oxide">
+          Process transparent
         </div>
-      </Section>
-
-      <Section background="paper-2">
-        <div className="mx-auto max-w-5xl">
-          <ProcessSteps />
+        <h1 className="mb-6 font-display text-[clamp(2rem,3.5vw,3rem)] font-medium leading-[1.12] tracking-[-0.02em]">
+          Comment se déroule une expertise
+        </h1>
+        <div className="prose max-w-none">
+          <p className="lead">
+            Une mission Justebati suit un déroulé simple et transparent. Cinq étapes, du premier
+            contact au rapport. Pas de surprise sur le rôle de l&apos;expert : constater, analyser,
+            chiffrer, écrire — sans vendre de travaux.
+          </p>
         </div>
-      </Section>
+      </PageLayout>
 
-      <Section>
-        <div className="mx-auto max-w-4xl">
-          <div className="prose-custom">
-            <h2>Étape 1 — Contact et cadrage</h2>
-            <p>
-              Vous appelez le 01 00 00 00 00 ou{" "}
-              <a href="/contact">demandez un devis</a>. Vous décrivez le bien,
-              le problème et votre objectif (achat, désordre, réception, litige,
-              sinistre). Nous précisons le périmètre de la mission et les
-              conditions d&apos;intervention.
-            </p>
-            <p>Aucun engagement de chantier. Un devis d&apos;expertise, clair.</p>
+      <div className="border-b border-ink">
+        <FriseEtapes />
+      </div>
 
-            <h2>Étape 2 — Visite sur site</h2>
-            <p>
-              L&apos;expert se rend sur place. Il observe les zones concernées
-              et, selon la mission, élargit le regard aux points sensibles du
-              bâti. Photos, mesures, notes. Votre présence est utile pour
-              préciser l&apos;historique (travaux, sinistres, évolutions).
-            </p>
+      <PageLayout>
+        <div className="prose max-w-none">
+          <h2>Étape 1 — Contact et cadrage</h2>
+          <p>
+            Vous appelez le 01 00 00 00 00 ou <Link href="/contact">demandez un devis</Link>. Vous
+            décrivez le bien, le problème et votre objectif (achat, désordre, réception, litige,
+            sinistre). Nous précisons le périmètre de la mission et les conditions
+            d&apos;intervention.
+          </p>
+          <p>Aucun engagement de chantier. Un devis d&apos;expertise, clair.</p>
 
-            <h2>Étape 3 — Analyse</h2>
-            <p>
-              Retour au cabinet : lecture des constats, hypothèses de cause,
-              distinction entre désordre cosmétique et enjeu plus grave. Si une
-              investigation complémentaire est souhaitable (hors mission), elle
-              est signalée sans ambiguïté.
-            </p>
+          <h2>Étape 2 — Visite sur site</h2>
+          <p>
+            L&apos;expert se rend sur place. Il observe les zones concernées et, selon la mission,
+            élargit le regard aux points sensibles du bâti. Photos, mesures, notes. Votre présence
+            est utile pour préciser l&apos;historique (travaux, sinistres, évolutions).
+          </p>
 
-            <h2>Étape 4 — Chiffrage des travaux à prévoir</h2>
-            <p>
-              Lorsque c&apos;est pertinent, l&apos;expert établit un ordre de
-              grandeur des travaux à prévoir. Ce chiffrage aide à décider ou
-              négocier. Il ne constitue pas un devis de travaux Justebati : nous
-              ne réalisons pas les chantiers.
-            </p>
+          <h2>Étape 3 — Analyse</h2>
+          <p>
+            Retour au cabinet : lecture des constats, hypothèses de cause, distinction entre
+            désordre cosmétique et enjeu plus grave. Si une investigation complémentaire est
+            souhaitable (hors mission), elle est signalée sans ambiguïté.
+          </p>
 
-            <h2>Étape 5 — Rapport écrit</h2>
-            <p>
-              Vous recevez un rapport illustré : constats, analyse,
-              préconisations, chiffrage le cas échéant. Document transmissable à
-              vos interlocuteurs (notaire, artisan, assureur, conseil).
-            </p>
-            <p>
-              Les délais exacts dépendent de la mission et de la charge ; ils
-              sont précisés lors du devis. Voir aussi la <a href="/faq">FAQ</a>.
-            </p>
+          <h2>Étape 4 — Chiffrage des travaux à prévoir</h2>
+          <p>
+            Lorsque c&apos;est pertinent, l&apos;expert établit un ordre de grandeur des travaux à
+            prévoir. Ce chiffrage aide à décider ou négocier. Il ne constitue pas un devis de
+            travaux Justebati : nous ne réalisons pas les chantiers.
+          </p>
 
-            <h2>Selon votre besoin</h2>
-            <ul>
-              <li>
-                <a href="/expertise-avant-achat">Avant achat</a>
-              </li>
-              <li>
-                <a href="/expertise-fissures">Fissures</a>
-              </li>
-              <li>
-                <a href="/expertise-humidite">Humidité</a>
-              </li>
-              <li>
-                <a href="/expertise-malfacons-reception">
-                  Malfaçons et réception
-                </a>
-              </li>
-              <li>
-                <a href="/assistance-expertise-assurance">
-                  Assurance et sinistre
-                </a>
-              </li>
-              <li>
-                <a href="/litige-artisan">Litige artisan</a>
-              </li>
-            </ul>
+          <h2>Étape 5 — Rapport écrit</h2>
+          <p>
+            Vous recevez un rapport illustré : constats, analyse, préconisations, chiffrage le cas
+            échéant. Document transmissible à vos interlocuteurs (notaire, artisan, assureur,
+            conseil).
+          </p>
+          <p>
+            Les délais exacts dépendent de la mission et de la charge ; ils sont précisés lors du
+            devis. Voir aussi la <Link href="/faq">FAQ</Link>.
+          </p>
 
-            <h2>Rappel d&apos;indépendance</h2>
-            <p>
-              Justebati ne vend aucun travaux, ne réalise pas les diagnostics
-              obligatoires (DPE, amiante…) ni d&apos;estimation immobilière.
-            </p>
-          </div>
+          <h2>Selon votre besoin</h2>
+          <ul>
+            <li>
+              <Link href="/expertise-avant-achat">Avant achat</Link>
+            </li>
+            <li>
+              <Link href="/expertise-fissures">Fissures</Link>
+            </li>
+            <li>
+              <Link href="/expertise-humidite">Humidité</Link>
+            </li>
+            <li>
+              <Link href="/expertise-malfacons-reception">Malfaçons et réception</Link>
+            </li>
+            <li>
+              <Link href="/assistance-expertise-assurance">Assurance et sinistre</Link>
+            </li>
+            <li>
+              <Link href="/litige-artisan">Litige artisan</Link>
+            </li>
+          </ul>
 
-          <div className="mt-12 flex flex-col items-start space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0">
-            <Button href="/contact">Demander un devis</Button>
-            <Button href="/faq" variant="secondary">
-              Lire la FAQ
-            </Button>
-          </div>
+          <h2>Rappel d&apos;indépendance</h2>
+          <p>
+            Justebati ne vend aucun travaux, ne réalise pas les diagnostics obligatoires (DPE,
+            amiante…) ni d&apos;estimation immobilière.
+          </p>
         </div>
-      </Section>
+
+        <div className="mt-12 flex flex-col gap-4 sm:flex-row">
+          <Button asChild className="bg-ink text-paper hover:bg-oxide">
+            <Link href="/contact">Demander un devis</Link>
+          </Button>
+          <Button asChild variant="outline">
+            <Link href="/faq">Lire la FAQ</Link>
+          </Button>
+        </div>
+      </PageLayout>
     </>
   );
 }

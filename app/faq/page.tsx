@@ -1,7 +1,9 @@
 import { Metadata } from "next";
-import Section from "@/components/Section";
+import PageLayout from "@/components/PageLayout";
 import FaqAccordion from "@/components/FaqAccordion";
-import Button from "@/components/Button";
+import { Button } from "@/components/ui/button";
+import Link from "next/link";
+import Cartouche from "@/components/Cartouche";
 
 export const metadata: Metadata = {
   title: "FAQ expertise bâtiment",
@@ -72,52 +74,55 @@ const faqItems = [
 export default function FaqPage() {
   return (
     <>
-      <Section>
-        <div className="mx-auto max-w-4xl">
-          <h1 className="mb-6 text-4xl font-display md:text-5xl">
-            Questions fréquentes
-          </h1>
-          <p className="mb-12 text-lg text-stone">
-            Réponses courtes sur l&apos;indépendance, le périmètre, le déroulé
-            et les situations typiques. Pour un cas précis :{" "}
-            <a href="/contact" className="text-copper underline">
-              demandez un devis
-            </a>{" "}
-            ou appelez le 01 00 00 00 00.
-          </p>
-
-          <FaqAccordion items={faqItems} />
-
-          <div className="mt-12 flex flex-col items-start space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0">
-            <Button href="/contact">Demander un devis</Button>
-            <Button href="tel:0100000000" variant="secondary">
-              Appeler 01 00 00 00 00
-            </Button>
-          </div>
+      <PageLayout>
+        <Cartouche
+          fields={[
+            { label: "Doc.", value: "JB-FAQ" },
+            { label: "Objet", value: "Questions" },
+            { label: "Statut", value: "Public" },
+            { label: "", value: "" },
+          ]}
+        />
+        <div className="mb-4 mt-6 font-mono text-[11px] uppercase tracking-[0.07em] text-oxide">
+          Questions fréquentes
         </div>
-      </Section>
+        <h1 className="mb-6 font-display text-[clamp(2rem,3.5vw,3rem)] font-medium leading-[1.12] tracking-[-0.02em]">
+          Questions fréquentes
+        </h1>
+        <p className="mb-12 text-[15px] leading-relaxed text-mist">
+          Réponses courtes sur l&apos;indépendance, le périmètre, le déroulé et les situations
+          typiques. Pour un cas précis : <Link href="/contact" className="text-oxide underline">demandez un devis</Link> ou
+          appelez le 01 00 00 00 00.
+        </p>
 
-      <Section background="paper-2">
+        <FaqAccordion items={faqItems} />
+
+        <div className="mt-12 flex flex-col gap-4 sm:flex-row">
+          <Button asChild className="bg-ink text-paper hover:bg-oxide">
+            <Link href="/contact">Demander un devis</Link>
+          </Button>
+          <Button asChild variant="outline">
+            <a href="tel:0100000000">Appeler 01 00 00 00 00</a>
+          </Button>
+        </div>
+      </PageLayout>
+
+      <div className="border-b border-ink bg-sand px-6 py-16 lg:px-12">
         <div className="mx-auto max-w-3xl text-center">
-          <h2 className="mb-6 text-2xl font-display">
-            Liens utiles
-          </h2>
+          <h2 className="mb-6 font-display text-[1.5rem] font-medium">En savoir plus</h2>
           <div className="flex flex-wrap justify-center gap-4">
-            <Button href="/lexpert" variant="secondary">
-              L&apos;expert
+            <Button asChild variant="secondary">
+              <Link href="/comment-ca-se-passe">Comment ça se passe</Link>
             </Button>
-            <Button href="/comment-ca-se-passe" variant="secondary">
-              Comment ça se passe
+            <Button asChild variant="secondary">
+              <Link href="/lexpert">L&apos;expert</Link>
             </Button>
-            <Button href="/expertise-avant-achat" variant="secondary">
-              Avant achat
-            </Button>
-            <Button href="/expertise-fissures" variant="secondary">
-              Fissures
+            <Button asChild variant="secondary">
+              <Link href="/">Accueil</Link>
             </Button>
           </div>
         </div>
-      </Section>
+      </div>
     </>
   );
 }

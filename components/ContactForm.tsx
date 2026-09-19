@@ -1,7 +1,8 @@
 "use client";
 
 import { useState, FormEvent } from "react";
-import Button from "./Button";
+import { Button } from "./ui/button";
+import Link from "next/link";
 
 export default function ContactForm() {
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -28,9 +29,7 @@ export default function ContactForm() {
       setIsSuccess(true);
       (e.target as HTMLFormElement).reset();
     } catch {
-      setError(
-        "L'envoi a échoué. Réessayez ou appelez le 01 00 00 00 00."
-      );
+      setError("L'envoi a échoué. Réessayez ou appelez le 01 00 00 00 00.");
     } finally {
       setIsSubmitting(false);
     }
@@ -38,16 +37,16 @@ export default function ContactForm() {
 
   if (isSuccess) {
     return (
-      <div className="rounded-lg border-2 border-copper bg-paper-2 p-8 text-center">
-        <h3 className="mb-2 text-2xl font-display text-ink">
+      <div className="border-2 border-oxide bg-sand p-8 text-center">
+        <h3 className="mb-2 font-display text-[1.5rem] font-medium text-ink">
           Demande bien reçue
         </h3>
-        <p className="mb-6 text-stone">
-          Merci. Nous revenons vers vous rapidement pour votre devis
-          d&apos;expertise. En cas d&apos;urgence, appelez le 01 00 00 00 00.
+        <p className="mb-6 text-mist">
+          Merci. Nous revenons vers vous rapidement pour votre devis d&apos;expertise. En cas
+          d&apos;urgence, appelez le 01 00 00 00 00.
         </p>
-        <Button href="/" variant="secondary">
-          Retour à l&apos;accueil
+        <Button asChild variant="secondary">
+          <Link href="/">Retour à l&apos;accueil</Link>
         </Button>
       </div>
     );
@@ -57,10 +56,7 @@ export default function ContactForm() {
     <form onSubmit={handleSubmit} className="space-y-6">
       <div className="grid gap-6 md:grid-cols-2">
         <div>
-          <label
-            htmlFor="prenom"
-            className="mb-2 block text-sm font-medium text-ink"
-          >
+          <label htmlFor="prenom" className="mb-2 block text-sm font-medium text-ink">
             Prénom *
           </label>
           <input
@@ -68,14 +64,11 @@ export default function ContactForm() {
             id="prenom"
             name="prenom"
             required
-            className="w-full rounded-lg border border-line bg-paper px-4 py-3 text-ink transition-colors focus:border-copper focus:outline-none"
+            className="w-full border border-line bg-paper px-4 py-3 text-ink transition-colors focus:border-oxide focus:outline-none focus:ring-2 focus:ring-oxide"
           />
         </div>
         <div>
-          <label
-            htmlFor="nom"
-            className="mb-2 block text-sm font-medium text-ink"
-          >
+          <label htmlFor="nom" className="mb-2 block text-sm font-medium text-ink">
             Nom *
           </label>
           <input
@@ -83,17 +76,14 @@ export default function ContactForm() {
             id="nom"
             name="nom"
             required
-            className="w-full rounded-lg border border-line bg-paper px-4 py-3 text-ink transition-colors focus:border-copper focus:outline-none"
+            className="w-full border border-line bg-paper px-4 py-3 text-ink transition-colors focus:border-oxide focus:outline-none focus:ring-2 focus:ring-oxide"
           />
         </div>
       </div>
 
       <div className="grid gap-6 md:grid-cols-2">
         <div>
-          <label
-            htmlFor="telephone"
-            className="mb-2 block text-sm font-medium text-ink"
-          >
+          <label htmlFor="telephone" className="mb-2 block text-sm font-medium text-ink">
             Téléphone *
           </label>
           <input
@@ -103,14 +93,11 @@ export default function ContactForm() {
             placeholder="06 00 00 00 00"
             required
             pattern="[0-9\s]+"
-            className="w-full rounded-lg border border-line bg-paper px-4 py-3 text-ink transition-colors focus:border-copper focus:outline-none"
+            className="w-full border border-line bg-paper px-4 py-3 text-ink transition-colors focus:border-oxide focus:outline-none focus:ring-2 focus:ring-oxide"
           />
         </div>
         <div>
-          <label
-            htmlFor="codePostal"
-            className="mb-2 block text-sm font-medium text-ink"
-          >
+          <label htmlFor="codePostal" className="mb-2 block text-sm font-medium text-ink">
             Code postal *
           </label>
           <input
@@ -120,24 +107,21 @@ export default function ContactForm() {
             placeholder="00000"
             required
             pattern="[0-9]{5}"
-            className="w-full rounded-lg border border-line bg-paper px-4 py-3 text-ink transition-colors focus:border-copper focus:outline-none"
+            className="w-full border border-line bg-paper px-4 py-3 text-ink transition-colors focus:border-oxide focus:outline-none focus:ring-2 focus:ring-oxide"
           />
         </div>
       </div>
 
       <div className="grid gap-6 md:grid-cols-2">
         <div>
-          <label
-            htmlFor="typeBien"
-            className="mb-2 block text-sm font-medium text-ink"
-          >
+          <label htmlFor="typeBien" className="mb-2 block text-sm font-medium text-ink">
             Type de bien *
           </label>
           <select
             id="typeBien"
             name="typeBien"
             required
-            className="w-full rounded-lg border border-line bg-paper px-4 py-3 text-ink transition-colors focus:border-copper focus:outline-none"
+            className="w-full border border-line bg-paper px-4 py-3 text-ink transition-colors focus:border-oxide focus:outline-none focus:ring-2 focus:ring-oxide"
           >
             <option value="">Sélectionnez...</option>
             <option value="maison">Maison</option>
@@ -146,17 +130,14 @@ export default function ContactForm() {
           </select>
         </div>
         <div>
-          <label
-            htmlFor="typeMission"
-            className="mb-2 block text-sm font-medium text-ink"
-          >
+          <label htmlFor="typeMission" className="mb-2 block text-sm font-medium text-ink">
             Type de mission *
           </label>
           <select
             id="typeMission"
             name="typeMission"
             required
-            className="w-full rounded-lg border border-line bg-paper px-4 py-3 text-ink transition-colors focus:border-copper focus:outline-none"
+            className="w-full border border-line bg-paper px-4 py-3 text-ink transition-colors focus:border-oxide focus:outline-none focus:ring-2 focus:ring-oxide"
           >
             <option value="">Sélectionnez...</option>
             <option value="avant-achat">Expertise avant achat</option>
@@ -170,10 +151,7 @@ export default function ContactForm() {
       </div>
 
       <div>
-        <label
-          htmlFor="description"
-          className="mb-2 block text-sm font-medium text-ink"
-        >
+        <label htmlFor="description" className="mb-2 block text-sm font-medium text-ink">
           Décrivez votre besoin *
         </label>
         <textarea
@@ -182,29 +160,24 @@ export default function ContactForm() {
           rows={6}
           required
           placeholder="Ex. fissures apparues après l'été, visite avant compromis prévue le..."
-          className="w-full rounded-lg border border-line bg-paper px-4 py-3 text-ink transition-colors focus:border-copper focus:outline-none"
+          className="w-full border border-line bg-paper px-4 py-3 text-ink transition-colors focus:border-oxide focus:outline-none focus:ring-2 focus:ring-oxide"
         />
       </div>
 
       {error && (
-        <div className="rounded-lg border border-copper bg-copper/10 p-4 text-sm text-ink">
-          {error}
-        </div>
+        <div className="border border-oxide bg-oxide/10 p-4 text-sm text-ink">{error}</div>
       )}
 
-      <div className="text-sm text-stone">
-        En envoyant ce formulaire, vous acceptez que Justebati traite vos
-        données pour répondre à votre demande. Voir la{" "}
-        <a
-          href="/politique-de-confidentialite"
-          className="text-copper underline"
-        >
+      <div className="text-sm text-mist">
+        En envoyant ce formulaire, vous acceptez que Justebati traite vos données pour répondre à
+        votre demande. Voir la{" "}
+        <Link href="/politique-de-confidentialite" className="text-oxide underline">
           politique de confidentialité
-        </a>
+        </Link>
         .
       </div>
 
-      <Button type="submit" variant="primary" className="w-full md:w-auto">
+      <Button type="submit" className="w-full bg-ink text-paper hover:bg-oxide md:w-auto">
         {isSubmitting ? "Envoi en cours..." : "Envoyer ma demande"}
       </Button>
     </form>

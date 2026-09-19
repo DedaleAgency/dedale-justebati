@@ -1,11 +1,13 @@
 import { Metadata } from "next";
-import Section from "@/components/Section";
-import Button from "@/components/Button";
+import PageLayout from "@/components/PageLayout";
+import { Button } from "@/components/ui/button";
+import Link from "next/link";
+import Cartouche from "@/components/Cartouche";
 
 export const metadata: Metadata = {
-  title: "Expertise sinistre & sécheresse",
+  title: "Assistance expertise d'assurance et sinistre",
   description:
-    "Sinistre, sécheresse, refus d'indemnisation : assistance technique indépendante face à l'assureur. Rapport clair pour défendre votre dossier. Devis.",
+    "Sinistre sécheresse, dégât des eaux, litige d'indemnisation : assistance technique indépendante face à l'expert d'assurance. Devis.",
   alternates: {
     canonical: "/assistance-expertise-assurance",
   },
@@ -14,115 +16,127 @@ export const metadata: Metadata = {
 export default function AssistanceExpertiseAssurancePage() {
   return (
     <>
-      <Section>
-        <div className="mx-auto max-w-4xl">
-          <h1 className="mb-6 text-4xl font-display md:text-5xl">
-            Assistance expertise d&apos;assurance et sinistre
-          </h1>
-          <div className="prose-custom">
-            <p className="text-xl text-stone">
-              Face à un sinistre — dégât des eaux, événement climatique,
-              sécheresse et fissures associées — l&apos;assureur mandate souvent
-              son propre expert. Vous pouvez, de votre côté, vous faire assister
-              par un expert indépendant. Justebati apporte un regard technique
-              neutre pour documenter les désordres et éclairer votre dossier.
-            </p>
-            <p className="text-xl font-semibold text-ink">
-              Important : Justebati ne promet aucune indemnisation, aucun
-              montant, ni aucun résultat face à la compagnie. Notre rôle est
-              technique : constater, analyser, formaliser.
-            </p>
-
-            <h2>À quoi sert l&apos;assistance technique ?</h2>
-            <ul>
-              <li>
-                Décrire les désordres de façon précise et photographiée
-              </li>
-              <li>
-                Proposer une lecture constructive des causes apparentes
-              </li>
-              <li>
-                Préparer ou accompagner les échanges contradictoires sur le plan
-                technique
-              </li>
-              <li>
-                Disposer d&apos;un rapport exploitable pour votre conseil ou
-                votre assureur
-              </li>
-            </ul>
-            <p>
-              Vous restez maître des décisions (déclaration, négociation,
-              recours). L&apos;expertise indépendante renforce la clarté du
-              débat ; elle ne le remplace pas.
-            </p>
-
-            <h2>Sécheresse et fissures</h2>
-            <p>
-              Les épisodes de sécheresse peuvent s&apos;accompagner de
-              mouvements de sol et de fissuration du bâti. Une{" "}
-              <a href="/expertise-fissures">expertise fissures</a> peut
-              s&apos;inscrire dans ce contexte, seule ou en lien avec une
-              procédure d&apos;assurance. Là encore : constat et analyse, sans
-              promesse d&apos;indemnisation.
-            </p>
-
-            <h2>Ce que Justebati ne fait pas</h2>
-            <ul>
-              <li>
-                Défendre juridiquement votre dossier (rôle de l&apos;avocat ou
-                du conseil)
-              </li>
-              <li>Vendre des travaux de réparation</li>
-              <li>
-                Réaliser les diagnostics obligatoires (DPE, amiante…) ou une
-                estimation immobilière
-              </li>
-              <li>
-                Garantir l&apos;issue d&apos;une négociation avec
-                l&apos;assureur
-              </li>
-            </ul>
-
-            <h2>Déroulement type</h2>
-            <p>
-              Contact et cadrage de la mission → visite et constats → analyse →
-              rapport écrit. Le détail est sur{" "}
-              <a href="/comment-ca-se-passe">
-                Comment se déroule une expertise
-              </a>
-              .
-            </p>
-          </div>
-
-          <div className="mt-12 flex flex-col items-start space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0">
-            <Button href="/contact">
-              Demander un devis assistance sinistre
-            </Button>
-            <Button href="/expertise-fissures" variant="secondary">
-              Expertise fissures
-            </Button>
-          </div>
+      <PageLayout>
+        <Cartouche
+          fields={[
+            { label: "Doc.", value: "JB-M05" },
+            { label: "Mission", value: "Assurance" },
+            { label: "Statut", value: "Indépendant" },
+            { label: "Travaux", value: "Aucun" },
+          ]}
+        />
+        <div className="mb-4 mt-6 font-mono text-[11px] uppercase tracking-[0.07em] text-oxide">
+          Sinistre & expertise contradictoire
         </div>
-      </Section>
+        <h1 className="mb-6 font-display text-[clamp(2rem,3.5vw,3rem)] font-medium leading-[1.12] tracking-[-0.02em]">
+          Assistance expertise d&apos;assurance et sinistre
+        </h1>
+        <div className="prose max-w-none">
+          <p className="lead">
+            Face à un sinistre (sécheresse, dégât des eaux, fissures, catastrophe naturelle), vous
+            avez le droit de faire appel à un expert indépendant pour vous assister lors de
+            l&apos;expertise d&apos;assurance. Justebati documente les désordres et défend vos
+            intérêts techniques face à l&apos;expert mandaté par votre compagnie.
+          </p>
 
-      <Section background="paper-2">
+          <h2>Pourquoi se faire assister</h2>
+          <p>
+            L&apos;expert d&apos;assurance représente la compagnie. Son rapport conditionne
+            l&apos;indemnisation. Vous avez intérêt à ce que les désordres soient correctement
+            documentés, chiffrés et imputés. Un expert indépendant à vos côtés rééquilibre le
+            dialogue technique.
+          </p>
+          <p>
+            Justebati ne garantit aucun résultat d&apos;indemnisation — nous ne sommes pas
+            avocats, ni représentants juridiques. Notre rôle est technique : documenter, étayer,
+            contredire si nécessaire.
+          </p>
+
+          <h2>Les cas les plus fréquents</h2>
+          <ul>
+            <li>
+              <strong>Sécheresse</strong> : fissures liées au retrait-gonflement des argiles,
+              reconnaissance catastrophe naturelle
+            </li>
+            <li>
+              <strong>Dégât des eaux</strong> : infiltration, fuite, rupture de canalisation
+            </li>
+            <li>
+              <strong>Tempête</strong> : dommages toiture, menuiseries, structure
+            </li>
+            <li>
+              <strong>Incendie</strong> : bilan structurel post-sinistre
+            </li>
+            <li>
+              <strong>Litige d&apos;indemnisation</strong> : désaccord sur le montant ou la
+              cause
+            </li>
+          </ul>
+
+          <h2>Ce que fait l&apos;expert Justebati</h2>
+          <ul>
+            <li>Participation à la visite contradictoire avec l&apos;expert d&apos;assurance</li>
+            <li>Documentation photographique et technique des désordres</li>
+            <li>
+              Qualification de la cause, de l&apos;étendue et de la gravité des désordres
+            </li>
+            <li>Chiffrage contradictoire des travaux de remise en état</li>
+            <li>
+              Rédaction d&apos;un rapport technique à joindre au dossier d&apos;indemnisation
+            </li>
+          </ul>
+
+          <h2>Le rapport d&apos;expertise</h2>
+          <p>
+            Vous recevez un document écrit et illustré qui synthétise les constats, qualifie les
+            désordres, contredit éventuellement l&apos;analyse de l&apos;expert d&apos;assurance,
+            et chiffre les travaux nécessaires. Ce rapport peut être transmis à votre assureur ou à
+            votre avocat.
+          </p>
+
+          <h2>Sécheresse : reconnaissance catastrophe naturelle</h2>
+          <p>
+            Si vous suspectez un sinistre sécheresse, l&apos;arrêté de catastrophe naturelle est un
+            préalable à l&apos;indemnisation. L&apos;expertise Justebati documente les fissures et
+            leur lien probable avec le retrait-gonflement des argiles. Nous ne déclenchons pas
+            l&apos;arrêté cat-nat (c&apos;est une décision préfectorale), mais nous étayons votre
+            dossier.
+          </p>
+
+          <h2>Pour qui ?</h2>
+          <p>
+            Assurés en sinistre (sécheresse, dégât des eaux, tempête, incendie) ou en litige
+            d&apos;indemnisation avec leur compagnie, qui veulent un appui technique indépendant
+            lors de l&apos;expertise contradictoire.
+          </p>
+        </div>
+
+        <div className="mt-12 flex flex-col gap-4 sm:flex-row">
+          <Button asChild className="bg-ink text-paper hover:bg-oxide">
+            <Link href="/contact">Demander une assistance sinistre</Link>
+          </Button>
+          <Button asChild variant="outline">
+            <Link href="/comment-ca-se-passe">Comment ça se passe</Link>
+          </Button>
+        </div>
+      </PageLayout>
+
+      <div className="border-b border-ink bg-sand px-6 py-16 lg:px-12">
         <div className="mx-auto max-w-3xl text-center">
-          <h2 className="mb-6 text-2xl font-display">
-            Liens utiles
-          </h2>
+          <h2 className="mb-6 font-display text-[1.5rem] font-medium">Liens utiles</h2>
           <div className="flex flex-wrap justify-center gap-4">
-            <Button href="/litige-artisan" variant="secondary">
-              Litige artisan
+            <Button asChild variant="secondary">
+              <Link href="/expertise-fissures">Expertise fissures</Link>
             </Button>
-            <Button href="/comment-ca-se-passe" variant="secondary">
-              Comment ça se passe
+            <Button asChild variant="secondary">
+              <Link href="/litige-artisan">Litige avec un artisan</Link>
             </Button>
-            <Button href="/faq" variant="secondary">
-              FAQ
+            <Button asChild variant="secondary">
+              <Link href="/faq">FAQ</Link>
             </Button>
           </div>
         </div>
-      </Section>
+      </div>
     </>
   );
 }
