@@ -2,7 +2,7 @@ import { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Confidentialité | Justebati",
+  title: "Confidentialité",
   description:
     "Traitement des données personnelles, formulaires et cookies sur justebati.fr — transparence RGPD.",
   alternates: {

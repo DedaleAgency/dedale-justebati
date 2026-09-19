@@ -2,7 +2,7 @@ import { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Mentions légales | Justebati",
+  title: "Mentions légales",
   description:
     "Mentions légales du site justebati.fr — éditeur, hébergeur, propriété intellectuelle, contact.",
   alternates: {

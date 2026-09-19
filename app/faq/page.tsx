@@ -2,7 +2,7 @@ import { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "FAQ expertise bâtiment | Justebati",
+  title: "FAQ expertise bâtiment",
   description:
     "Indépendance, tarifs, délais, différence avec un diagnostiqueur, sinistres : réponses claires aux questions sur l'expertise Justebati. Contact & devis.",
   alternates: {

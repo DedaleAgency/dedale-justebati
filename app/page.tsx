@@ -4,9 +4,7 @@ import Link from "next/link";
 import Button from "@/components/Button";
 
 export const metadata: Metadata = {
-  title: {
-    absolute: "Expert bâtiment indépendant | Justebati",
-  },
+  title: "Expert bâtiment indépendant",
   description:
     "Justebati : expertise bâtiment pour particuliers. Avant achat, fissures, humidité, malfaçons, sinistres. Indépendant — aucun travaux à vendre. Devis.",
   alternates: {

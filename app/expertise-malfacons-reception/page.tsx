@@ -2,7 +2,7 @@ import { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Expertise malfaçons & réception | Justebati",
+  title: "Expertise malfaçons & réception",
   description:
     "Malfaçons, non-conformités, assistance à la réception : constat indépendant, réserves exploitables. Rapport technique — sans travaux à vendre. Devis.",
   alternates: {

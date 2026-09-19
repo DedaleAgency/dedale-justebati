@@ -2,7 +2,7 @@ import { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "L'expert bâtiment | Justebati",
+  title: "L'expert bâtiment",
   description:
     "Parcours, indépendance et méthode de l'expert Justebati. Une expertise au service des particuliers — sans aucun travaux à vendre. Contactez-nous.",
   alternates: {

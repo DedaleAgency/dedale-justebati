@@ -2,7 +2,7 @@ import { Metadata } from "next";
 import Link from "next/link";
 
 export const metadata: Metadata = {
-  title: "Expertise sinistre & sécheresse | Justebati",
+  title: "Expertise sinistre & sécheresse",
   description:
     "Sinistre, sécheresse, refus d'indemnisation : assistance technique indépendante face à l'assureur. Rapport clair pour défendre votre dossier. Devis.",
   alternates: {
