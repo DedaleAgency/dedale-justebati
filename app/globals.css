@@ -1,3 +1,6 @@
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+@import url('https://api.fontshare.com/v2/css?f[]=boska@400,500,700&f[]=satoshi@400,500,600,700&display=swap');
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -8,7 +11,7 @@
   }
 
   body {
-    @apply bg-paper text-ink antialiased;
+    @apply antialiased bg-paper text-ink font-sans;
   }
 
   h1,
@@ -30,6 +33,50 @@
       animation-iteration-count: 1 !important;
       transition-duration: 0.01ms !important;
     }
+  }
+  
+  :root {
+    --font-boska: 'Boska', Georgia, serif;
+    --font-satoshi: 'Satoshi', system-ui, sans-serif;
+    
+    --ink: 30 12% 9%;
+    --paper: 40 33% 93%;
+    --sand: 36 24% 86%;
+    --oxide: 14 37% 40%;
+    --mist: 30 6% 40%;
+    --line: 36 20% 78%;
+    --night: 30 12% 5%;
+    --on-night: 40 33% 93%;
+
+    --background: 40 33% 93%;
+    --foreground: 30 12% 9%;
+    --card: 40 33% 93%;
+    --card-foreground: 30 12% 9%;
+    --popover: 40 33% 93%;
+    --popover-foreground: 30 12% 9%;
+    --primary: 30 12% 9%;
+    --primary-foreground: 40 33% 93%;
+    --secondary: 36 24% 86%;
+    --secondary-foreground: 30 12% 9%;
+    --muted: 36 24% 86%;
+    --muted-foreground: 30 6% 40%;
+    --accent: 14 37% 40%;
+    --accent-foreground: 40 33% 93%;
+    --destructive: 14 37% 40%;
+    --destructive-foreground: 40 33% 93%;
+    --border: 36 20% 78%;
+    --input: 36 20% 78%;
+    --ring: 14 37% 40%;
+    --chart-1: 14 37% 40%;
+    --chart-2: 30 6% 40%;
+    --chart-3: 36 24% 86%;
+    --chart-4: 36 20% 78%;
+    --chart-5: 30 12% 9%;
+    --radius: 0px;
+  }
+
+  * {
+    @apply border-border;
   }
 }
 

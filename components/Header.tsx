@@ -1,157 +1,84 @@
 "use client";
 
 import Link from "next/link";
-import { useState } from "react";
-import { siteConfig } from "@/config/site";
 import Logo from "./Logo";
+import { Button } from "./ui/button";
+import { useState } from "react";
+import { Menu, X } from "lucide-react";
 
 export default function Header() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
-  const expertises = [
-    { name: "Expertise avant achat", href: "/expertise-avant-achat" },
-    { name: "Expertise fissures", href: "/expertise-fissures" },
-    { name: "Expertise humidité", href: "/expertise-humidite" },
-    {
-      name: "Malfaçons et réception",
-      href: "/expertise-malfacons-reception",
-    },
-    {
-      name: "Assistance assurance",
-      href: "/assistance-expertise-assurance",
-    },
-    { name: "Litige artisan", href: "/litige-artisan" },
+  const navLinks = [
+    { href: "/", label: "Prestations", anchor: "#missions" },
+    { href: "/comment-ca-se-passe", label: "Méthode" },
+    { href: "/lexpert", label: "L'expert" },
   ];
 
   return (
-    <header className="sticky top-0 z-50 border-b border-line bg-paper/95 backdrop-blur-sm">
-      <nav className="container-custom">
-        <div className="flex h-20 items-center justify-between">
-          <Link href="/" className="flex items-center space-x-2">
-            <Logo className="h-8 w-auto" />
-          </Link>
+    <header className="sticky top-0 z-50 border-b border-line bg-paper/96 backdrop-blur-sm">
+      <div className="mx-auto flex items-center justify-between px-6 py-[18px] lg:px-12">
+        <Logo />
 
-          {/* Desktop Navigation */}
-          <div className="hidden items-center space-x-8 md:flex">
-            <div className="group relative">
-              <button className="text-sm font-medium text-ink transition-colors hover:text-copper">
-                Expertises
-              </button>
-              <div className="absolute left-0 top-full hidden pt-2 group-hover:block">
-                <div className="w-64 rounded-lg border border-line bg-paper p-2 shadow-lg">
-                  {expertises.map((item) => (
-                    <Link
-                      key={item.href}
-                      href={item.href}
-                      className="block rounded px-4 py-2 text-sm text-ink transition-colors hover:bg-paper-2 hover:text-copper"
-                    >
-                      {item.name}
-                    </Link>
-                  ))}
-                </div>
-              </div>
-            </div>
+        <nav className="hidden items-center gap-7 lg:flex">
+          {navLinks.map((link) => (
             <Link
-              href="/lexpert"
-              className="text-sm font-medium text-ink transition-colors hover:text-copper"
+              key={link.href}
+              href={link.anchor ? `${link.href}${link.anchor}` : link.href}
+              className="text-[13px] font-medium text-ink transition-colors hover:text-oxide"
             >
-              L&apos;expert
+              {link.label}
             </Link>
-            <Link
-              href="/comment-ca-se-passe"
-              className="text-sm font-medium text-ink transition-colors hover:text-copper"
-            >
-              Comment ça se passe
-            </Link>
-            <Link
-              href="/faq"
-              className="text-sm font-medium text-ink transition-colors hover:text-copper"
-            >
-              FAQ
-            </Link>
-            <a
-              href={`tel:${siteConfig.phone}`}
-              className="text-sm font-medium text-copper transition-colors hover:text-ink"
-            >
-              {siteConfig.phoneDisplay}
-            </a>
-            <Link
-              href="/contact"
-              className="rounded-lg bg-copper px-6 py-2.5 text-sm font-medium text-paper transition-colors hover:bg-ink"
-            >
-              Devis
-            </Link>
-          </div>
-
-          {/* Mobile Menu Button */}
-          <button
-            onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="flex flex-col space-y-1.5 md:hidden"
-            aria-label="Menu"
+          ))}
+          <a
+            href="tel:0100000000"
+            className="font-mono text-[11px] tracking-[0.04em] text-ink hover:text-oxide"
           >
-            <span
-              className={`block h-0.5 w-6 bg-ink transition-transform ${isMenuOpen ? "translate-y-2 rotate-45" : ""}`}
-            />
-            <span
-              className={`block h-0.5 w-6 bg-ink transition-opacity ${isMenuOpen ? "opacity-0" : ""}`}
-            />
-            <span
-              className={`block h-0.5 w-6 bg-ink transition-transform ${isMenuOpen ? "-translate-y-2 -rotate-45" : ""}`}
-            />
-          </button>
-        </div>
+            01 00 00 00 00
+          </a>
+          <Button asChild size="sm" className="bg-ink text-paper hover:bg-oxide">
+            <Link href="/contact">Demander un devis</Link>
+          </Button>
+        </nav>
 
-        {/* Mobile Navigation */}
-        {isMenuOpen && (
-          <div className="border-t border-line py-4 md:hidden">
-            <div className="space-y-4">
-              <div>
-                <div className="mb-2 text-xs font-mono font-medium uppercase tracking-wider text-stone">
-                  Expertises
-                </div>
-                {expertises.map((item) => (
-                  <Link
-                    key={item.href}
-                    href={item.href}
-                    onClick={() => setIsMenuOpen(false)}
-                    className="block py-2 text-sm text-ink transition-colors hover:text-copper"
-                  >
-                    {item.name}
-                  </Link>
-                ))}
-              </div>
+        <button
+          className="lg:hidden"
+          onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+          aria-label="Menu"
+        >
+          {mobileMenuOpen ? (
+            <X className="h-6 w-6" />
+          ) : (
+            <Menu className="h-6 w-6" />
+          )}
+        </button>
+      </div>
+
+      {mobileMenuOpen && (
+        <div className="border-t border-line bg-paper lg:hidden">
+          <nav className="flex flex-col space-y-4 px-6 py-6">
+            {navLinks.map((link) => (
               <Link
-                href="/lexpert"
-                onClick={() => setIsMenuOpen(false)}
-                className="block py-2 text-sm text-ink transition-colors hover:text-copper"
+                key={link.href}
+                href={link.anchor ? `${link.href}${link.anchor}` : link.href}
+                className="text-base font-medium text-ink hover:text-oxide"
+                onClick={() => setMobileMenuOpen(false)}
               >
-                L&apos;expert
+                {link.label}
               </Link>
-              <Link
-                href="/comment-ca-se-passe"
-                onClick={() => setIsMenuOpen(false)}
-                className="block py-2 text-sm text-ink transition-colors hover:text-copper"
-              >
-                Comment ça se passe
-              </Link>
-              <Link
-                href="/faq"
-                onClick={() => setIsMenuOpen(false)}
-                className="block py-2 text-sm text-ink transition-colors hover:text-copper"
-              >
-                FAQ
-              </Link>
-              <Link
-                href="/contact"
-                onClick={() => setIsMenuOpen(false)}
-                className="mt-4 block rounded-lg bg-copper px-6 py-2.5 text-center text-sm font-medium text-paper"
-              >
-                Demander un devis
-              </Link>
-            </div>
-          </div>
-        )}
-      </nav>
+            ))}
+            <a
+              href="tel:0100000000"
+              className="font-mono text-sm tracking-wider text-ink hover:text-oxide"
+            >
+              01 00 00 00 00
+            </a>
+            <Button asChild className="bg-ink text-paper hover:bg-oxide">
+              <Link href="/contact">Demander un devis</Link>
+            </Button>
+          </nav>
+        </div>
+      )}
     </header>
   );
 }

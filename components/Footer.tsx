@@ -1,156 +1,68 @@
 import Link from "next/link";
-import { siteConfig } from "@/config/site";
-import Logo from "./Logo";
 
 export default function Footer() {
   return (
-    <footer className="border-t border-line bg-ok-dark text-on-dark">
-      <div className="container-custom section-spacing">
-        <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-4">
-          {/* Marque */}
-          <div className="lg:col-span-2">
-            <Logo className="mb-4 h-8 w-auto text-on-dark" mono />
-            <p className="mb-4 text-sm text-stone">
-              {siteConfig.baseline}
-            </p>
-            <p className="text-sm text-stone">
-              Cabinet d&apos;expertise bâtiment indépendant. Aucun travaux à
-              vendre.
+    <footer className="border-t border-ink bg-night text-on-night">
+      <div className="mx-auto px-6 py-12 lg:px-12 lg:py-16">
+        <div className="grid gap-10 border-b border-[#2A2824] pb-9 lg:grid-cols-[2fr_1fr_1fr] lg:gap-12">
+          <div>
+            <div className="mb-3 font-display text-[22px] font-bold">JusteBati</div>
+            <p className="max-w-[36ch] text-[13px] leading-relaxed text-on-night/55">
+              Cabinet d'expertise bâtiment indépendant pour particuliers. Aucun travaux à vendre.
             </p>
           </div>
 
-          {/* Navigation */}
           <div>
-            <h3 className="mb-4 text-sm font-mono font-medium uppercase tracking-wider">
-              Navigation
-            </h3>
-            <ul className="space-y-2 text-sm">
-              <li>
-                <Link
-                  href="/"
-                  className="text-stone transition-colors hover:text-copper"
-                >
-                  Accueil
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/lexpert"
-                  className="text-stone transition-colors hover:text-copper"
-                >
-                  L&apos;expert
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/comment-ca-se-passe"
-                  className="text-stone transition-colors hover:text-copper"
-                >
-                  Comment ça se passe
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/faq"
-                  className="text-stone transition-colors hover:text-copper"
-                >
-                  FAQ
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/contact"
-                  className="text-stone transition-colors hover:text-copper"
-                >
-                  Contact
-                </Link>
-              </li>
+            <h4 className="mb-[14px] font-mono text-[10px] uppercase tracking-[0.08em] text-oxide">
+              Missions
+            </h4>
+            <ul className="space-y-2">
+              {[
+                { href: "/expertise-avant-achat", label: "Avant achat" },
+                { href: "/expertise-fissures", label: "Fissures" },
+                { href: "/expertise-humidite", label: "Humidité" },
+                { href: "/contact", label: "Contact" },
+              ].map((link) => (
+                <li key={link.href}>
+                  <Link
+                    href={link.href}
+                    className="text-[13px] text-on-night/80 transition-colors hover:text-on-night"
+                  >
+                    {link.label}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
 
-          {/* Prestations */}
           <div>
-            <h3 className="mb-4 text-sm font-mono font-medium uppercase tracking-wider">
-              Expertises
-            </h3>
-            <ul className="space-y-2 text-sm">
-              <li>
-                <Link
-                  href="/expertise-avant-achat"
-                  className="text-stone transition-colors hover:text-copper"
-                >
-                  Avant achat
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/expertise-fissures"
-                  className="text-stone transition-colors hover:text-copper"
-                >
-                  Fissures
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/expertise-humidite"
-                  className="text-stone transition-colors hover:text-copper"
-                >
-                  Humidité
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/expertise-malfacons-reception"
-                  className="text-stone transition-colors hover:text-copper"
-                >
-                  Malfaçons
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/assistance-expertise-assurance"
-                  className="text-stone transition-colors hover:text-copper"
-                >
-                  Assurance
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/litige-artisan"
-                  className="text-stone transition-colors hover:text-copper"
-                >
-                  Litige artisan
-                </Link>
-              </li>
+            <h4 className="mb-[14px] font-mono text-[10px] uppercase tracking-[0.08em] text-oxide">
+              Cabinet
+            </h4>
+            <ul className="space-y-2">
+              {[
+                { href: "/lexpert", label: "L'expert" },
+                { href: "/comment-ca-se-passe", label: "Méthode" },
+                { href: "/faq", label: "FAQ" },
+                { href: "/mentions-legales", label: "Mentions légales" },
+              ].map((link) => (
+                <li key={link.href}>
+                  <Link
+                    href={link.href}
+                    className="text-[13px] text-on-night/80 transition-colors hover:text-on-night"
+                  >
+                    {link.label}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
         </div>
 
-        {/* Bas de footer */}
-        <div className="mt-12 border-t border-stone/20 pt-8">
-          <div className="flex flex-col items-center justify-between space-y-4 text-sm text-stone md:flex-row md:space-y-0">
-            <div className="flex flex-col items-center space-y-2 md:flex-row md:space-x-6 md:space-y-0">
-              <p>
-                &copy; {new Date().getFullYear()} {siteConfig.name}
-              </p>
-              <Link
-                href="/mentions-legales"
-                className="transition-colors hover:text-copper"
-              >
-                Mentions légales
-              </Link>
-              <Link
-                href="/politique-de-confidentialite"
-                className="transition-colors hover:text-copper"
-              >
-                Confidentialité
-              </Link>
-            </div>
-            <p className="text-center md:text-right">
-              Réalisation{" "}
-              <span className="text-copper">Dédale Agency</span>
-            </p>
-          </div>
+        <div className="flex flex-wrap items-center justify-between gap-4 pt-5 font-mono text-[10px] uppercase tracking-[0.06em] text-on-night/40">
+          <span>JB · Colophon</span>
+          <span>France · 2026</span>
+          <span>Indépendant</span>
         </div>
       </div>
     </footer>

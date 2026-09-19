@@ -1,30 +1,12 @@
 import type { Metadata } from "next";
-import { Fraunces, DM_Sans, IBM_Plex_Mono } from "next/font/google";
 import "./globals.css";
 import { siteConfig } from "@/config/site";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import StickyMobileCta from "@/components/StickyMobileCta";
 import JsonLd from "@/components/JsonLd";
-
-const fraunces = Fraunces({
-  subsets: ["latin"],
-  variable: "--font-fraunces",
-  display: "swap",
-});
-
-const dmSans = DM_Sans({
-  subsets: ["latin"],
-  variable: "--font-dm-sans",
-  display: "swap",
-});
-
-const ibmPlexMono = IBM_Plex_Mono({
-  subsets: ["latin"],
-  weight: ["400", "500"],
-  variable: "--font-ibm-plex-mono",
-  display: "swap",
-});
+import { jetbrainsMono } from "@/lib/fonts";
+import { cn } from "@/lib/utils";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
@@ -47,7 +29,7 @@ export default function RootLayout({
   return (
     <html
       lang="fr"
-      className={`${fraunces.variable} ${dmSans.variable} ${ibmPlexMono.variable}`}
+      className={cn(jetbrainsMono.variable)}
     >
       <head>
         <JsonLd />
