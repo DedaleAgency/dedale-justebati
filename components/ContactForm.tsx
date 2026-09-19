@@ -3,6 +3,7 @@
 import { useState, FormEvent } from "react";
 import { Button } from "./ui/button";
 import Link from "next/link";
+import ContactFormValidation from "./ContactFormValidation";
 
 export default function ContactForm() {
   const [isSubmitting, setIsSubmitting] = useState(false);
@@ -54,6 +55,7 @@ export default function ContactForm() {
 
   return (
     <form onSubmit={handleSubmit} className="space-y-6">
+      <ContactFormValidation />
       <div className="grid gap-6 md:grid-cols-2">
         <div>
           <label htmlFor="prenom" className="mb-2 block text-sm font-medium text-ink">

@@ -1,6 +1,5 @@
 @import "tw-animate-css";
 @import "shadcn/tailwind.css";
-@import url('https://api.fontshare.com/v2/css?f[]=boska@400,500,700&f[]=satoshi@400,500,600,700&display=swap');
 @import "./prose.css";
 @tailwind base;
 @tailwind components;
@@ -9,10 +8,13 @@
 @layer base {
   html {
     scroll-behavior: smooth;
+    overflow-x: hidden;
   }
 
   body {
     @apply antialiased bg-paper text-ink font-sans;
+    overflow-x: hidden;
+    max-width: 100vw;
   }
 
   h1,
@@ -37,8 +39,6 @@
   }
   
   :root {
-    --font-boska: 'Boska', Georgia, serif;
-    --font-satoshi: 'Satoshi', system-ui, sans-serif;
     
     --ink: 30 12% 9%;
     --paper: 40 33% 93%;

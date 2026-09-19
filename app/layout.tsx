@@ -5,7 +5,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import StickyMobileCta from "@/components/StickyMobileCta";
 import JsonLd from "@/components/JsonLd";
-import { jetbrainsMono } from "@/lib/fonts";
+import { boska, satoshi, jetbrainsMono } from "@/lib/fonts";
 import { cn } from "@/lib/utils";
 
 export const metadata: Metadata = {
@@ -29,12 +29,12 @@ export default function RootLayout({
   return (
     <html
       lang="fr"
-      className={cn(jetbrainsMono.variable)}
+      className={cn(boska.variable, satoshi.variable, jetbrainsMono.variable)}
     >
       <head>
         <JsonLd />
       </head>
-      <body className="flex min-h-screen flex-col">
+      <body className="flex min-h-screen flex-col pb-[64px] lg:pb-0">
         <Header />
         <main className="flex-1">{children}</main>
         <Footer />
