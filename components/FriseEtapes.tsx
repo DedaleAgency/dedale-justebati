@@ -8,8 +8,8 @@ interface StepProps {
 function Step({ number, title, description, isLast }: StepProps) {
   return (
     <article
-      className={`relative border-line px-[22px] py-7 lg:py-9 ${
-        isLast ? "" : "border-r"
+      className={`relative min-w-0 border-line px-6 py-7 lg:px-[22px] lg:py-9 ${
+        isLast ? "lg:border-r-0" : "border-b lg:border-b-0 lg:border-r"
       }`}
     >
       <span className="mb-[14px] block font-mono text-[11px] uppercase tracking-[0.06em] text-oxide">

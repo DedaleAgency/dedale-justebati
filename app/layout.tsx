@@ -34,7 +34,7 @@ export default function RootLayout({
       <head>
         <JsonLd />
       </head>
-      <body className="flex min-h-screen flex-col pb-[64px] lg:pb-0">
+      <body className="flex min-h-screen flex-col pb-20 lg:pb-0">
         <Header />
         <main className="flex-1">{children}</main>
         <Footer />
