@@ -316,7 +316,7 @@ export default function HomePage() {
               </div>
               <div className="flex justify-center md:justify-end">
                 <Image
-                  src="/maps/carte-paca.svg"
+                  src="/maps/carte-intervention.svg"
                   alt="Région Provence-Alpes-Côte d'Azur"
                   width={423}
                   height={364}

@@ -61,7 +61,7 @@ export default function ContactPage() {
               </h2>
               <div className="mb-4 flex justify-center">
                 <Image
-                  src="/maps/carte-paca.svg"
+                  src="/maps/carte-intervention.svg"
                   alt="Région Provence-Alpes-Côte d'Azur"
                   width={210}
                   height={182}
