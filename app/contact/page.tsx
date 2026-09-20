@@ -1,7 +1,7 @@
 import { Metadata } from "next";
+import Image from "next/image";
 import Section from "@/components/Section";
 import ContactForm from "@/components/ContactForm";
-import FranceMap from "@/components/FranceMap";
 import { siteConfig } from "@/config/site";
 
 export const metadata: Metadata = {
@@ -59,8 +59,14 @@ export default function ContactPage() {
               <h2 className="mb-4 font-serif text-[22px] leading-[1.25] text-navy">
                 Zone d'intervention
               </h2>
-              <div className="mb-4">
-                <FranceMap className="h-auto w-full max-w-[200px]" />
+              <div className="mb-4 flex justify-center">
+                <Image
+                  src="/france.svg"
+                  alt="Contour de la France métropolitaine"
+                  width={200}
+                  height={220}
+                  className="h-auto w-full max-w-[200px]"
+                />
               </div>
               <p className="text-[15px] leading-[1.6] text-navy-muted">
                 Interventions sur l'ensemble du territoire français. Chaque déplacement fait l'objet d'un devis personnalisé.
