@@ -207,7 +207,7 @@ export default function HomePage() {
       </section>
 
       {/* Indépendance */}
-      <section className="section-light section-spacing">
+      <section className="bg-white section-spacing">
         <div className="container-custom">
           <FadeUp className="mx-auto max-w-3xl text-center">
             <h2 className="mb-6 font-serif text-[clamp(1.625rem,2.5vw,2rem)] leading-[1.2] text-navy">

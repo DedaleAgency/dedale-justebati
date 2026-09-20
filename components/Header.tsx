@@ -36,7 +36,7 @@ export default function Header() {
   // Determine header style based on page and scroll state
   const headerBg = isHomePage && !isScrolled 
     ? "bg-transparent" 
-    : "bg-paper/95 backdrop-blur-[10px] border-b border-border-on-paper";
+    : "bg-white/95 backdrop-blur-[10px] border-b border-border-on-paper";
   
   const textColor = isHomePage && !isScrolled 
     ? "text-paper" 
@@ -52,7 +52,7 @@ export default function Header() {
 
   const dropdownBg = isHomePage && !isScrolled
     ? "bg-navy/95 border-border-on-navy"
-    : "bg-paper border-border-on-paper";
+    : "bg-white border-border-on-paper";
 
   const dropdownItemHover = isHomePage && !isScrolled
     ? "hover:bg-paper-subtle"
@@ -64,7 +64,7 @@ export default function Header() {
       animate={{
         backgroundColor: isHomePage && !isScrolled 
           ? "rgba(31, 26, 20, 0)" 
-          : "rgba(245, 240, 230, 0.95)",
+          : "rgba(255, 255, 255, 0.95)",
       }}
       transition={{ duration: 0.3 }}
       className={`sticky top-0 z-50 ${isHomePage && !isScrolled ? "" : "border-b border-border-on-paper"}`}
