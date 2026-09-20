@@ -2,6 +2,9 @@ import { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import Button from "@/components/Button";
+import HeroProofPanel from "@/components/HeroProofPanel";
+import MissionCard from "@/components/MissionCard";
+import FranceMap from "@/components/FranceMap";
 
 export const metadata: Metadata = {
   title: "Expert bâtiment indépendant",
@@ -78,33 +81,37 @@ export default function HomePage() {
           />
         </div>
         <div className="container-custom relative flex min-h-[85vh] items-center">
-          <div className="max-w-[580px] py-20">
-            <div className="mb-5 text-[11px] font-semibold uppercase tracking-[0.14em] text-copper">
-              Expertise bâtiment indépendante
+          <div className="flex w-full flex-col items-start gap-8 py-20 lg:flex-row lg:items-center lg:justify-between">
+            <div className="max-w-[580px]">
+              <div className="mb-5 text-[11px] font-semibold uppercase tracking-[0.14em] text-copper">
+                Expertise bâtiment indépendante
+              </div>
+              <h1 className="mb-6 font-serif text-[clamp(1.875rem,3.2vw,2.375rem)] leading-[1.15] tracking-[-0.01em] text-paper">
+                Expertise bâtiment indépendante — sans travaux à vendre
+              </h1>
+              <p className="mb-8 text-[17px] leading-[1.65] text-paper-muted">
+                Justebati est un cabinet d'expertise bâtiment pour particuliers. Inspection sur site, analyse des désordres, rapport écrit avec photos et chiffrage des travaux à prévoir.
+              </p>
+              <p className="mb-8 text-[17px] leading-[1.65] text-paper-muted">
+                Nous ne vendons aucun travaux. Notre rôle s'arrête au diagnostic technique et au conseil clair.
+              </p>
+              <div className="flex flex-col gap-4 sm:flex-row">
+                <Link
+                  href="/contact"
+                  className="inline-flex items-center justify-center rounded-sm bg-copper px-[22px] py-3 text-[13px] font-semibold text-white transition-colors duration-base hover:bg-copper-hover"
+                >
+                  Demander un devis
+                </Link>
+                <Link
+                  href="/comment-ca-se-passe"
+                  className="inline-flex items-center justify-center rounded-sm border border-paper/35 px-[22px] py-3 text-[13px] font-semibold text-paper transition-colors duration-base hover:border-paper hover:bg-paper-subtle"
+                >
+                  Comment ça se passe
+                </Link>
+              </div>
+              <HeroProofPanel />
             </div>
-            <h1 className="mb-6 font-serif text-[clamp(1.875rem,3.2vw,2.375rem)] leading-[1.15] tracking-[-0.01em] text-paper">
-              Expertise bâtiment indépendante — sans travaux à vendre
-            </h1>
-            <p className="mb-8 text-[17px] leading-[1.65] text-paper-muted">
-              Justebati est un cabinet d'expertise bâtiment pour particuliers. Inspection sur site, analyse des désordres, rapport écrit avec photos et chiffrage des travaux à prévoir.
-            </p>
-            <p className="mb-8 text-[17px] leading-[1.65] text-paper-muted">
-              Nous ne vendons aucun travaux. Notre rôle s'arrête au diagnostic technique et au conseil clair.
-            </p>
-            <div className="flex flex-col gap-4 sm:flex-row">
-              <Link
-                href="/contact"
-                className="inline-flex items-center justify-center rounded-sm bg-copper px-[22px] py-3 text-[13px] font-semibold text-white transition-colors duration-base hover:bg-copper-hover"
-              >
-                Demander un devis
-              </Link>
-              <Link
-                href="/comment-ca-se-passe"
-                className="inline-flex items-center justify-center rounded-sm border border-paper/35 px-[22px] py-3 text-[13px] font-semibold text-paper transition-colors duration-base hover:border-paper hover:bg-paper-subtle"
-              >
-                Comment ça se passe
-              </Link>
-            </div>
+            <HeroProofPanel />
           </div>
         </div>
       </section>
@@ -139,44 +146,84 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Six missions — Liste éditoriale */}
-      <section className="section-light section-spacing" style={{ paddingTop: 0 }}>
+      {/* Six missions — Grille de cartes */}
+      <section className="section-light section-spacing">
         <div className="container-custom">
           <div className="mb-12 text-center">
             <h2 className="mb-4 font-serif text-[clamp(1.625rem,2.5vw,2rem)] leading-[1.2]">
-              Six missions
+              Nos expertises
             </h2>
             <p className="mx-auto max-w-2xl text-navy-muted">
               Avant achat, fissures, humidité, malfaçons, assurance, litige : chaque expertise apporte un regard technique neutre, sans travaux à vendre.
             </p>
           </div>
-          <div className="space-y-0">
-            {missions.map((mission, index) => (
-              <Link
-                key={mission.href}
-                href={mission.href}
-                className="group grid grid-cols-1 gap-6 border-t border-border-on-paper py-7 transition-colors duration-base hover:bg-navy/[0.03] sm:grid-cols-[140px,1fr,auto] sm:items-center"
-              >
-                <div className="relative aspect-[16/10] w-full overflow-hidden sm:aspect-[140/88] sm:w-[140px]">
-                  <Image
-                    src={mission.image}
-                    alt={mission.title}
-                    fill
-                    className="object-cover"
-                  />
-                </div>
-                <div>
-                  <h3 className="mb-1 font-serif text-[22px] leading-[1.25] text-navy">
-                    {mission.title}
-                  </h3>
-                  <p className="text-sm text-navy-muted">{mission.description}</p>
-                </div>
-                <div className="flex items-center text-copper transition-colors group-hover:text-copper-hover">
-                  <span className="text-xl">→</span>
-                </div>
-              </Link>
-            ))}
-            <div className="border-t border-border-on-paper" />
+          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            <MissionCard
+              title="Avant achat"
+              description="Bilan technique avant le compromis."
+              href="/expertise-avant-achat"
+              icon={
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="h-6 w-6">
+                  <path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z" />
+                  <polyline points="9 22 9 12 15 12 15 22" />
+                </svg>
+              }
+            />
+            <MissionCard
+              title="Fissures"
+              description="Cause, gravité, cosmétique ou structurel."
+              href="/expertise-fissures"
+              icon={
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="h-6 w-6">
+                  <path d="M14.7 6.3a1 1 0 000 1.4l1.6 1.6a1 1 0 001.4 0l3.77-3.77a6 6 0 01-7.94 7.94l-6.91 6.91a2.12 2.12 0 01-3-3l6.91-6.91a6 6 0 017.94-7.94l-3.76 3.76z" />
+                </svg>
+              }
+            />
+            <MissionCard
+              title="Humidité"
+              description="Identification de l'origine, sans vente de traitement."
+              href="/expertise-humidite"
+              icon={
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="h-6 w-6">
+                  <path d="M12 2.69l5.66 5.66a8 8 0 11-11.31 0z" />
+                </svg>
+              }
+            />
+            <MissionCard
+              title="Malfaçons et réception"
+              description="Constat, réserves, non-conformités."
+              href="/expertise-malfacons-reception"
+              icon={
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="h-6 w-6">
+                  <path d="M9 11l3 3L22 4" />
+                  <path d="M21 12v7a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h11" />
+                </svg>
+              }
+            />
+            <MissionCard
+              title="Assurance et sinistre"
+              description="Assistance technique indépendante, notamment sécheresse."
+              href="/assistance-expertise-assurance"
+              icon={
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="h-6 w-6">
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
+                </svg>
+              }
+            />
+            <MissionCard
+              title="Litige artisan"
+              description="Constat pour négocier ou constituer un dossier."
+              href="/litige-artisan"
+              icon={
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="h-6 w-6">
+                  <path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8z" />
+                  <polyline points="14 2 14 8 20 8" />
+                  <line x1="16" y1="13" x2="8" y2="13" />
+                  <line x1="16" y1="17" x2="8" y2="17" />
+                  <polyline points="10 9 9 9 8 9" />
+                </svg>
+              }
+            />
           </div>
         </div>
       </section>
@@ -226,18 +273,18 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Comment ça se passe */}
+      {/* Comment ça se passe — Étapes aérées */}
       <section className="section-light section-spacing">
         <div className="container-custom">
-          <div className="mx-auto max-w-3xl text-center">
+          <div className="mx-auto mb-16 max-w-3xl text-center">
             <h2 className="mb-6 font-serif text-[clamp(1.625rem,2.5vw,2rem)] leading-[1.2] text-navy">
               Comment ça se passe
             </h2>
-            <p className="mb-12 text-navy-muted">
+            <p className="text-navy-muted">
               Contact, visite sur site, analyse, chiffrage, rapport remis. Chaque étape est documentée.
             </p>
           </div>
-          <div className="mx-auto grid max-w-5xl gap-8 sm:grid-cols-2 lg:grid-cols-5">
+          <div className="mx-auto grid max-w-5xl gap-x-8 gap-y-12 sm:grid-cols-2 lg:grid-cols-5">
             {[
               { num: "01", label: "Contact", desc: "Décrivez votre besoin" },
               { num: "02", label: "Visite", desc: "Sur site" },
@@ -245,14 +292,14 @@ export default function HomePage() {
               { num: "04", label: "Chiffrage", desc: "Travaux à prévoir" },
               { num: "05", label: "Rapport", desc: "Remis illustré" },
             ].map((step) => (
-              <div key={step.num} className="border-t-2 border-copper pt-5">
-                <div className="mb-2 text-sm font-medium text-navy-muted">
+              <div key={step.num} className="text-center">
+                <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-full border-2 border-copper bg-surface font-mono text-[20px] font-bold text-copper">
                   {step.num}
                 </div>
-                <h3 className="mb-1 font-serif text-[18px] text-navy">
+                <h3 className="mb-2 font-serif text-[20px] text-navy">
                   {step.label}
                 </h3>
-                <p className="text-[13px] text-navy-muted">{step.desc}</p>
+                <p className="text-[14px] leading-[1.5] text-navy-muted">{step.desc}</p>
               </div>
             ))}
           </div>
@@ -263,6 +310,35 @@ export default function HomePage() {
             >
               Le détail du déroulé →
             </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* Zone d'intervention France */}
+      <section className="section-spacing bg-navy">
+        <div className="container-custom">
+          <div className="mx-auto max-w-5xl">
+            <div className="grid gap-12 md:grid-cols-[1fr,300px] md:items-center">
+              <div>
+                <div className="mb-4 text-[11px] font-semibold uppercase tracking-[0.14em] text-copper">
+                  Zone d'intervention
+                </div>
+                <h2 className="mb-6 font-serif text-[clamp(1.625rem,2.5vw,2rem)] leading-[1.2] text-paper">
+                  Interventions sur l'ensemble du territoire français
+                </h2>
+                <div className="space-y-4 text-base leading-[1.65] text-paper-muted">
+                  <p>
+                    Justebati intervient sur l'ensemble de la France métropolitaine pour vos expertises bâtiment. Avant achat, fissures, humidité, malfaçons, sinistre ou litige : nous nous déplaçons sur site pour établir un diagnostic technique complet.
+                  </p>
+                  <p>
+                    Chaque intervention fait l'objet d'un devis personnalisé en fonction de la nature de l'expertise et de la localisation du bien.
+                  </p>
+                </div>
+              </div>
+              <div className="flex justify-center md:justify-end">
+                <FranceMap className="h-auto w-full max-w-[280px]" />
+              </div>
+            </div>
           </div>
         </div>
       </section>

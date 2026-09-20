@@ -6,9 +6,9 @@ export const siteConfig = {
   phoneDisplay: "01 00 00 00 00",
   email: "contact@exemple.fr",
   zone: {
-    villePrincipale: "Ville-Centre",
-    departements: ["00"],
-    villesCouvertes: ["Ville-Centre"],
+    villePrincipale: "France entière",
+    departements: ["France métropolitaine"],
+    villesCouvertes: ["Interventions sur l'ensemble du territoire français"],
   },
   social: {},
   noIndex: true,
