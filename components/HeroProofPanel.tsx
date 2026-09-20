@@ -39,40 +39,21 @@ const proofItems: ProofItem[] = [
 
 export default function HeroProofPanel() {
   return (
-    <>
-      {/* Desktop side panel */}
-      <div className="hidden lg:block lg:w-[280px] xl:w-[320px]">
-        <div className="rounded-sm border border-paper/20 bg-navy/40 p-6 backdrop-blur-sm">
-          <div className="space-y-4">
-            {proofItems.map((item, index) => (
-              <div key={index} className="flex items-start gap-3">
-                <div className="mt-0.5 flex-shrink-0 text-copper">
-                  {item.icon}
-                </div>
-                <p className="text-[14px] leading-[1.5] text-paper">
-                  {item.text}
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
-
-      {/* Mobile stacked below CTAs */}
-      <div className="mt-8 lg:hidden">
-        <div className="grid gap-3 sm:grid-cols-3">
+    <div className="hidden lg:block lg:w-[280px] xl:w-[320px]">
+      <div className="rounded-sm border border-paper/20 bg-navy/40 p-6 backdrop-blur-sm">
+        <div className="space-y-4">
           {proofItems.map((item, index) => (
-            <div key={index} className="flex items-center gap-2 rounded-sm border border-paper/20 bg-navy/40 p-3 backdrop-blur-sm">
-              <div className="flex-shrink-0 text-copper">
+            <div key={index} className="flex items-start gap-3">
+              <div className="mt-0.5 flex-shrink-0 text-copper">
                 {item.icon}
               </div>
-              <p className="text-[13px] leading-[1.4] text-paper">
+              <p className="text-[14px] leading-[1.5] text-paper">
                 {item.text}
               </p>
             </div>
           ))}
         </div>
       </div>
-    </>
+    </div>
   );
 }

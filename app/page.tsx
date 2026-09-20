@@ -107,8 +107,25 @@ export default function HomePage() {
                   Comment ça se passe
                 </Link>
               </div>
-              <HeroProofPanel />
+              {/* Mobile proof panel (stacked below CTAs on mobile only) */}
+              <div className="mt-8 lg:hidden">
+                <div className="grid gap-3 sm:grid-cols-3">
+                  {[
+                    { icon: "✓", text: "Aucun travaux à vendre" },
+                    { icon: "⏱", text: "Intervention sous 10 jours" },
+                    { icon: "📄", text: "Rapport illustré détaillé" },
+                  ].map((item, index) => (
+                    <div key={index} className="flex items-center gap-2 rounded-sm border border-paper/20 bg-navy/40 p-3 backdrop-blur-sm">
+                      <span className="text-copper">{item.icon}</span>
+                      <p className="text-[13px] leading-[1.4] text-paper">
+                        {item.text}
+                      </p>
+                    </div>
+                  ))}
+                </div>
+              </div>
             </div>
+            {/* Desktop proof panel (right side on desktop only) */}
             <HeroProofPanel />
           </div>
         </div>
@@ -190,13 +207,13 @@ export default function HomePage() {
       </section>
 
       {/* Indépendance */}
-      <section className="section-spacing bg-navy">
+      <section className="section-light section-spacing">
         <div className="container-custom">
           <div className="mx-auto max-w-3xl text-center">
-            <h2 className="mb-6 font-serif text-[clamp(1.625rem,2.5vw,2rem)] leading-[1.2] text-paper">
+            <h2 className="mb-6 font-serif text-[clamp(1.625rem,2.5vw,2rem)] leading-[1.2] text-navy">
               Indépendance
             </h2>
-            <div className="space-y-4 text-base leading-[1.65] text-paper-muted">
+            <div className="space-y-4 text-base leading-[1.65] text-navy-muted">
               <p>
                 Justebati ne réalise pas de travaux, ne propose pas d'entreprise partenaires et ne perçoit aucune commission sur des interventions. Le rapport reste neutre : ce que le bâtiment présente, ce qu'il faut prévoir, ce que cela peut coûter.
               </p>
