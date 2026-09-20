@@ -1,4 +1,5 @@
 import { Metadata } from "next";
+import Image from "next/image";
 import Section from "@/components/Section";
 import ContactForm from "@/components/ContactForm";
 import { siteConfig } from "@/config/site";
@@ -27,28 +28,48 @@ export default function ContactPage() {
             Décrivez votre besoin. Nous revenons vers vous avec une proposition adaptée. Justebati : expertise bâtiment indépendante — sans travaux à vendre.
           </p>
 
-          <div className="mb-12 rounded-sm border border-border-on-paper bg-paper p-8">
-            <h2 className="mb-4 font-serif text-[22px] leading-[1.25] text-navy">
-              Coordonnées
-            </h2>
-            <div className="space-y-2 text-base">
-              <p className="flex items-center gap-2">
-                <span className="text-navy-muted">Téléphone :</span>
-                <a
-                  href={`tel:${siteConfig.phone}`}
-                  className="font-medium text-copper-hover hover:text-copper"
-                >
-                  {siteConfig.phoneDisplay}
-                </a>
-              </p>
-              <p className="flex items-center gap-2">
-                <span className="text-navy-muted">E-mail :</span>
-                <a
-                  href={`mailto:${siteConfig.email}`}
-                  className="font-medium text-copper-hover hover:text-copper"
-                >
-                  {siteConfig.email}
-                </a>
+          <div className="mb-12 grid gap-8 sm:grid-cols-2">
+            <div className="rounded-sm border border-border-on-paper bg-paper p-8">
+              <h2 className="mb-4 font-serif text-[22px] leading-[1.25] text-navy">
+                Coordonnées
+              </h2>
+              <div className="space-y-2 text-base">
+                <p className="flex items-center gap-2">
+                  <span className="text-navy-muted">Téléphone :</span>
+                  <a
+                    href={`tel:${siteConfig.phone}`}
+                    className="font-medium text-copper-hover hover:text-copper"
+                  >
+                    {siteConfig.phoneDisplay}
+                  </a>
+                </p>
+                <p className="flex items-center gap-2">
+                  <span className="text-navy-muted">E-mail :</span>
+                  <a
+                    href={`mailto:${siteConfig.email}`}
+                    className="font-medium text-copper-hover hover:text-copper"
+                  >
+                    {siteConfig.email}
+                  </a>
+                </p>
+              </div>
+            </div>
+
+            <div className="rounded-sm border border-border-on-paper bg-paper p-8">
+              <h2 className="mb-4 font-serif text-[22px] leading-[1.25] text-navy">
+                Zone d'intervention
+              </h2>
+              <div className="mb-4 flex justify-center">
+                <Image
+                  src="/maps/carte-intervention.svg"
+                  alt="Région Provence-Alpes-Côte d'Azur"
+                  width={210}
+                  height={182}
+                  className="h-auto w-full max-w-[210px]"
+                />
+              </div>
+              <p className="text-[15px] leading-[1.6] text-navy-muted">
+                Interventions en région Provence-Alpes-Côte d'Azur. Chaque déplacement fait l'objet d'un devis personnalisé.
               </p>
             </div>
           </div>

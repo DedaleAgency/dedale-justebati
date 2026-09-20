@@ -40,7 +40,7 @@ export default function FaqPage() {
     {
       question: "Dans quelle zone intervenez-vous ?",
       answer:
-        "Zone d'intervention à confirmer (hypothèse provisoire : Ville-Centre / département 00). Contactez-nous avec votre code postal pour vérifier la faisabilité.",
+        "Justebati intervient en région Provence-Alpes-Côte d'Azur. Chaque déplacement fait l'objet d'un devis personnalisé en fonction de la localisation du bien et de la nature de l'expertise.",
     },
     {
       question: "Intervenez-vous en cas de sinistre ou face à un assureur ?",

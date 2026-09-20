@@ -6,9 +6,9 @@ export const siteConfig = {
   phoneDisplay: "01 00 00 00 00",
   email: "contact@exemple.fr",
   zone: {
-    villePrincipale: "Ville-Centre",
-    departements: ["00"],
-    villesCouvertes: ["Ville-Centre"],
+    villePrincipale: "Région PACA",
+    departements: ["Provence-Alpes-Côte d'Azur"],
+    villesCouvertes: ["Interventions en région Provence-Alpes-Côte d'Azur"],
   },
   social: {},
   noIndex: true,
