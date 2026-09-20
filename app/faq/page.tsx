@@ -40,7 +40,7 @@ export default function FaqPage() {
     {
       question: "Dans quelle zone intervenez-vous ?",
       answer:
-        "Justebati intervient sur l'ensemble du territoire français. Chaque déplacement fait l'objet d'un devis personnalisé en fonction de la localisation du bien et de la nature de l'expertise.",
+        "Justebati intervient en région Provence-Alpes-Côte d'Azur. Chaque déplacement fait l'objet d'un devis personnalisé en fonction de la localisation du bien et de la nature de l'expertise.",
     },
     {
       question: "Intervenez-vous en cas de sinistre ou face à un assureur ?",

@@ -61,15 +61,15 @@ export default function ContactPage() {
               </h2>
               <div className="mb-4 flex justify-center">
                 <Image
-                  src="/france.svg"
-                  alt="Contour de la France métropolitaine"
-                  width={200}
-                  height={220}
-                  className="h-auto w-full max-w-[200px]"
+                  src="/maps/carte-paca.svg"
+                  alt="Région Provence-Alpes-Côte d'Azur"
+                  width={210}
+                  height={182}
+                  className="h-auto w-full max-w-[210px]"
                 />
               </div>
               <p className="text-[15px] leading-[1.6] text-navy-muted">
-                Interventions sur l'ensemble du territoire français. Chaque déplacement fait l'objet d'un devis personnalisé.
+                Interventions en région Provence-Alpes-Côte d'Azur. Chaque déplacement fait l'objet d'un devis personnalisé.
               </p>
             </div>
           </div>

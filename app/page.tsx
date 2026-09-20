@@ -287,7 +287,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Zone d'intervention France — Split layout avec SVG */}
+      {/* Zone d'intervention PACA — Split layout avec SVG */}
       <section className="section-light section-spacing">
         <div className="container-custom">
           <div className="mx-auto max-w-6xl">
@@ -301,10 +301,10 @@ export default function HomePage() {
                 </h2>
                 <div className="mb-8 space-y-4 text-[16px] leading-[1.65] text-navy-muted">
                   <p>
-                    Justebati intervient sur l'ensemble de la France métropolitaine pour vos expertises bâtiment. Avant achat, fissures, humidité, malfaçons, sinistre ou litige : nous nous déplaçons sur site pour établir un diagnostic technique complet.
+                    Justebati intervient en région Provence-Alpes-Côte d'Azur pour vos expertises bâtiment. Avant achat, fissures, humidité, malfaçons, sinistre ou litige : nous nous déplaçons sur site pour établir un diagnostic technique complet.
                   </p>
                   <p>
-                    Déplacement et devis selon la nature de la mission. Grâce à notre organisation, nous garantissons des interventions adaptées sur l'ensemble du territoire français.
+                    Déplacement et devis selon la nature de la mission. Nos interventions couvrent l'ensemble de la région PACA.
                   </p>
                 </div>
                 <Link
@@ -316,10 +316,10 @@ export default function HomePage() {
               </div>
               <div className="flex justify-center md:justify-end">
                 <Image
-                  src="/france.svg"
-                  alt="Contour de la France métropolitaine"
-                  width={340}
-                  height={376}
+                  src="/maps/carte-paca.svg"
+                  alt="Région Provence-Alpes-Côte d'Azur"
+                  width={423}
+                  height={364}
                   className="h-auto w-full max-w-[340px]"
                 />
               </div>
