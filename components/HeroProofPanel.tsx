@@ -1,5 +1,8 @@
 "use client";
 
+import { motion } from "framer-motion";
+import { fadeIn, defaultViewport } from "@/lib/animations";
+
 interface ProofItem {
   icon: React.ReactElement;
   text: string;
@@ -39,7 +42,13 @@ const proofItems: ProofItem[] = [
 
 export default function HeroProofPanel() {
   return (
-    <div className="hidden lg:block lg:w-[280px] xl:w-[320px]">
+    <motion.div 
+      className="hidden lg:block lg:w-[280px] xl:w-[320px]"
+      initial="hidden"
+      animate="visible"
+      variants={fadeIn}
+      transition={{ delay: 0.6 }}
+    >
       <div className="rounded-sm border border-paper/20 bg-navy/40 p-6 backdrop-blur-sm">
         <div className="space-y-4">
           {proofItems.map((item, index) => (
@@ -54,6 +63,6 @@ export default function HeroProofPanel() {
           ))}
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 }

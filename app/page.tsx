@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import Button from "@/components/Button";
 import HeroProofPanel from "@/components/HeroProofPanel";
+import { FadeUp, StaggerContainer, StaggerItem, HeroAnimated, HeroItem } from "@/components/AnimatedWrappers";
 
 export const metadata: Metadata = {
   title: "Expert bâtiment indépendant",
@@ -80,20 +81,20 @@ export default function HomePage() {
         </div>
         <div className="container-custom relative flex min-h-[85vh] items-center">
           <div className="flex w-full flex-col items-start gap-8 py-20 lg:flex-row lg:items-center lg:justify-between">
-            <div className="max-w-[580px]">
-              <div className="mb-5 text-[11px] font-semibold uppercase tracking-[0.14em] text-copper">
+            <HeroAnimated className="max-w-[580px]">
+              <HeroItem className="mb-5 text-[11px] font-semibold uppercase tracking-[0.14em] text-copper">
                 Expertise bâtiment indépendante
-              </div>
-              <h1 className="mb-6 font-serif text-[clamp(1.875rem,3.2vw,2.375rem)] leading-[1.15] tracking-[-0.01em] text-paper">
+              </HeroItem>
+              <HeroItem className="mb-6 font-serif text-[clamp(1.875rem,3.2vw,2.375rem)] leading-[1.15] tracking-[-0.01em] text-paper">
                 Expertise bâtiment indépendante — sans travaux à vendre
-              </h1>
-              <p className="mb-8 text-[17px] leading-[1.65] text-paper-muted">
+              </HeroItem>
+              <HeroItem className="mb-8 text-[17px] leading-[1.65] text-paper-muted">
                 Justebati est un cabinet d'expertise bâtiment pour particuliers. Inspection sur site, analyse des désordres, rapport écrit avec photos et chiffrage des travaux à prévoir.
-              </p>
-              <p className="mb-8 text-[17px] leading-[1.65] text-paper-muted">
+              </HeroItem>
+              <HeroItem className="mb-8 text-[17px] leading-[1.65] text-paper-muted">
                 Nous ne vendons aucun travaux. Notre rôle s'arrête au diagnostic technique et au conseil clair.
-              </p>
-              <div className="flex flex-col gap-4 sm:flex-row">
+              </HeroItem>
+              <HeroItem className="flex flex-col gap-4 sm:flex-row">
                 <Link
                   href="/contact"
                   className="inline-flex items-center justify-center rounded-sm bg-copper px-[22px] py-3 text-[13px] font-semibold text-white transition-colors duration-base hover:bg-copper-hover"
@@ -106,9 +107,8 @@ export default function HomePage() {
                 >
                   Comment ça se passe
                 </Link>
-              </div>
-              {/* Mobile proof panel (stacked below CTAs on mobile only) */}
-              <div className="mt-8 lg:hidden">
+              </HeroItem>
+              <HeroItem className="mt-8 lg:hidden">
                 <div className="grid gap-3 sm:grid-cols-3">
                   {[
                     { icon: "✓", text: "Aucun travaux à vendre" },
@@ -123,9 +123,8 @@ export default function HomePage() {
                     </div>
                   ))}
                 </div>
-              </div>
-            </div>
-            {/* Desktop proof panel (right side on desktop only) */}
+              </HeroItem>
+            </HeroAnimated>
             <HeroProofPanel />
           </div>
         </div>
@@ -164,7 +163,7 @@ export default function HomePage() {
       {/* Six missions — Rangées éditoriales (Direction C) */}
       <section className="section-light section-spacing">
         <div className="container-custom">
-          <div className="mb-12">
+          <FadeUp className="mb-12">
             <div className="mb-3 text-[11px] font-semibold uppercase tracking-[0.14em] text-copper-hover">
               Missions
             </div>
@@ -174,42 +173,43 @@ export default function HomePage() {
             <p className="max-w-2xl text-[16px] text-navy-muted">
               Avant achat, fissures, humidité, malfaçons, assurance, litige : chaque expertise apporte un regard technique neutre, sans travaux à vendre.
             </p>
-          </div>
-          <div className="space-y-0">
-            {missions.map((mission) => (
-              <Link
-                key={mission.href}
-                href={mission.href}
-                className="group grid grid-cols-1 gap-6 border-t border-border-on-paper py-7 transition-colors duration-base hover:bg-navy/[0.02] sm:grid-cols-[140px,1fr,auto] sm:items-center"
-              >
-                <div className="relative aspect-[16/10] w-full overflow-hidden sm:aspect-[140/88] sm:w-[140px]">
-                  <Image
-                    src={mission.image}
-                    alt={mission.title}
-                    fill
-                    className="object-cover"
-                  />
-                </div>
-                <div>
-                  <h3 className="mb-1 font-serif text-[22px] leading-[1.25] text-navy">
-                    {mission.title}
-                  </h3>
-                  <p className="max-w-[520px] text-[14px] text-navy-muted">{mission.description}</p>
-                </div>
-                <div className="flex items-center text-[13px] font-semibold text-copper-hover transition-colors group-hover:text-copper">
-                  En savoir plus →
-                </div>
-              </Link>
+          </FadeUp>
+          <StaggerContainer className="space-y-0">
+            {missions.map((mission, index) => (
+              <StaggerItem key={mission.href}>
+                <Link
+                  href={mission.href}
+                  className="group grid grid-cols-1 gap-6 border-t border-border-on-paper py-7 transition-colors duration-base hover:bg-navy/[0.02] sm:grid-cols-[140px,1fr,auto] sm:items-center"
+                >
+                  <div className="relative aspect-[16/10] w-full overflow-hidden sm:aspect-[140/88] sm:w-[140px]">
+                    <Image
+                      src={mission.image}
+                      alt={mission.title}
+                      fill
+                      className="object-cover"
+                    />
+                  </div>
+                  <div>
+                    <h3 className="mb-1 font-serif text-[22px] leading-[1.25] text-navy">
+                      {mission.title}
+                    </h3>
+                    <p className="max-w-[520px] text-[14px] text-navy-muted">{mission.description}</p>
+                  </div>
+                  <div className="flex items-center text-[13px] font-semibold text-copper-hover transition-colors group-hover:text-copper">
+                    En savoir plus →
+                  </div>
+                </Link>
+              </StaggerItem>
             ))}
             <div className="border-t border-border-on-paper" />
-          </div>
+          </StaggerContainer>
         </div>
       </section>
 
       {/* Indépendance */}
       <section className="section-light section-spacing">
         <div className="container-custom">
-          <div className="mx-auto max-w-3xl text-center">
+          <FadeUp className="mx-auto max-w-3xl text-center">
             <h2 className="mb-6 font-serif text-[clamp(1.625rem,2.5vw,2rem)] leading-[1.2] text-navy">
               Indépendance
             </h2>
@@ -221,48 +221,48 @@ export default function HomePage() {
                 Nous ne réalisons pas les diagnostics obligatoires (DPE, amiante, plomb, etc.) ni d'estimation immobilière.
               </p>
             </div>
-          </div>
-          <div className="mt-12 grid gap-3 sm:grid-cols-3">
-            <div className="relative aspect-[4/3] overflow-hidden">
+          </FadeUp>
+          <StaggerContainer className="mt-12 grid gap-3 sm:grid-cols-3">
+            <StaggerItem className="relative aspect-[4/3] overflow-hidden">
               <Image
                 src="/images/pierre-mur.jpg"
                 alt="Détail pierre de mur"
                 fill
                 className="object-cover"
               />
-            </div>
-            <div className="relative aspect-[4/3] overflow-hidden">
+            </StaggerItem>
+            <StaggerItem className="relative aspect-[4/3] overflow-hidden">
               <Image
                 src="/images/toiture-01.jpg"
                 alt="Détail de toiture"
                 fill
                 className="object-cover"
               />
-            </div>
-            <div className="relative aspect-[4/3] overflow-hidden">
+            </StaggerItem>
+            <StaggerItem className="relative aspect-[4/3] overflow-hidden">
               <Image
                 src="/images/platre-algues.jpg"
                 alt="Détail plâtre et algues"
                 fill
                 className="object-cover"
               />
-            </div>
-          </div>
+            </StaggerItem>
+          </StaggerContainer>
         </div>
       </section>
 
       {/* Méthode — StepRail 5 temps sur surface-dark */}
       <section className="section-spacing bg-navy">
         <div className="container-custom">
-          <div className="mx-auto mb-16 max-w-3xl text-center">
+          <FadeUp className="mx-auto mb-16 max-w-3xl text-center">
             <div className="mb-3 text-[11px] font-semibold uppercase tracking-[0.14em] text-copper">
               Méthode
             </div>
             <h2 className="mb-6 font-serif text-[clamp(1.625rem,2.5vw,2rem)] leading-[1.2] text-paper">
               Comment ça se <em className="font-serif italic text-copper">passe</em>
             </h2>
-          </div>
-          <div className="grid gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-5">
+          </FadeUp>
+          <StaggerContainer className="grid gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-5">
             {[
               { 
                 num: "01", 
@@ -290,7 +290,10 @@ export default function HomePage() {
                 desc: "Échanges sur le rapport si besoin. Nous ne réalisons ni ne vendons les travaux." 
               },
             ].map((step) => (
-              <div key={step.num} className="border-t-2 border-copper pt-5">
+              <StaggerItem 
+                key={step.num} 
+                className="border-t-2 border-copper pt-5"
+              >
                 <div className="mb-2 text-[11px] font-semibold uppercase tracking-[0.14em] text-copper">
                   {step.num}
                 </div>
@@ -298,9 +301,9 @@ export default function HomePage() {
                   {step.label}
                 </h3>
                 <p className="text-[13px] leading-[1.55] text-paper-muted">{step.desc}</p>
-              </div>
+              </StaggerItem>
             ))}
-          </div>
+          </StaggerContainer>
         </div>
       </section>
 
@@ -308,8 +311,8 @@ export default function HomePage() {
       <section className="section-light section-spacing">
         <div className="container-custom">
           <div className="mx-auto max-w-6xl">
-            <div className="grid gap-12 md:grid-cols-[1.05fr,0.95fr] md:items-center">
-              <div>
+            <StaggerContainer className="grid gap-12 md:grid-cols-[1.05fr,0.95fr] md:items-center">
+              <StaggerItem>
                 <div className="mb-3 text-[11px] font-semibold uppercase tracking-[0.14em] text-copper-hover">
                   Couverture
                 </div>
@@ -330,8 +333,8 @@ export default function HomePage() {
                 >
                   Demander un devis
                 </Link>
-              </div>
-              <div className="flex justify-center md:justify-end">
+              </StaggerItem>
+              <StaggerItem className="flex justify-center md:justify-end">
                 <Image
                   src="/maps/carte-intervention.svg"
                   alt="Région Provence-Alpes-Côte d'Azur"
@@ -339,8 +342,8 @@ export default function HomePage() {
                   height={364}
                   className="h-auto w-full max-w-[340px]"
                 />
-              </div>
-            </div>
+              </StaggerItem>
+            </StaggerContainer>
           </div>
         </div>
       </section>
