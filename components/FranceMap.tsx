@@ -8,26 +8,39 @@ export default function FranceMap({ className = "" }: FranceMapProps) {
   return (
     <div className={`relative ${className}`}>
       <svg
-        viewBox="0 0 300 350"
+        viewBox="0 0 400 450"
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
         className="h-full w-full"
         aria-label="Silhouette de la France métropolitaine"
       >
         <path
-          d="M150 20 C165 18, 180 22, 190 30 L200 40 C210 50, 220 65, 225 80 L230 95 C232 110, 235 125, 240 140 L245 160 C248 175, 250 190, 252 205 L253 225 C252 240, 248 255, 242 268 L230 290 C220 305, 205 315, 188 322 L165 330 C145 332, 125 330, 108 325 L85 315 C70 308, 58 295, 50 280 L42 260 C38 245, 35 230, 33 215 L32 195 C33 180, 35 165, 38 150 L42 130 C45 115, 50 100, 56 85 L65 65 C75 48, 90 35, 108 28 L130 22 Z"
+          d="M 200 50
+             L 220 45 L 240 48 L 260 55 L 280 65 L 295 80
+             L 305 95 L 315 115 L 320 135 L 322 155
+             L 320 175 L 315 195 L 310 215 L 305 235
+             L 300 255 L 295 275 L 288 295 L 280 315
+             L 270 330 L 255 345 L 240 355 L 220 365
+             L 200 370 L 180 368 L 160 363 L 140 355
+             L 120 345 L 105 335 L 92 320 L 85 305
+             L 80 285 L 78 265 L 75 245 L 73 225
+             L 70 205 L 68 185 L 70 165 L 75 145
+             L 82 125 L 92 105 L 105 88 L 120 75
+             L 140 65 L 160 58 L 180 52 Z"
           fill="#E8E0D2"
           stroke="#A67C52"
-          strokeWidth="2"
+          strokeWidth="3"
           strokeLinecap="round"
           strokeLinejoin="round"
+          opacity="0.9"
         />
+        
         <circle
-          cx="150"
-          cy="170"
-          r="4"
+          cx="200"
+          cy="210"
+          r="5"
           fill="#A67C52"
-          opacity="0.6"
+          opacity="0.7"
         />
       </svg>
     </div>

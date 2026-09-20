@@ -35,7 +35,7 @@
 
 @layer utilities {
   .section-spacing {
-    @apply py-16 md:py-24;
+    @apply py-20 md:py-28 lg:py-32;
   }
 
   .container-custom {
