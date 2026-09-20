@@ -17,14 +17,14 @@ export default function Icon() {
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
-          backgroundColor: "#0B1623",
+          backgroundColor: "#1F1A14",
         }}
       >
         <div
           style={{
             fontSize: "20px",
             fontWeight: "400",
-            color: "#B87333",
+            color: "#A67C52",
             fontFamily: "serif",
           }}
         >
